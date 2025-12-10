@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './Inspiration.css';
 
 class StellarNav extends React.Component {
@@ -21,10 +22,17 @@ class StellarNav extends React.Component {
                 <label htmlFor="toggle-recipes" className="stellar-link toggle-label">
                   RECIPES
                 </label>
-                <a href="#" className="stellar-link desktop-trigger">
+
+                <button
+                  type="button"
+                  className="stellar-link desktop-trigger"
+                  aria-expanded="false"
+                  aria-controls="recipes-menu"
+                >
                   RECIPES
-                </a>
-                <div className="stellar-dropdown-menu">
+                </button>
+
+                <div className="stellar-dropdown-menu" id="recipes-menu">
                   <a href="/five-course-meal/main-page-html/main-course.html">
                     <img src="/assets/main_course/main_course_pfp.jpg" alt="Main course" loading="lazy" />
                     <span>Main Course</span>
@@ -49,34 +57,53 @@ class StellarNav extends React.Component {
                 <label htmlFor="toggle-inspiration" className="stellar-link toggle-label active">
                   INSPIRATION
                 </label>
-                <a href="#" className="stellar-link active desktop-trigger">
+
+                <button
+                  type="button"
+                  className="stellar-link active desktop-trigger"
+                  aria-expanded="true"
+                  aria-controls="inspiration-menu"
+                >
                   INSPIRATION
-                </a>
-                <div className="stellar-dropdown-menu">
-                  <a href="/inspiration/stellar-tips">
+                </button>
+
+                <div className="stellar-dropdown-menu" id="inspiration-menu">
+                  {/*
+                    Option A (hard reload navigation): use a plain <a href="...">.
+                    Clicking this will perform a full page navigation / reload.
+                  */}
+                  <a href="/inspiration/stellar-tips" className="dropdown-item">
                     <img src="/assets/inspiration/stellar_tips_pfp.jpg" alt="Stellar Tips" loading="lazy" />
                     <span>Stellar Tips</span>
                   </a>
-                  <a href="/inspiration/seasonal-constellation">
+
+                  {/*
+                    The other submenu items can remain client-side links (NavLink)
+                    or be anchors too depending on whether you want a full reload.
+                  */}
+                  <NavLink to="/inspiration/seasonal-constellation" className="dropdown-item">
                     <img
                       src="/assets/inspiration/seasonal_constellation_pfp.png"
                       alt="Seasonal Constellations"
                       loading="lazy"
                     />
                     <span>Seasonal Constellations</span>
-                  </a>
-                  <a href="/coming-soon">
+                  </NavLink>
+
+                  <NavLink to="/coming-soon" className="dropdown-item">
                     <img src="/assets/inspiration/kitchen_universe_pfp.png" alt="Kitchen Universe" loading="lazy" />
                     <span>Kitchen Universe</span>
-                  </a>
-                  <a href="/coming-soon">
+                  </NavLink>
+
+                  <NavLink to="/coming-soon" className="dropdown-item">
                     <img src="/assets/inspiration/guiding_stars_pfp.png" alt="Guiding Stars" loading="lazy" />
                     <span>Guiding Stars</span>
-                  </a>
-                  <a href="/coming-soon">
+                  </NavLink>
+
+                  <NavLink to="/coming-soon" className="dropdown-item">
                     <img src="/assets/inspiration/orbit_of_flavors_pfp.png" alt="Orbit Of Flavors" loading="lazy" />
                     <span>Orbit Of Flavors</span>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
 
@@ -85,10 +112,17 @@ class StellarNav extends React.Component {
                 <label htmlFor="toggle-shop" className="stellar-link toggle-label">
                   SHOP
                 </label>
-                <a href="#" className="stellar-link desktop-trigger">
+
+                <button
+                  type="button"
+                  className="stellar-link desktop-trigger"
+                  aria-expanded="false"
+                  aria-controls="shop-menu"
+                >
                   SHOP
-                </a>
-                <div className="stellar-dropdown-menu">
+                </button>
+
+                <div className="stellar-dropdown-menu" id="shop-menu">
                   <a href="/shop/ingredients_shop.html">
                     <img
                       src="/assets/shop/Ingredients/ingredients_pfp.jpg"
@@ -129,10 +163,17 @@ class StellarNav extends React.Component {
                 <label htmlFor="toggle-about" className="stellar-link toggle-label">
                   ABOUT US
                 </label>
-                <a href="/about-us/about-us.html#our-story" className="stellar-link desktop-trigger">
+
+                <button
+                  type="button"
+                  className="stellar-link desktop-trigger"
+                  aria-expanded="false"
+                  aria-controls="about-menu"
+                >
                   ABOUT US
-                </a>
-                <div className="stellar-dropdown-menu">
+                </button>
+
+                <div className="stellar-dropdown-menu" id="about-menu">
                   <a href="/about-us/about-us.html#our-story">
                     <img src="/assets/about us/about_us_pfp.png" alt="Our Story" loading="lazy" />
                     <span>Our Story</span>
@@ -154,16 +195,16 @@ class StellarNav extends React.Component {
             </div>
           </div>
 
-          <a href="/" className="stellar-brand">
+          <Link to="/" className="stellar-brand">
             <span className="brand-text">CELESTIAL</span>
             <span className="brand-icon">💫</span>
             <div className="brand-glow"></div>
-          </a>
+          </Link>
 
           <div className="stellar-nav-right">
-            <a href="/" id="home" className="stellar-icon-link" title="Home">
+            <Link to="/" id="home" className="stellar-icon-link" title="Home">
               <img src="/assets/icons/house.png" alt="home" />
-            </a>
+            </Link>
             <a href="/forms/index.html" className="stellar-icon-link" title="Account">
               <img src="/assets/icons/user.png" alt="user" />
             </a>

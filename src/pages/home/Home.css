@@ -38,6 +38,7 @@ body {
   align-items: center;
   padding: 1.5rem 2.5rem 0 2.5rem;
   border-radius: 0 0 32px 32px;
+  font-size: 0.875rem;
 }
 
 .navtop ul .left, .navtop ul .right {

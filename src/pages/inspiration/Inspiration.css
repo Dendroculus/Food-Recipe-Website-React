@@ -564,6 +564,64 @@ main {
   flex-shrink: 0;
 }
 
+
+button.stellar-link,
+button.stellar-link.desktop-trigger {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  font-weight: 700;
+}
+
+button.stellar-link::before,
+button.stellar-link.desktop-trigger::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--color-brand-2);
+  transition: width 0.3s ease;
+}
+
+button.stellar-link:hover::before,
+button.stellar-link.desktop-trigger:hover::before {
+  width: 80%;
+}
+
+button.stellar-link:hover,
+button.stellar-link.desktop-trigger:hover,
+button.stellar-link.active,
+button.stellar-link.desktop-trigger.active {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+button.stellar-link[aria-expanded="true"],
+button.stellar-link.desktop-trigger[aria-expanded="true"] {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button.stellar-link:focus,
+button.stellar-link.desktop-trigger:focus {
+  outline: none;
+}
+
+button.stellar-link:focus-visible,
+button.stellar-link.desktop-trigger:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0, 180, 160, 0.18);
+  border-radius: 8px;
+}
+
 .stellar-dropdown-menu a:hover img {
   transform: rotate(360deg) scale(1.1);
 }
@@ -702,6 +760,7 @@ main {
     padding: 0.85rem 1.5rem 0.3rem;
     gap: 1.5rem;
   }
+
 
   .stellar-nav-left {
     gap: 1.5rem;
@@ -855,7 +914,10 @@ main {
     padding-bottom: 0;
   }
 
-  .desktop-trigger { display: none; }
+  .desktop-trigger,
+  button.desktop-trigger {
+    display: none;
+  }
   .toggle-label {
     display: block;
     width: 100%;
