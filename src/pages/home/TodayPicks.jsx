@@ -1,80 +1,76 @@
 import React from 'react';
 import TodayPickCard from './TodayPickCard';
+import todayPicks from './TodayPicksData';
 
 class TodayPicks extends React.Component {
   constructor(props) {
     super(props);
-    this.picks = [
-      {
-        image: '/assets/main_course/Pork Chops Charcutiere Sauce.png',
-        title: 'Pork Chops Charcutiere',
-        href: './five-course-meal/recipes-html/main-course-recipes.html#pork-chops',
-        meta: '30 min • Medium • ★ 4.8',
-      },
-      {
-        image: '/assets/desserts/Panacotta.png',
-        title: 'Panacotta',
-        href: './five-course-meal/recipes-html/dessert-recipes.html#panacotta',
-        meta: '2 hr • Medium • ★ 4.7',
-      },
-      {
-        image: '/assets/salad/Italian Salad.png',
-        title: 'Italian Salad',
-        href: './five-course-meal/recipes-html/salad-recipes.html#italian-salad',
-        meta: '10 min • Easy • ★ 4.5',
-      },
-      {
-        image: '/assets/desserts/Oreo Tiramisu Trifle.webp',
-        title: 'Oreo Tiramisu Trifle',
-        href: './five-course-meal/recipes-html/dessert-recipes.html#oreo-tiramisu-trifle',
-        meta: '24 min • Easy • ★ 4.4',
-      },
-      {
-        image: '/assets/appetizers/Fried Prosciutto Tortellini.jpg',
-        title: 'Fried Prosciutto Tortellini',
-        href: './five-course-meal/recipes-html/appetizer-recipes.html#fried-prosciutto-tortellini',
-        meta: '15 min • Medium • ★ 4.9',
-      },
-      {
-        image: '/assets/salad/Mediterranean Salad.jpg',
-        title: 'Mediterranean Salad',
-        href: './five-course-meal/recipes-html/salad-recipes.html#mediterranean-salad',
-        meta: '10 min • Medium • ★ 4.5',
-      },
-    ];
+
+    this.picks = todayPicks;
+
+    this.state = {
+      startIndex: 0,
+      fading: false,
+    };
+
+    this.intervalMs = 5000; // rotate every 5s
+    this.fadeMs = 300; // match CSS transition
+    this.tick = this.tick.bind(this);
+  }
+
+  componentDidMount() {
+    this.timer = setInterval(this.tick, this.intervalMs);
+  }
+
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+    if (this.fadeTimeout) clearTimeout(this.fadeTimeout);
+  }
+
+  tick() {
+    // trigger fade-out, then change picks, then fade-in
+    this.setState({ fading: true }, () => {
+      this.fadeTimeout = setTimeout(() => {
+        this.setState((prev) => {
+          const nextStart = (prev.startIndex + 6) % this.picks.length;
+          return { startIndex: nextStart, fading: false };
+        });
+      }, this.fadeMs);
+    });
+  }
+
+  visiblePicks() {
+    const { startIndex } = this.state;
+    return Array.from({ length: 6 }, (_, i) => this.picks[(startIndex + i) % this.picks.length]);
+  }
+
+  renderRow(slice) {
+    return (
+      <div className="today-picks-fyp">
+        {slice.map((item, index) => (
+          <TodayPickCard
+            key={index + item.href}
+            image={item.image}
+            title={item.title}
+            href={item.href}
+            meta={item.meta}
+          />
+        ))}
+      </div>
+    );
   }
 
   render() {
-    const firstRow = this.picks.slice(0, 3);
-    const secondRow = this.picks.slice(3, 6);
+    const { fading } = this.state;
+    const picks = this.visiblePicks();
+    const firstRow = picks.slice(0, 3);
+    const secondRow = picks.slice(3, 6);
 
     return (
-      <div className="today-picks">
+      <div className={`today-picks ${fading ? 'tp-fade-out' : 'tp-fade-in'}`}>
         <h1>Today's Picks</h1>
-
-        <div className="today-picks-fyp">
-          {firstRow.map((item, index) => (
-            <TodayPickCard
-              key={index}
-              image={item.image}
-              title={item.title}
-              href={item.href}
-              meta={item.meta}
-            />
-          ))}
-        </div>
-
-        <div className="today-picks-fyp">
-          {secondRow.map((item, index) => (
-            <TodayPickCard
-              key={index + 3}
-              image={item.image}
-              title={item.title}
-              href={item.href}
-              meta={item.meta}
-            />
-          ))}
-        </div>
+        {this.renderRow(firstRow)}
+        {this.renderRow(secondRow)}
 
         <div className="quick-recipes">
           <form id="quick-recipes-form" action="quick-recipe-subscribe">

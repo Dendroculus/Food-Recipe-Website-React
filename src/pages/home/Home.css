@@ -223,6 +223,10 @@ body {
   height: 100%;
 }
 
+.dropdown-container > button:focus {
+  outline: none; 
+}
+
 .site-search { flex-shrink: 0; }
 .site-search .search {
   max-width: 100%;
@@ -361,6 +365,18 @@ body {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   text-align: left;
+}
+
+.today-picks {
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+.today-picks.tp-fade-out {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.today-picks.tp-fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .fyp-image {
