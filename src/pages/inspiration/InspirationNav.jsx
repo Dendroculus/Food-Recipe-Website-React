@@ -81,7 +81,7 @@ class StellarNav extends React.Component {
                     The other submenu items can remain client-side links (NavLink)
                     or be anchors too depending on whether you want a full reload.
                   */}
-                  <NavLink to="/inspiration/seasonal-constellation" className="dropdown-item">
+                  <NavLink to="/inspiration/seasonal-constellations" className="dropdown-item">
                     <img
                       src="/assets/inspiration/seasonal_constellation_pfp.png"
                       alt="Seasonal Constellations"
