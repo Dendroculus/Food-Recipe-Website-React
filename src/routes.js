@@ -16,6 +16,10 @@ const routes = [
   {
     path: '/coming-soon/coming-soon',
     component: React.lazy(() => import('./pages/coming-soon/ComingSoon')),
+  },
+  {
+    path: '/about-us/AboutUs',
+    component: React.lazy(() => import('./pages/about-us/AboutUs')),
   }
   // add new routes here
 ];

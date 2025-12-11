@@ -296,6 +296,7 @@ body {
 }
 .hero h1 {
   text-align: left;
+  color: #007A70;
   font-family: 'Playwrite', sans-serif;
 }
 .hero-text-and-desc { max-width: 40rem; }

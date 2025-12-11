@@ -25,10 +25,10 @@ const shopItems = [
 ];
 
 const aboutItems = [
-  { image: '/assets/about us/about_us_pfp.png', alt: 'Our Story', label: 'Our Story', href: '/about-us#our-story' },
-  { image: '/assets/about us/meet_the_team_pfp.png', alt: 'Meet the Team', label: 'Meet the Team', href: '/about-us#meet-the-team' },
-  { image: '/assets/about us/our_mission_pfp.png', alt: 'Our Mission', label: 'Our Mission', href: '/about-us#our-mission' },
-  { image: '/assets/about us/contact_us_pfp.png', alt: 'Contact Us', label: 'Contact Us', href: '/about-us#contact-us' },
+  { image: '/assets/about us/about_us_pfp.png', alt: 'Our Story', label: 'Our Story', href: '/about-us/AboutUs#our-story' },
+  { image: '/assets/about us/meet_the_team_pfp.png', alt: 'Meet the Team', label: 'Meet the Team', href: '/about-us/AboutUs#meet-the-team' },
+  { image: '/assets/about us/our_mission_pfp.png', alt: 'Our Mission', label: 'Our Mission', href: '/about-us/AboutUs#our-mission' },
+  { image: '/assets/about us/contact_us_pfp.png', alt: 'Contact Us', label: 'Contact Us', href: '/about-us/AboutUs#contact-us' },
 ];
 
 class Dropdown extends React.Component {
