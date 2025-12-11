@@ -5,7 +5,7 @@ import "../../home/Home.css";
 import Footer from "../../home/Footer";
 import Modals from "../../home/Modals";
 
-import SeasonalNav from "./SeasonalNav";
+import InspirationNav from "../InspirationNav";
 import SeasonsGrid from "./SeasonsGrid";
 import Calendar from "./Calendar";
 import WhySeasonal from "./WhySeasonal";
@@ -15,7 +15,6 @@ class SeasonalConstellations extends React.Component {
   constructor(props) {
     super(props);
 
-    // central state: arrays and objects passed down to child components via props
     this.state = {
       navGroups: [
         {
@@ -171,7 +170,7 @@ class SeasonalConstellations extends React.Component {
 
     return (
       <>
-        <SeasonalNav navGroups={navGroups} />
+        <InspirationNav navGroups={navGroups} />
 
         <header className="stellar-hero">
           <div className="container">

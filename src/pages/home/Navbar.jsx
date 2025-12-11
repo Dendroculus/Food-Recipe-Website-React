@@ -12,9 +12,9 @@ const recipesItems = [
 const inspirationItems = [
   { image: '/assets/inspiration/stellar_tips_pfp.jpg', alt: 'Stellar Tips', label: 'Stellar Tips', href: '/inspiration/stellar-tips' },
   { image: '/assets/inspiration/seasonal_constellation_pfp.png', alt: 'Seasonal Constellations', label: 'Seasonal Constellations', href: '/inspiration/seasonal-constellations' },
-  { image: '/assets/inspiration/kitchen_universe_pfp.png', alt: 'Kitchen Universe', label: 'Kitchen Universe', href: '/coming-soon' },
-  { image: '/assets/inspiration/guiding_stars_pfp.png', alt: 'Guiding Stars', label: 'Guiding Stars', href: '/coming-soon' },
-  { image: '/assets/inspiration/orbit_of_flavors_pfp.png', alt: 'Orbit Of Flavors', label: 'Orbit Of Flavors', href: '/coming-soon' },
+  { image: '/assets/inspiration/kitchen_universe_pfp.png', alt: 'Kitchen Universe', label: 'Kitchen Universe', href: '/coming-soon/coming-soon' },
+  { image: '/assets/inspiration/guiding_stars_pfp.png', alt: 'Guiding Stars', label: 'Guiding Stars', href: '/coming-soon/coming-soon' },
+  { image: '/assets/inspiration/orbit_of_flavors_pfp.png', alt: 'Orbit Of Flavors', label: 'Orbit Of Flavors', href: '/coming-soon/coming-soon' },
 ];
 
 const shopItems = [
