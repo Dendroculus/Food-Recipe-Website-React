@@ -24,7 +24,23 @@ const routes = [
   {
     path: '/payment/Payment',
     component: React.lazy(() => import('./pages/payment/Payment')),
-  }
+  },
+  {
+    path : '/five-course-meal/main-page/appetizer',
+    component: React.lazy(() => import('./pages/five-course-meal/main-page/Appetizer')),
+  },
+  {
+    path : '/five-course-meal/main-page/salad',
+    component: React.lazy(() => import('./pages/five-course-meal/main-page/Salad')),
+  },
+  {
+    path : '/five-course-meal/main-page/main-course',
+    component: React.lazy(() => import('./pages/five-course-meal/main-page/MainCourse')),
+  },
+  {
+    path : '/five-course-meal/main-page/dessert',
+    component: React.lazy(() => import('./pages/five-course-meal/main-page/Dessert')),
+  },
 
 
 ];

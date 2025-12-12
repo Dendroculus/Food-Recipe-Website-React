@@ -1,0 +1,124 @@
+import React from "react";
+import "../../home/Home.css";
+import "../styles/main.css";
+import Navbar from "../../home/Navbar";
+import Footer from "../../home/Footer";
+
+export default class MainCourse extends React.Component {
+  topPicks = [
+    { img: "/assets/main_course/Chicken Cordon Bleu.png", title: "Chicken Cordon Bleu" },
+    { img: "/assets/main_course/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak" },
+    { img: "/assets/main_course/Shrimp Avocado Cocktail.png", title: "Shrimp Avocado Cocktail" },
+  ];
+
+  allRecipes = [
+    { img: "/assets/main_course/Chicken Cordon Bleu.png", title: "Chicken Cordon Bleu", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "1 hr 15 mins" },
+    { img: "/assets/main_course/Lobster Mango Salad.png", title: "Lobster Mango Salad", href: "/five-course-meal/recipes-html/main-course-recipes.html#lobster-mango-salad", time: "1 hr" },
+    { img: "/assets/main_course/Pork Chops Charcutiere Sauce.png", title: "Pork Chops", href: "/five-course-meal/recipes-html/main-course-recipes.html#pork-chops", time: "25 mins" },
+    { img: "/assets/main_course/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak", href: "/five-course-meal/recipes-html/main-course-recipes.html#salmon-steak", time: "24 mins" },
+    { img: "/assets/main_course/Shrimp Avocado Cocktail.png", title: "Shrimp Avocado Cocktail", href: "/five-course-meal/recipes-html/main-course-recipes.html#shrimp-avocado-cocktail", time: "1 hr 45 mins" },
+    { img: "/assets/main_course/Sole and Salmon Mousse Terrine with Indian Sauce.jpg", title: "Mousse Terrine", href: "/five-course-meal/recipes-html/main-course-recipes.html#mousse-terrine", time: "1 hr 5 mins" },
+    { img: "/assets/main_course/Coffee-Rubbed Braised Short Ribs.png", title: "Braised Short Ribs", href: "/five-course-meal/recipes-html/main-course-recipes.html#short-ribs", time: "3 hr 55 mins" },
+    { img: "/assets/main_course/Fig Arugula and Prosciutto Salad.jpg", title: "Arugula & Prosciutto Salad", href: "/five-course-meal/recipes-html/main-course-recipes.html#arugula-prosciutto-salad", time: "15 mins" },
+  ];
+
+  renderTopPicks() {
+    return (
+      <div className="recommended-img">
+        {this.topPicks.map((item) => (
+          <div className="recommended-card" key={item.title}>
+            <img src={item.img} alt={item.title} />
+            <div className="overlay">
+              <p className="text">{item.title}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  renderAllRecipes() {
+    return (
+      <section className="recipe-section">
+        {this.allRecipes.map((r) => (
+          <div className="card" key={r.title}>
+            <div className="card-image">
+              <img src={r.img} alt={r.title} />
+            </div>
+            <div className="text">
+              <a href={r.href}>{r.title}</a>
+              <p>{r.time}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+    );
+  }
+
+  render() {
+    return (
+      <div className="page-wrapper">
+        <Navbar />
+
+        <main>
+          <h1 className="head-title">Main Course</h1>
+
+          <div className="summary-content">
+            <p className="main-course-definition">
+              The main course is the primary dish of food served for lunch or dinner. It is also known by the name of Entree in many countries.
+            </p>
+          </div>
+
+          <div className="main text-container">
+            <div className="content">
+              <p className="check-out">
+                Explore our website's full main course recipe collection. Log in or create your account to easily save, revisit and review all your favourite main-course dishes!
+              </p>
+            </div>
+          </div>
+
+          <section className="recommended-section">
+            <div className="heading-container">
+              <h3 className="top-pick-heading">
+                <span className="top-line">Top Picks</span>
+                <span className="bottom-line">Main Course</span>
+              </h3>
+            </div>
+            {this.renderTopPicks()}
+          </section>
+
+          <div className="all-recipes">
+            <h3 className="all-recipes">
+              A<span className="blink">l</span>l R<span className="long-blink">e</span>ci<span className="blink">p</span>es
+            </h3>
+          </div>
+
+          {this.renderAllRecipes()}
+
+          <section className="button">
+            <div className="text-center mt-4">
+              <button type="button" className="btn btn-secondary">More &gt;</button>
+            </div>
+          </section>
+
+          <section className="more-recipes-section">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-6">
+                  <div className="cooking-badge">COOKING FOR EVERYONE</div>
+                  <h1 className="more-section-title">MAIN COURSE</h1>
+                  <p className="description-text">
+                    For more best main course recipe ideas, Celestial's got you covered!
+                  </p>
+                  <button type="button" className="cta-button">MORE MAIN COURSE RECIPE</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    );
+  }
+}

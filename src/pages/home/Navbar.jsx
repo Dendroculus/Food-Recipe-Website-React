@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const recipesItems = [
-  { image: '/assets/main_course/main_course_pfp.jpg', alt: 'Main course', label: 'Main Course', href: '/five-course-meal/main-page-html/main-course.html' },
-  { image: '/assets/appetizers/appetizers_pfp.jpg', alt: 'Appetizers', label: 'Appetizers', href: '/five-course-meal/main-page-html/appetizer.html' },
-  { image: '/assets/salad/salad_pfp.jpg', alt: 'Salad', label: 'Salad', href: '/five-course-meal/main-page-html/salad.html' },
-  { image: '/assets/desserts/desserts_pfp.jpg', alt: 'Desserts', label: 'Desserts', href: '/five-course-meal/main-page-html/dessert.html' },
+  { image: '/assets/main_course/main_course_pfp.jpg', alt: 'Main course', label: 'Main Course', href: '/five-course-meal/main-page/main-course' },
+  { image: '/assets/appetizers/appetizers_pfp.jpg', alt: 'Appetizers', label: 'Appetizers', href: '/five-course-meal/main-page/appetizer' },
+  { image: '/assets/salad/salad_pfp.jpg', alt: 'Salad', label: 'Salad', href: '/five-course-meal/main-page/salad' },
+  { image: '/assets/desserts/desserts_pfp.jpg', alt: 'Desserts', label: 'Desserts', href: '/five-course-meal/main-page/dessert' },
   { image: '/assets/special_diets/special_diets_pfp.jpg', alt: 'Special Diets', label: 'Special Diets', href: '/five-course-meal/special-diets/index.html' },
 ];
 
