@@ -728,6 +728,36 @@ main {
     box-shadow: 0 4px 12px rgba(0, 122, 112, 0.3);
 }
 
+.chicken-recipes h3 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Playwrite";
+    color: #d0fffd;
+    margin-top:  4.5rem;
+    margin-bottom: 2.5rem;
+    font-weight:  400;
+    letter-spacing: 0.1rem;
+    position: relative;
+    text-shadow: 
+        0 0 5px #41f5d7,
+        0 0 10px #41f5d7,
+        0 0 15px #41f5d7,
+        0 0 20px #099e88,
+        0 0 35px #3ef2e6,
+        0 0 40px #099e88,
+        0 0 50px #029db5;
+    animation: realisticFlicker 4s infinite;
+}
+
+@keyframes realisticFlicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: 1;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+    }
+}
+
 .all-recipes h3 {
     text-align: center;
     font-size: 3rem;
@@ -866,7 +896,7 @@ main {
     color: #007A70;
     text-decoration: underline;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     display: block;
     margin-bottom: 0.5rem;
     transition: color 0.2s ease;
@@ -1096,13 +1126,13 @@ main {
       max-width: 25rem;
   }
 
-  .card a {
+  :is(.card a, .card a:visited) {
     text-decoration: none;
     color: #007A70;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 1.35rem;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-block: 0.5rem;
     transition: color 0.2s ease;
   }
 
@@ -1241,42 +1271,42 @@ main {
         font-size: 2.5rem;
     }
 
-  .recipe-section {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
+    .recipe-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 
-  .top-line {
-      font-size: 3.5rem;
-  }
+    .top-line {
+        font-size: 3.5rem;
+    }
 
-  .bottom-line {
-      font-size: 2.5rem;
-  }
+    .bottom-line {
+        font-size: 2.5rem;
+    }
 
-  .heading-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+    .heading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .recommended-img {
-      flex-direction: column;
-      align-items: center;
-  }
+    .recommended-img {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .recommended-card {
-      width: 100%;
-      max-width: 25rem;
-  }
+    .recommended-card {
+        width: 100%;
+        max-width: 25rem;
+    }
 
-    .card a {
+    :is(.card a, .card a:visited) {
         text-decoration: none;
         color: #007A70;
         font-weight: 600;
-        font-size: 1.7rem;
+        font-size: 1.25rem;
         display: block;
-        margin-bottom: 0.5rem;
+        margin-block: 0.5rem;
         transition: color 0.2s ease;
     }
 

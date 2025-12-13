@@ -3,23 +3,36 @@ import "../../home/Home.css";
 import "../styles/main.css";
 import Navbar from "../../home/Navbar";
 import Footer from "../../home/Footer";
+import Chicken from "./RecipeCard";
 
 export default class MainCourse extends React.Component {
   topPicks = [
-    { img: "/assets/main_course/Chicken Cordon Bleu.png", title: "Chicken Cordon Bleu" },
-    { img: "/assets/main_course/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak" },
-    { img: "/assets/main_course/Shrimp Avocado Cocktail.png", title: "Shrimp Avocado Cocktail" },
+    { img: "/assets/main_course/Chicken/Chicken Cordon Bleu.png", title: "Chicken Cordon Bleu" },
+    { img: "/assets/main_course/Seafood/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak" },
+    { img: "/assets/main_course/Seafood/Shrimp Avocado Cocktail.png", title: "Shrimp Avocado Cocktail" },
   ];
 
+  beef = [
+    { img: "/assets/main_course/Beef/Coffee-Rubbed Braised Short Ribs.png", title: "Braised Short Ribs", href: "/five-course-meal/recipes-html/main-course-recipes.html#short-ribs", time: "3 hr 55 mins" },
+    { img: "/assets/main_course/Chicken/Chicken Marsala.jpg", title: "Chicken Marsala", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "30 mins" },
+    { img: "/assets/main_course/Chicken/Chicken Roulade.jpg", title: "Chicken Roulade", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "1 hr 10 mins" },
+    { img: "/assets/main_course/Chicken/Chicken Wellington.png", title: "Chicken Wellington", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "55 mins" },
+    { img: "/assets/main_course/Chicken/Juicy Pan-Seared Chicken.jpg", title: "Juicy Pan-Seared Chicken", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "15 mins" },
+  ]
+
   allRecipes = [
-    { img: "/assets/main_course/Chicken Cordon Bleu.png", title: "Chicken Cordon Bleu", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "1 hr 15 mins" },
-    { img: "/assets/main_course/Lobster Mango Salad.png", title: "Lobster Mango Salad", href: "/five-course-meal/recipes-html/main-course-recipes.html#lobster-mango-salad", time: "1 hr" },
-    { img: "/assets/main_course/Pork Chops Charcutiere Sauce.png", title: "Pork Chops", href: "/five-course-meal/recipes-html/main-course-recipes.html#pork-chops", time: "25 mins" },
-    { img: "/assets/main_course/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak", href: "/five-course-meal/recipes-html/main-course-recipes.html#salmon-steak", time: "24 mins" },
-    { img: "/assets/main_course/Shrimp Avocado Cocktail.png", title: "Shrimp Avocado Cocktail", href: "/five-course-meal/recipes-html/main-course-recipes.html#shrimp-avocado-cocktail", time: "1 hr 45 mins" },
-    { img: "/assets/main_course/Sole and Salmon Mousse Terrine with Indian Sauce.jpg", title: "Mousse Terrine", href: "/five-course-meal/recipes-html/main-course-recipes.html#mousse-terrine", time: "1 hr 5 mins" },
-    { img: "/assets/main_course/Coffee-Rubbed Braised Short Ribs.png", title: "Braised Short Ribs", href: "/five-course-meal/recipes-html/main-course-recipes.html#short-ribs", time: "3 hr 55 mins" },
-    { img: "/assets/main_course/Fig Arugula and Prosciutto Salad.jpg", title: "Arugula & Prosciutto Salad", href: "/five-course-meal/recipes-html/main-course-recipes.html#arugula-prosciutto-salad", time: "15 mins" },
+    { img: "/assets/main_course/Chicken/Chicken Cordon Bleu.png", title: "Chicken Cordon Bleu", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "1 hr 15 mins" },
+    { img: "/assets/main_course/Chicken/Chicken Marsala.jpg", title: "Chicken Marsala", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "30 mins" },
+    { img: "/assets/main_course/Chicken/Chicken Roulade.jpg", title: "Chicken Roulade", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "1 hr 10 mins" },
+    { img: "/assets/main_course/Chicken/Chicken Wellington.png", title: "Chicken Wellington", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "55 mins" },
+    { img: "/assets/main_course/Chicken/Juicy Pan-Seared Chicken.jpg", title: "Juicy Pan-Seared Chicken", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "15 mins" },
+    { img: "/assets/main_course/Seafood/Lobster Mango Salad.png", title: "Lobster Mango Salad", href: "/five-course-meal/recipes-html/main-course-recipes.html#lobster-mango-salad", time: "1 hr" },
+    { img: "/assets/main_course/Pork/Pork Chops Charcutiere Sauce.png", title: "Pork Chops", href: "/five-course-meal/recipes-html/main-course-recipes.html#pork-chops", time: "25 mins" },
+    { img: "/assets/main_course/Seafood/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak", href: "/five-course-meal/recipes-html/main-course-recipes.html#salmon-steak", time: "24 mins" },
+    { img: "/assets/main_course/Seafood/Shrimp Avocado Cocktail.png", title: "Shrimp Avocado Cocktail", href: "/five-course-meal/recipes-html/main-course-recipes.html#shrimp-avocado-cocktail", time: "1 hr 45 mins" },
+    { img: "/assets/main_course/Seafood/Sole and Salmon Mousse Terrine with Indian Sauce.jpg", title: "Mousse Terrine", href: "/five-course-meal/recipes-html/main-course-recipes.html#mousse-terrine", time: "1 hr 5 mins" },
+    { img: "/assets/main_course/Beef/Coffee-Rubbed Braised Short Ribs.png", title: "Braised Short Ribs", href: "/five-course-meal/recipes-html/main-course-recipes.html#short-ribs", time: "3 hr 55 mins" },
+    { img: "/assets/main_course/Lamb/Fig Arugula and Prosciutto Salad.jpg", title: "Arugula & Prosciutto Salad", href: "/five-course-meal/recipes-html/main-course-recipes.html#arugula-prosciutto-salad", time: "15 mins" },
   ];
 
   renderTopPicks() {
@@ -86,6 +99,14 @@ export default class MainCourse extends React.Component {
             </div>
             {this.renderTopPicks()}
           </section>
+
+          <div className="chicken-recipes">
+            <h3 className="chicken-recipes">
+              Chicken
+            </h3>
+          </div>
+
+          <Chicken />
 
           <div className="all-recipes">
             <h3 className="all-recipes">
