@@ -33,7 +33,7 @@ main {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 100;
 }
 
 .header-navigation ul {
@@ -662,6 +662,7 @@ main {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
     contain: layout style paint;
+    margin-bottom: 2rem;
 }
 
 .recommended-card:hover {
@@ -728,13 +729,13 @@ main {
     box-shadow: 0 4px 12px rgba(0, 122, 112, 0.3);
 }
 
-.chicken-recipes h3 {
+.category-recipes h3 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 2.3rem;
     font-family: "Playwrite";
-    color: #d0fffd;
-    margin-top:  4.5rem;
-    margin-bottom: 2.5rem;
+    color: #e1fdfc;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     font-weight:  400;
     letter-spacing: 0.1rem;
     position: relative;
@@ -765,7 +766,7 @@ main {
     color: #fff;
     text-shadow: 0 -20px 80px, 0 0 2px, 0 0 1em #1f9188, 
     0 0 0.3em #1f9188, 0 0 0.1em #1f9188, 0 10px 3px #1f9188;
-    margin-top: 4.5rem;
+    margin-top: 1.5rem;
     margin-bottom: 2.5rem;
     animation: flicker 1.5s infinite alternate;
 }
@@ -844,6 +845,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -896,7 +898,8 @@ main {
     color: #007A70;
     text-decoration: underline;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    padding-inline: 0.2rem;
     display: block;
     margin-bottom: 0.5rem;
     transition: color 0.2s ease;
@@ -1108,6 +1111,7 @@ main {
 
   .bottom-line {
       font-size: 2.5rem;
+      margin-bottom: 1.5rem;
   }
 
   .heading-container {
@@ -1124,6 +1128,10 @@ main {
   .recommended-card {
       width: 100%;
       max-width: 25rem;
+  }
+
+  .category-recipes h3 {
+    font-size: 3.5rem;
   }
 
   :is(.card a, .card a:visited) {
@@ -1155,9 +1163,18 @@ main {
     .main-title {
         padding-top: 7.5rem;
     }
+    .header-navigation {
+        padding-right: 0;
+        box-sizing: border-box;
+    }
 }
 
 @media screen and (max-width: 960px) {
+
+    .header-navigation {
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
 
   .main-title {
         padding-top: 4rem;
@@ -1349,6 +1366,13 @@ main {
 
 @media screen and (max-width: 768px) {
 
+    .heading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
     body {
         overflow-x: hidden;
     }
@@ -1539,6 +1563,10 @@ main {
     .bars::after {
         width: 2rem;
     }
+
+    .category-recipes h3 {
+        font-size: 3rem;
+    }
         
     .recipe-section {
         grid-template-columns: repeat(2, 1fr);
@@ -1596,6 +1624,13 @@ main {
 }
 
 @media screen and (max-width: 480px) {
+
+    .heading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
 
     .main-title {
       padding-top: 6.5rem;

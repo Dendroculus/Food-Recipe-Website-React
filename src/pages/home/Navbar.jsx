@@ -6,7 +6,7 @@ const recipesItems = [
   { image: '/assets/appetizers/appetizers_pfp.jpg', alt: 'Appetizers', label: 'Appetizers', href: '/five-course-meal/main-page/appetizer' },
   { image: '/assets/salad/salad_pfp.jpg', alt: 'Salad', label: 'Salad', href: '/five-course-meal/main-page/salad' },
   { image: '/assets/desserts/desserts_pfp.jpg', alt: 'Desserts', label: 'Desserts', href: '/five-course-meal/main-page/dessert' },
-  { image: '/assets/special_diets/special_diets_pfp.jpg', alt: 'Special Diets', label: 'Special Diets', href: '/five-course-meal/special-diets/index.html' },
+  { image: '/assets/special_diets/special_diets_pfp.jpg', alt: 'Special Diets', label: 'Special Diets', href: '/five-course-meal/main-page/special-diets' },
 ];
 
 const inspirationItems = [
