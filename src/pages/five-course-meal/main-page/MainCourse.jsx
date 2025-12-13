@@ -3,22 +3,10 @@ import "../../home/Home.css";
 import "../styles/main.css";
 import RecipeNavBar from "../RecipesNavBar"; 
 import Footer from "../../home/Footer";
-import Chicken from "./RecipeCard";
+import MainCourseRecipeCard from "./MainCourseRecipeCard";
+import TopPicks from "./TopPicks";
 
 export default class MainCourse extends React.Component {
-  topPicks = [
-    { img: "/assets/main_course/Chicken/Chicken Cordon Bleu.png", title: "Chicken Cordon Bleu" },
-    { img: "/assets/main_course/Seafood/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak" },
-    { img: "/assets/main_course/Seafood/Shrimp Avocado Cocktail.png", title: "Shrimp Avocado Cocktail" },
-  ];
-
-  beef = [
-    { img: "/assets/main_course/Beef/Coffee-Rubbed Braised Short Ribs.png", title: "Braised Short Ribs", href: "/five-course-meal/recipes-html/main-course-recipes.html#short-ribs", time: "3 hr 55 mins" },
-    { img: "/assets/main_course/Chicken/Chicken Marsala.jpg", title: "Chicken Marsala", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "30 mins" },
-    { img: "/assets/main_course/Chicken/Chicken Roulade.jpg", title: "Chicken Roulade", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "1 hr 10 mins" },
-    { img: "/assets/main_course/Chicken/Chicken Wellington.png", title: "Chicken Wellington", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "55 mins" },
-    { img: "/assets/main_course/Chicken/Juicy Pan-Seared Chicken.jpg", title: "Juicy Pan-Seared Chicken", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "15 mins" },
-  ]
 
   allRecipes = [
     { img: "/assets/main_course/Chicken/Chicken Cordon Bleu.png", title: "Chicken Cordon Bleu", href: "/five-course-meal/recipes-html/main-course-recipes.html#chicken-cordon-bleu", time: "1 hr 15 mins" },
@@ -34,21 +22,6 @@ export default class MainCourse extends React.Component {
     { img: "/assets/main_course/Beef/Coffee-Rubbed Braised Short Ribs.png", title: "Braised Short Ribs", href: "/five-course-meal/recipes-html/main-course-recipes.html#short-ribs", time: "3 hr 55 mins" },
     { img: "/assets/main_course/Lamb/Fig Arugula and Prosciutto Salad.jpg", title: "Arugula & Prosciutto Salad", href: "/five-course-meal/recipes-html/main-course-recipes.html#arugula-prosciutto-salad", time: "15 mins" },
   ];
-
-  renderTopPicks() {
-    return (
-      <div className="recommended-img">
-        {this.topPicks.map((item) => (
-          <div className="recommended-card" key={item.title}>
-            <img src={item.img} alt={item.title} />
-            <div className="overlay">
-              <p className="text">{item.title}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  }
 
   renderAllRecipes() {
     return (
@@ -90,23 +63,9 @@ export default class MainCourse extends React.Component {
             </div>
           </div>
 
-          <section className="recommended-section">
-            <div className="heading-container">
-              <h3 className="top-pick-heading">
-                <span className="top-line">Top Picks</span>
-                <span className="bottom-line">Main Course</span>
-              </h3>
-            </div>
-            {this.renderTopPicks()}
-          </section>
+          <TopPicks />
 
-          <div className="chicken-recipes">
-            <h3 className="chicken-recipes">
-              Chicken
-            </h3>
-          </div>
-
-          <Chicken />
+          <MainCourseRecipeCard />
 
           <div className="all-recipes">
             <h3 className="all-recipes">

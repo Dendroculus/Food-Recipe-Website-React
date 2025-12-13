@@ -64,6 +64,7 @@ export default class Dessert extends React.Component {
             </div>
             <button type="button" className="cta-button">
               <i className="bi bi-bookmark-heart"></i>
+              &nbsp;
               Save Your Favorites
             </button>
           </section>

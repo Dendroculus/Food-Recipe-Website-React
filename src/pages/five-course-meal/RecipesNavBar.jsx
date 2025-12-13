@@ -38,7 +38,7 @@ class RecipeNavbar extends React.Component {
         key: "special-diets",
         label: "Special Diets",
         img: "/assets/special_diets/vegan/Vegan BG.jpg",
-        href: "/five-course-meal/special-diets/index.html",
+        href: "/five-course-meal/main-page/special-diets",
         match: "special-diets",
       },
     ];

@@ -6,21 +6,21 @@ import Footer from "../../home/Footer";
 
 export default class Appetizer extends React.Component {
   topPicks = [
-    { img: "/assets/appetizers/Florentine Ciabatta.jpg", title: "Florentine Ciabatta" },
-    { img: "/assets/appetizers/Party Cheese Bread.jpg", title: "Party Cheese Bread" },
-    { img: "/assets/appetizers/Ham 'n' Cheese Biscuit Stacks.jpg", title: "Ham 'n' Cheese Biscuit Stacks" },
-    { img: "/assets/appetizers/Stuffed Cherry Tomatoes.jpg", title: "Stuffed Cherry Tomatoes" },
+    { img: "/assets/appetizers/Bread/Florentine Ciabatta.jpg", title: "Florentine Ciabatta" },
+    { img: "/assets/appetizers/Dip-Based/Party Cheese Bread.jpg", title: "Party Cheese Bread" },
+    { img: "/assets/appetizers/Finger Food/Ham n Cheese Biscuit Stacks.jpg", title: "Ham 'n' Cheese Biscuit Stacks" },
+    { img: "/assets/appetizers/Finger Food/Stuffed Cherry Tomatoes.jpg", title: "Stuffed Cherry Tomatoes" },
   ];
 
   allRecipes = [
-    { img: "/assets/appetizers/Florentine Ciabatta.jpg", title: "Florentine Ciabatta", href: "/five-course-meal/recipes-html/appetizer-recipes.html#florentine-ciabatta", time: "25 mins" },
-    { img: "/assets/appetizers/Fried Prosciutto Tortellini.jpg", title: "Fried Prosciutto Tortellini", href: "/five-course-meal/recipes-html/appetizer-recipes.html#fried-prosciutto-tortellini", time: "30 mins" },
-    { img: "/assets/appetizers/Hot Spinach Artichoke Dip.jpg", title: "Hot Spinach Artichoke Dip", href: "/five-course-meal/recipes-html/appetizer-recipes.html#artichoke-dip", time: "40 mins" },
-    { img: "/assets/appetizers/Grilled Tomato-Peach Pizza.jpg", title: "Grilled Tomato-Peach Pizza", href: "/five-course-meal/recipes-html/appetizer-recipes.html#grilled-pizza", time: "25 mins" },
-    { img: "/assets/appetizers/Orange Marmalade Meatballs.jpg", title: "Orange Marmalade Meatballs", href: "/five-course-meal/recipes-html/appetizer-recipes.html#meatballs", time: "30 mins" },
-    { img: "/assets/appetizers/Party Cheese Bread.jpg", title: "Party Cheese Bread", href: "/five-course-meal/recipes-html/appetizer-recipes.html#party-cheese-bread", time: "55 mins" },
-    { img: "/assets/appetizers/Stuffed Cherry Tomatoes.jpg", title: "Stuffed Cherry Tomatoes", href: "/five-course-meal/recipes-html/appetizer-recipes.html#stuffed-cherry-tomatoes", time: "40 mins" },
-    { img: "/assets/appetizers/Ham 'n' Cheese Biscuit Stacks.jpg", title: "Ham 'n' Cheese Biscuit Stacks", href: "/five-course-meal/recipes-html/appetizer-recipes.html#cheese-biscuit-stacks", time: "25 mins" },
+    { img: "/assets/appetizers/Bread/Florentine Ciabatta.jpg", title: "Florentine Ciabatta", href: "/five-course-meal/recipes-html/appetizer-recipes.html#florentine-ciabatta", time: "25 mins" },
+    { img: "/assets/appetizers/Finger Food/Fried Prosciutto Tortellini.jpg", title: "Fried Prosciutto Tortellini", href: "/five-course-meal/recipes-html/appetizer-recipes.html#fried-prosciutto-tortellini", time: "30 mins" },
+    { img: "/assets/appetizers/Dip-Based/Hot Spinach Artichoke Dip.jpg", title: "Hot Spinach Artichoke Dip", href: "/five-course-meal/recipes-html/appetizer-recipes.html#artichoke-dip", time: "40 mins" },
+    { img: "/assets/appetizers/Bread/Grilled Tomato-Peach Pizza.jpg", title: "Grilled Tomato-Peach Pizza", href: "/five-course-meal/recipes-html/appetizer-recipes.html#grilled-pizza", time: "25 mins" },
+    { img: "/assets/appetizers/Finger Food/Orange Marmalade Meatballs.jpg", title: "Orange Marmalade Meatballs", href: "/five-course-meal/recipes-html/appetizer-recipes.html#meatballs", time: "30 mins" },
+    { img: "/assets/appetizers/Dip-Based/Party Cheese Bread.jpg", title: "Party Cheese Bread", href: "/five-course-meal/recipes-html/appetizer-recipes.html#party-cheese-bread", time: "55 mins" },
+    { img: "/assets/appetizers/Finger Food/Stuffed Cherry Tomatoes.jpg", title: "Stuffed Cherry Tomatoes", href: "/five-course-meal/recipes-html/appetizer-recipes.html#stuffed-cherry-tomatoes", time: "40 mins" },
+    { img: "/assets/appetizers/Finger Food/Ham n Cheese Biscuit Stacks.jpg", title: "Ham 'n' Cheese Biscuit Stacks", href: "/five-course-meal/recipes-html/appetizer-recipes.html#cheese-biscuit-stacks", time: "25 mins" },
   ];
 
   renderCardGrid(list, className = "row g-4", imgClass = "card-img", descClass = "section-description") {
