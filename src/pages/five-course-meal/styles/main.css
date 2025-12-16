@@ -615,7 +615,7 @@ main {
 
 .top-line {
     display: block;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     color: #007A70;
     text-transform: uppercase;
@@ -630,17 +630,18 @@ main {
     bottom: -0.1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 6rem;
+    width: 8rem;
     height: 0.2rem;
     background: linear-gradient(90deg, #007A70, #bffbf6);
 }
 
 .bottom-line {
     display: block;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #7f8c8d;
     font-style: italic;
     letter-spacing: 0.1rem;
+    margin-bottom: 1.2rem;
 }
 
 .recommended-section, .recommended-img {
