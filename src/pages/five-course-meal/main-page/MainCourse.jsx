@@ -91,12 +91,6 @@ export default class MainCourse extends React.Component {
         <main>
           <h1 className="head-title">Main Course</h1>
 
-          <div className="summary-content">
-            <p className="main-course-definition">
-              The main course is the primary dish of food served for lunch or dinner. It is also known by the name of Entree in many countries.
-            </p>
-          </div>
-
           <div className="main text-container">
             <div className="content">
               <p className="check-out">

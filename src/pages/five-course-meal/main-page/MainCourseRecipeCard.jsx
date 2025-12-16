@@ -82,7 +82,7 @@ export default class MainCourseRecipeCard extends React.Component {
     handleChickenPrevious = () => {
         this.setState((prevState) => ({
             chickenIndex: prevState.chickenIndex === 0 
-                ? Math.ceil(this. chicken.length / prevState.recipesPerView) - 1 
+                ? Math.ceil(this.chicken.length / prevState.recipesPerView) - 1 
                 : prevState.chickenIndex - 1
         }));
     }
@@ -105,7 +105,7 @@ export default class MainCourseRecipeCard extends React.Component {
 
     handleBeefNext = () => {
         this.setState((prevState) => ({
-            beefIndex: prevState. beefIndex >= Math.ceil(this.beef.length / prevState.recipesPerView) - 1 
+            beefIndex: prevState.beefIndex >= Math.ceil(this.beef.length / prevState.recipesPerView) - 1 
                 ? 0 
                 : prevState.beefIndex + 1
         }));
@@ -114,14 +114,14 @@ export default class MainCourseRecipeCard extends React.Component {
     handleLambPrevious = () => {
         this.setState((prevState) => ({
             lambIndex: prevState.lambIndex === 0 
-                ? Math.ceil(this.lamb.length / prevState. recipesPerView) - 1 
+                ? Math.ceil(this.lamb.length / prevState.recipesPerView) - 1 
                 : prevState.lambIndex - 1
         }));
     }
 
     handleLambNext = () => {
         this.setState((prevState) => ({
-            lambIndex: prevState. lambIndex >= Math.ceil(this.lamb.length / prevState. recipesPerView) - 1 
+            lambIndex: prevState.lambIndex >= Math.ceil(this.lamb.length / prevState.recipesPerView) - 1 
                 ? 0 
                 : prevState.lambIndex + 1
         }));
@@ -131,13 +131,13 @@ export default class MainCourseRecipeCard extends React.Component {
         this.setState((prevState) => ({
             porkIndex: prevState.porkIndex === 0 
                 ? Math.ceil(this.pork.length / prevState.recipesPerView) - 1 
-                : prevState. porkIndex - 1
+                : prevState.porkIndex - 1
         }));
     }
 
     handlePorkNext = () => {
         this.setState((prevState) => ({
-            porkIndex:  prevState.porkIndex >= Math.ceil(this.pork.length / prevState.recipesPerView) - 1 
+            porkIndex: prevState.porkIndex >= Math.ceil(this.pork.length / prevState.recipesPerView) - 1 
                 ? 0 
                 : prevState.porkIndex + 1
         }));
@@ -145,15 +145,15 @@ export default class MainCourseRecipeCard extends React.Component {
 
     handleSeafoodPrevious = () => {
         this.setState((prevState) => ({
-            seafoodIndex: prevState. seafoodIndex === 0 
-                ? Math.ceil(this. seafood.length / prevState. recipesPerView) - 1 
+            seafoodIndex: prevState.seafoodIndex === 0 
+                ? Math.ceil(this.seafood.length / prevState.recipesPerView) - 1 
                 : prevState.seafoodIndex - 1
         }));
     }
 
     handleSeafoodNext = () => {
         this.setState((prevState) => ({
-            seafoodIndex:  prevState.seafoodIndex >= Math.ceil(this.seafood.length / prevState.recipesPerView) - 1 
+            seafoodIndex: prevState.seafoodIndex >= Math.ceil(this.seafood.length / prevState.recipesPerView) - 1 
                 ? 0 
                 : prevState.seafoodIndex + 1
         }));

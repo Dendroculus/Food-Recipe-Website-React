@@ -106,7 +106,7 @@ export default class TopPicks extends React.Component {
                             if (index === currentIndex) {
                                 position = 'activeSlide';
                             }
-                            if (index === currentIndex - 1 || (currentIndex === 0 && index === this.topPicks. length - 1)) {
+                            if (index === currentIndex - 1 || (currentIndex === 0 && index === this.topPicks.length - 1)) {
                                 position = 'lastSlide';
                             }
 
