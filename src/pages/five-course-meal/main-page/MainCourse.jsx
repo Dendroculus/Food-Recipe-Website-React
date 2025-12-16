@@ -141,7 +141,7 @@ export default class MainCourse extends React.Component {
           <button 
             className={`filter-btn ${activeFilter === 'valentine' ? 'active' : ''}`}
             onClick={() => this.setFilter('valentine')}>
-            <FaHeart /> Thanksgiving
+            <FaHeart /> Valentine
           </button>
           <button 
             className={`filter-btn ${activeFilter === 'easter' ? 'active' : ''}`}
