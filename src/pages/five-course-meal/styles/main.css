@@ -33,8 +33,8 @@ main {
     background-attachment: fixed;
     background-size: 100% 100%;  
     background-repeat: no-repeat;
-    padding-bottom: 2. 5rem;
-    max-width: 1400px;
+    padding-bottom: 2.5rem;
+    max-width: 87.5rem;
     margin: 0 auto;
     min-height: 100vh;
 }
@@ -288,7 +288,7 @@ main {
 .main-title::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -0.5rem;
     left: 0;
     width: 100%;
     height: 1rem;
@@ -436,7 +436,7 @@ main {
     font-family: 'Playwrite', sans-serif;
     color: #007A70;
     padding-top: 2.5rem;
-    margin-top: 5rem;
+    margin-top: 7rem;
     margin-bottom: 1.5rem;
 }
 
@@ -449,12 +449,12 @@ main {
 .dessert-description {
     padding: 3rem 1rem;
     position: relative;
-    border-radius: 16px;
+    border-radius: 1rem;
     margin: 2rem auto;
     width: 60%;
     max-width: 100%;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 2rem #0000001a;
 }
 
 .dessert-description::before {
@@ -464,22 +464,22 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2)),
+    background-image: linear-gradient(#00000033),
         url('/public/assets/bg-image/dessert-gif.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 16px;
+    border-radius: 1rem;
 }
 
 .dessert-summary-content {
     text-align: center;
     margin-bottom: 2.5rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: #ffffffb3;
+    border-radius: 0.75rem;
+    border: 1px solid #ffffff33;
+    box-shadow: 0 0.5rem 2rem #0000001a;
     position: relative;
     overflow: hidden;
 }
@@ -568,15 +568,15 @@ main {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(4, 49, 48, 0.2);
-    color: white;
+    background: #04313033;
+    color: #fff;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 500;
     margin-top: 1.5rem;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ffffff4d;
     transition: all 0.3s ease;
     width: auto;
 }
@@ -584,7 +584,7 @@ main {
 .cta-button:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.1rem 0.2rem #00000033;
 }
 
 .text-container .content p:last-of-type {
@@ -671,7 +671,7 @@ main {
     height: 15rem;
     border-radius: 20%;
     overflow: hidden;
-    box-shadow: 0 10px 20px #00000026;
+    box-shadow: 0 0.625rem 1.25rem #00000026;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
     contain: layout style paint;
@@ -720,7 +720,7 @@ main {
     font-size: 1.8rem;
     text-align: center;
     padding: 2rem;
-    text-shadow: 1px 1px 3px #333;
+    text-shadow: 0.06rem 0.06rem 0.2rem #333;
     transform: translateY(1rem);
     transition: transform 0.4s ease;
 }
@@ -739,7 +739,7 @@ main {
 }
 
 .btn-secondary:hover {
-    box-shadow: 0 4px 12px rgba(0, 122, 112, 0.3);
+    box-shadow: 0 0.25rem 0.75rem #007a704d;
 }
 
 .category-recipes h3 {
@@ -777,8 +777,8 @@ main {
     font-size: 3rem;
     font-family: 'Georgia', serif;
     color: #fff;
-    text-shadow: 0 -20px 80px, 0 0 2px, 0 0 1em #1f9188, 
-    0 0 0.3em #1f9188, 0 0 0.1em #1f9188, 0 10px 3px #1f9188;
+    text-shadow: 0 -1.25rem 5rem, 0 0 0.125rem, 0 0 1em #1f9188, 
+    0 0 0.3em #1f9188, 0 0 0.1em #1f9188, 0 0.625rem 0.2rem #1f9188;
     margin-top: 1.5rem;
     margin-bottom: 2.5rem;
     animation: flicker 1.5s infinite alternate;
@@ -836,11 +836,73 @@ main {
     contain: layout style paint;
 }
 
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem auto 2rem;
+    padding: 2rem;
+    max-width: 75rem;
+    background: #ffffffcc;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.1rem 0.2rem #00000033;
+}
+
+.filter-category-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #007A70;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.filter-divider {
+    width: 100%;
+    height: 0.125rem;
+    background: linear-gradient(90deg, transparent, #007A70, transparent);
+    margin: 0.5rem 0;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #fff;
+    color: #007A70;
+    border: 2px solid #007A70;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #007A70;
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #007A70, #00B4A0);
+    color: #fff;
+    border-color: #007A70;
+}
+
 .recipe-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 2rem;
     gap: 2rem;
+}
+
+.filter-btn svg {
+    font-size: 1.2rem;
 }
 
 .recipe-section .card-container .card {
@@ -957,7 +1019,7 @@ main {
 @media (hover: none) and (pointer: coarse) {
     .recipe-section .card-container .card .fa-heart {
         min-width: 3rem;
-        min-height:  3rem;
+        min-height: 3rem;
     }
     
     .recipe-section .card-container .card .fa-heart:active {
@@ -1061,15 +1123,20 @@ main {
     color: #fff;
 }
 
+.pagination-btn.active {
+    background: #007A70;
+    color: #fff;
+}
+
 .pagination-btn.pagination-next {
     background: transparent;
-    border: 3px solid #007A70;
+    border: 0.2rem solid #007A70;
     color: #007A70;
 }
 
 .more-recipes-section {
     background: 
-        linear-gradient(rgba(30, 30, 30, 0.6), rgba(30, 30, 30, 0.6)),
+        linear-gradient(#1e1e1e99, #1e1e1e99),
         url("/public/assets/bg-image/baking-bg.jpg") center/cover;
     display: flex;
     align-items: center;
@@ -1079,7 +1146,7 @@ main {
     padding: 5rem 2rem;
     min-height: 2.5rem;
     width: 80%;
-    border-radius: 25px;
+    border-radius: 1.6rem;
 }
 
 .more-recipes-section .container {
@@ -1090,23 +1157,23 @@ main {
 
 .more-recipes-section .col-lg-8 {
     padding: 3rem 4rem;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 0.94rem;
+    box-shadow: 0 0.95rem 2.5rem #00000026;
 }
 
 .cooking-badge {
     background: linear-gradient(45deg, #007A70, #52aea7);
     color: #fff;
     padding: 0.5rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 1.6rem;
     font-weight: 700;
     font-size: 0.75rem;
     letter-spacing: 1px;
     display: inline-block;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.03rem;
     margin-bottom: 1rem;
     max-width: 100%;
-    box-shadow: 0 4px 15px rgba(34, 167, 147, 0.3);
+    box-shadow: 0 0.6rem 1.6rem #007a7066;
 }
 
 .more-section-title {
@@ -1132,19 +1199,19 @@ main {
     color: #fff;
     padding: 0.4rem 1.8rem;
     border: none;
-    border-radius: 25px;
+    border-radius: 1.6rem;
     font-weight: 700;
     font-size: 1.1rem;
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(0, 122, 112, 0.3);
+    box-shadow: 0 0.4rem 1.5rem #007a704d;
     max-width: 100%;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 122, 112, 0.4);
+    box-shadow: 0 0.6rem 1.6rem #007a7066;
     color: white;
 }
 
@@ -1176,20 +1243,20 @@ main {
   .dessert-description {
         padding: 4rem 2rem;
         margin: 3rem auto;
-        border-radius: 20px;
+        border-radius: 1.5rem;
         width: 90%;
         max-width: 90%;
     }
     
     .dessert-description::before {
-        border-radius: 20px;
+        border-radius: 1.5rem;
         background-position: center 30%;
     }
     
     .dessert-summary-content {
         padding: 2.5rem 3rem;
         margin-bottom: 3rem;
-        border-radius: 16px;
+        border-radius: 1rem;
         background: rgba(255, 255, 255, 0.7);
         max-width: 90%;
         margin-left: auto;
@@ -1354,20 +1421,20 @@ main {
     .dessert-description {
         padding: 4rem 2rem;
         margin: 3rem auto;
-        border-radius: 20px;
+        border-radius: 1.5rem;
         width: 90%;
         max-width: 90%;
     }
     
     .dessert-description::before {
-        border-radius: 20px;
+        border-radius: 1.5rem;
         background-position: center 30%;
     }
     
     .dessert-summary-content {
         padding: 2.5rem 3rem;
         margin-bottom: 3rem;
-        border-radius: 16px;
+        border-radius: 1rem;
         background: rgba(255, 255, 255, 0.7);
         max-width: 90%;
         margin-left: auto;
@@ -1414,20 +1481,20 @@ main {
     .dessert-description {
         padding: 4rem 2rem;
         margin: 3rem auto;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         width: 80%;
         max-width: 80%;
     }
     
     .dessert-description::before {
-        border-radius: 20px;
+        border-radius: 1.25rem;
         background-position: center 30%;
     }
     
     .dessert-summary-content {
         padding: 2.5rem 3rem;
         margin-bottom: 3rem;
-        border-radius: 16px;
+        border-radius: 1rem;
         background: rgba(255, 255, 255, 0.7);
         max-width: 90%;
         margin-left: auto;
@@ -1566,7 +1633,7 @@ main {
     }
     
    .dessert-description {
-        max-height: 400px;
+        max-height: 25rem;
         max-width: 90%;
         width: 90%;
         margin: 1rem auto;
@@ -1732,6 +1799,23 @@ main {
     .category-recipes h3 {
         font-size: 3rem;
     }
+
+    .filter-container {
+        margin: 2rem 1rem 1.5rem;
+        padding: 1.5rem 1rem;
+        gap: 0.8rem;
+        border-radius: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .filter-category-title {
+        font-size: 1rem;
+    }
         
     .recipe-section {
         grid-template-columns: repeat(2, 1fr);
@@ -1860,7 +1944,7 @@ main {
         font-size: 1.2rem;
         display: block;
         margin-right: 2rem;
-        max-width: 120px;
+        max-width: 7.5rem;
     }
 
     .other-logo {
@@ -1911,13 +1995,13 @@ main {
 
     .more-recipes-section {
         padding: 1.5rem 0.8rem;
-        max-height: 400px;
+        max-height: 25rem;
         margin: 0 auto;
         margin-top: 3.5rem;
     }
     
     .more-recipes-section::before {
-        background-size: 150px;
+        background-size: 9.5rem;
     }
     
     .cooking-badge {
@@ -1966,7 +2050,7 @@ main {
     }
 
     .recipe-menu {
-        width: 200px;
+        width: 12.5rem;
         padding: 3rem 1rem 1.5rem;
     }
 
@@ -2002,6 +2086,24 @@ main {
     .btn-secondary {
         font-size: 1rem;
         padding: 0.5rem 1rem;
+    }
+
+    .filter-container {
+        margin: 1.5rem 0.5rem 1rem;
+        padding: 1rem 0.5rem;
+        gap: 0.6rem;
+        border-radius: 0.8rem;
+        max-width: calc(100% - 1rem);
+        box-shadow: 0 0.05rem 0.15rem rgba(0, 0, 0, 0.2);
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .filter-btn svg {
+        font-size: 1rem;
     }
 
     .card-content p {

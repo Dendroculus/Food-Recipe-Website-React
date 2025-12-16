@@ -5,7 +5,9 @@ import RecipeNavBar from "../RecipesNavBar";
 import Footer from "../../home/Footer";
 import RecipeCard from "./RecipeCard";
 import TopPicks from "./TopPicks";
-import { FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaCanadianMapleLeaf, FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart, FaSnowflake, FaLeaf, FaSun, FaGift } from "react-icons/fa";
+import { PiRabbit } from "react-icons/pi";
+import { GiChickenOven, GiPumpkinLantern } from "react-icons/gi";
 import { chicken, beef, lamb, pork, seafood, allRecipes } from './MainCourseData';
 
 export default class MainCourse extends React.Component {
@@ -16,11 +18,26 @@ export default class MainCourse extends React.Component {
       savedRecipes: [],
       currentPage: 1,
       recipesPerPage: 8,
-      tappedHeart: null
+      tappedHeart: null,
+      activeFilter: 'all'
     };
     this.toggleSave = this.toggleSave.bind(this);
     this.paginate = this.paginate.bind(this);
     this.handleHeartTap = this.handleHeartTap.bind(this);
+    this.setFilter = this.setFilter.bind(this);
+  }
+
+  setFilter(filter) {
+    this.setState({
+      activeFilter: filter,
+      currentPage: 1
+    });
+  }
+
+  getFilteredRecipes() {
+    const { activeFilter } = this.state;
+    if (activeFilter === 'all') return allRecipes;
+    return allRecipes.filter((recipe) => recipe.tags && recipe.tags.includes(activeFilter) ? true : false)
   }
 
   handleHeartTap(recipeTitle) {
@@ -71,11 +88,12 @@ export default class MainCourse extends React.Component {
   }
 
   renderAllRecipes() {
-    const { currentPage, recipesPerPage } = this.state;
+    const { currentPage, recipesPerPage, activeFilter } = this.state;
+    const filteredRecipes = this.getFilteredRecipes();
     const indexOfLastRecipe = currentPage * recipesPerPage;
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
-    const currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
-    const totalPages = Math.ceil(allRecipes.length / recipesPerPage);
+    const currentRecipes = filteredRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
+    const totalPages = Math.ceil(filteredRecipes.length / recipesPerPage);
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
       pageNumbers.push(i);
@@ -83,6 +101,59 @@ export default class MainCourse extends React.Component {
 
     return (
       <Fragment>
+        <div className="filter-container">
+          <button className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`} 
+            onClick={() => this.setFilter('all')}>
+              All Recipes
+          </button>
+          <div className="filter-divider"></div>
+          <h4 className="filter-category-title">Seasons</h4>
+          <button className={`filter-btn ${activeFilter === 'winter' ? 'active': ''}`} 
+            onClick={() => this.setFilter('winter')}>
+              <FaSnowflake /> Winter
+          </button>
+          <button className={`filter-btn ${activeFilter === 'spring' ? 'active': ''}`} 
+            onClick={() => this.setFilter('spring')}>
+              <FaLeaf /> Spring
+          </button>
+          <button className={`filter-btn ${activeFilter === 'summer' ? 'active': ''}`} 
+            onClick={() => this.setFilter('summer')}>
+              <FaSun /> Summer
+          </button>
+          <button className={`filter-btn ${activeFilter === 'fall' ? 'active': ''}`} 
+            onClick={() => this.setFilter('fall')}>
+              <FaCanadianMapleLeaf /> Fall
+          </button>
+
+          <div className="filter-divider"></div>
+
+          <h4 className="filter-category-title">Events</h4>
+
+          <button className={`filter-btn ${activeFilter === 'christmas' ? 'active': ''}`} 
+              onClick={() => this.setFilter('christmas')}>
+              <FaGift /> Christmas
+          </button>
+          <button 
+            className={`filter-btn ${activeFilter === 'thanksgiving' ? 'active' : ''}`}
+            onClick={() => this.setFilter('thanksgiving')}>
+            <GiChickenOven /> Thanksgiving
+          </button>
+          <button 
+            className={`filter-btn ${activeFilter === 'valentine' ? 'active' : ''}`}
+            onClick={() => this.setFilter('valentine')}>
+            <FaHeart /> Thanksgiving
+          </button>
+          <button 
+            className={`filter-btn ${activeFilter === 'easter' ? 'active' : ''}`}
+            onClick={() => this.setFilter('easter')}>
+            <PiRabbit /> Easter
+          </button>
+          <button 
+            className={`filter-btn ${activeFilter === 'halloween' ? 'active' : ''}`}
+            onClick={() => this.setFilter('halloween')}>
+            <GiPumpkinLantern /> Halloween
+          </button>
+        </div>
         <section className="recipe-section">
           {currentRecipes.map((r) => {
             const isSaved = this.isRecipesSaved(r.title);
