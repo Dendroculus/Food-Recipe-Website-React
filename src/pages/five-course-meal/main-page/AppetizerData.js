@@ -157,9 +157,9 @@ const allAppetizerRecipes = [
     id: 34,
     category: 'appetizers',
     subcategory: 'bread',
-    img:  "/assets/appetizers/Bread/Mini Citrus Monkey Bread.jpeg", 
+    img: "/assets/appetizers/Bread/Mini Citrus Monkey Bread.jpeg", 
     title: "Mini Citrus Monkey Bread", 
-    href:  "/five-course-meal/recipes-html/appetizers-recipes. html#citrus-monkey-bread", 
+    href: "/five-course-meal/recipes-html/appetizers-recipes. html#citrus-monkey-bread", 
     time: "45 mins", 
     keywords:  ['appetizer', 'bread', 'monkey bread', 'citrus', 'sweet'],
     tags: ['spring', 'easter'] 

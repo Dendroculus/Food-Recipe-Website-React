@@ -1,27 +1,27 @@
 const lettuce_based = [
   { 
-    img: "/assets/salads/Lettuce-Based/Butter Lettuce Salad.jpg", 
+    img: "/assets/salad/Lettuce-Based/Butter Lettuce Salad.jpg", 
     title: "Butter Lettuce Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#butter-lettuce-salad", 
     time: "10 mins", 
     tags: ['summer', 'spring'] 
   },
   { 
-    img: "/assets/salads/Lettuce-Based/Maroulosalata.jpg", 
+    img: "/assets/salad/Lettuce-Based/Maroulosalata.jpg", 
     title: "Maroulosalata", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#maroulosalata", 
     time: "15 mins", 
     tags: ['summer', 'spring'] 
   },
   { 
-    img: "/assets/salads/Lettuce-Based/Radicchio Salad.jpg", 
+    img: "/assets/salad/Lettuce-Based/Radicchio Salad.jpg", 
     title: "Radicchio Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#radicchio-salad", 
     time: "12 mins", 
     tags: ['fall', 'winter'] 
   },
   { 
-    img: "/assets/salads/Lettuce-Based/Romaine Salad with Green Goddess.jpg", 
+    img: "/assets/salad/Lettuce-Based/Romaine Salad with Green Goddess.jpg", 
     title: "Romaine Salad with Green Goddess", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#romaine-green-goddess", 
     time: "15 mins", 
@@ -31,28 +31,28 @@ const lettuce_based = [
 
 const mixed_vegetable = [
   { 
-    img: "/assets/salads/Mixed Vegetable/Italian Salad.png", 
+    img: "/assets/salad/Mixed Vegetable/Italian Salad.png", 
     title: "Italian Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#italian-salad", 
     time: "15 mins", 
     tags: ['summer', 'spring'] 
   },
   { 
-    img: "/assets/salads/Mixed Vegetable/Mediterranean ChickPea Salad.jpg", 
+    img: "/assets/salad/Mixed Vegetable/Mediterranean ChickPea Salad.jpg", 
     title: "Mediterranean ChickPea Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#mediterranean-chickpea-salad", 
     time: "20 mins", 
     tags: ['summer', 'spring'] 
   },
   { 
-    img: "/assets/salads/Mixed Vegetable/Mediterranean Salad.jpg", 
+    img: "/assets/salad/Mixed Vegetable/Mediterranean Salad.jpg", 
     title: "Mediterranean Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#mediterranean-salad", 
     time: "15 mins", 
     tags: ['summer', 'spring'] 
   },
   { 
-    img: "/assets/salads/Mixed Vegetable/Mexican Chopped Salad.jpeg", 
+    img: "/assets/salad/Mixed Vegetable/Mexican Chopped Salad.jpeg", 
     title: "Mexican Chopped Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#mexican-chopped-salad", 
     time: "20 mins", 
@@ -62,28 +62,28 @@ const mixed_vegetable = [
 
 const specialty = [
   { 
-    img: "/assets/salads/Specialty/Apple Salad.png", 
+    img: "/assets/salad/Specialty/Apple Salad.png", 
     title: "Apple Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#apple-salad", 
     time: "15 mins", 
     tags: ['fall', 'winter'] 
   },
   { 
-    img: "/assets/salads/Specialty/Endive Salad Bites.jpg", 
+    img: "/assets/salad/Specialty/Endive Salad Bites.jpg", 
     title: "Endive Salad Bites", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#endive-salad-bites", 
     time: "10 mins", 
     tags: ['summer', 'spring', 'valentine'] 
   },
   { 
-    img:  "/assets/salads/Specialty/Frisee Salad.webp", 
+    img:  "/assets/salad/Specialty/Frisee Salad.webp", 
     title: "Frisee Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#frisee-salad", 
     time: "12 mins", 
     tags: ['spring', 'summer'] 
   },
   { 
-    img: "/assets/salads/Specialty/Watermelon Cucumber Salad.webp", 
+    img: "/assets/salad/Specialty/Watermelon Cucumber Salad.webp", 
     title: "Watermelon Cucumber Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#watermelon-cucumber-salad", 
     time: "10 mins", 
@@ -96,7 +96,7 @@ const allSaladRecipes = [
     id: 62,
     category: 'salads',
     subcategory:  'lettuceBased',
-    img: "/assets/salads/Lettuce-Based/Butter Lettuce Salad.jpg", 
+    img: "/assets/salad/Lettuce-Based/Butter Lettuce Salad.jpg", 
     title: "Butter Lettuce Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#butter-lettuce-salad", 
     time:  "10 mins", 
@@ -107,7 +107,7 @@ const allSaladRecipes = [
     id: 63,
     category: 'salads',
     subcategory: 'lettuceBased',
-    img:  "/assets/salads/Lettuce-Based/Maroulosalata.jpg", 
+    img:  "/assets/salad/Lettuce-Based/Maroulosalata.jpg", 
     title: "Maroulosalata", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#maroulosalata", 
     time: "15 mins", 
@@ -118,7 +118,7 @@ const allSaladRecipes = [
     id: 64,
     category: 'salads',
     subcategory: 'lettuceBased',
-    img: "/assets/salads/Lettuce-Based/Radicchio Salad.jpg", 
+    img: "/assets/salad/Lettuce-Based/Radicchio Salad.jpg", 
     title: "Radicchio Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#radicchio-salad", 
     time: "12 mins", 
@@ -129,7 +129,7 @@ const allSaladRecipes = [
     id: 65,
     category: 'salads',
     subcategory: 'lettuceBased',
-    img: "/assets/salads/Lettuce-Based/Romaine Salad with Green Goddess. jpg", 
+    img: "/assets/salad/Lettuce-Based/Romaine Salad with Green Goddess.jpg", 
     title: "Romaine Salad with Green Goddess", 
     href:  "/five-course-meal/recipes-html/salads-recipes.html#romaine-green-goddess", 
     time: "15 mins", 
@@ -140,7 +140,7 @@ const allSaladRecipes = [
     id: 66,
     category: 'salads',
     subcategory: 'mixedVegetable',
-    img: "/assets/salads/Mixed Vegetable/Italian Salad.png", 
+    img: "/assets/salad/Mixed Vegetable/Italian Salad.png", 
     title: "Italian Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#italian-salad", 
     time: "15 mins", 
@@ -151,7 +151,7 @@ const allSaladRecipes = [
     id: 67,
     category: 'salads',
     subcategory: 'mixedVegetable',
-    img: "/assets/salads/Mixed Vegetable/Mediterranean ChickPea Salad.jpg", 
+    img: "/assets/salad/Mixed Vegetable/Mediterranean ChickPea Salad.jpg", 
     title: "Mediterranean ChickPea Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#mediterranean-chickpea-salad", 
     time: "20 mins", 
@@ -162,7 +162,7 @@ const allSaladRecipes = [
     id: 68,
     category: 'salads',
     subcategory: 'mixedVegetable',
-    img: "/assets/salads/Mixed Vegetable/Mediterranean Salad.jpg", 
+    img: "/assets/salad/Mixed Vegetable/Mediterranean Salad.jpg", 
     title: "Mediterranean Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#mediterranean-salad", 
     time: "15 mins", 
@@ -173,7 +173,7 @@ const allSaladRecipes = [
     id: 69,
     category: 'salads',
     subcategory: 'mixedVegetable',
-    img: "/assets/salads/Mixed Vegetable/Mexican Chopped Salad.jpeg", 
+    img: "/assets/salad/Mixed Vegetable/Mexican Chopped Salad.jpeg", 
     title: "Mexican Chopped Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#mexican-chopped-salad", 
     time: "20 mins", 
@@ -184,9 +184,9 @@ const allSaladRecipes = [
     id: 70,
     category: 'salads',
     subcategory: 'specialty',
-    img:  "/assets/salads/Specialty/Apple Salad.png", 
+    img:  "/assets/salad/Specialty/Apple Salad.png", 
     title: "Apple Salad", 
-    href:  "/five-course-meal/recipes-html/salads-recipes.html#apple-salad", 
+    href: "/five-course-meal/recipes-html/salads-recipes.html#apple-salad", 
     time: "15 mins", 
     keywords: ['salad', 'specialty', 'apple', 'fruit', 'sweet'],
     tags: ['fall', 'winter'] 
@@ -195,7 +195,7 @@ const allSaladRecipes = [
     id: 71,
     category: 'salads',
     subcategory: 'specialty',
-    img: "/assets/salads/Specialty/Endive Salad Bites.jpg", 
+    img: "/assets/salad/Specialty/Endive Salad Bites.jpg", 
     title: "Endive Salad Bites", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#endive-salad-bites", 
     time: "10 mins", 
@@ -206,8 +206,8 @@ const allSaladRecipes = [
     id: 72,
     category: 'salads',
     subcategory: 'specialty',
-    img: "/assets/salads/Specialty/Frisee Salad. webp", 
-    title:  "Frisee Salad", 
+    img: "/assets/salad/Specialty/Frisee Salad.webp", 
+    title: "Frisee Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#frisee-salad", 
     time: "12 mins", 
     keywords: ['salad', 'specialty', 'frisee', 'french', 'gourmet'],
@@ -217,7 +217,7 @@ const allSaladRecipes = [
     id: 73,
     category: 'salads',
     subcategory: 'specialty',
-    img: "/assets/salads/Specialty/Watermelon Cucumber Salad.webp", 
+    img: "/assets/salad/Specialty/Watermelon Cucumber Salad.webp", 
     title: "Watermelon Cucumber Salad", 
     href: "/five-course-meal/recipes-html/salads-recipes.html#watermelon-cucumber-salad", 
     time: "10 mins", 

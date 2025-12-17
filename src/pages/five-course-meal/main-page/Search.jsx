@@ -78,17 +78,6 @@ export default class Search extends React.Component {
         window.location.href = `/five-course-meal/main-page/${categoryPath}`;
     };
 
-    getCategoryIcon = (categoryName) => {
-        const icons = {
-        'Appetizers': '🥖',
-        'Main Course': '🍖',
-        'Salad': '🥗',
-        'Desserts': '🍰',
-        'Special Diets': '🌱'
-        };
-        return icons[categoryName] || '🍽️';
-    };
-
     render() {
         const { searchTerm, isFocused, searchResults } = this.state;
         const showDropdown = isFocused;
@@ -102,27 +91,27 @@ export default class Search extends React.Component {
         const categories = [
             { 
                 name: 'Appetizers', 
-                path: 'Appetizer', 
+                path: 'appetizer', 
                 img: '/assets/appetizers/appetizers_pfp.jpg'
             },
             { 
                 name: 'Main Course', 
-                path: 'MainCourse', 
+                path: 'main-course', 
                 img:  '/assets/main_course/main_course_pfp.jpg'
             },
             { 
                 name: 'Salad', 
-                path: 'Salad', 
+                path: 'salad', 
                 img: '/assets/salad/salad_pfp.jpg'
             },
             { 
                 name: 'Desserts', 
-                path: 'Dessert', 
+                path: 'dessert', 
                 img: '/assets/desserts/desserts_pfp.jpg'
             },
             { 
                 name: 'Special Diets', 
-                path: 'SpecialDiet', 
+                path: 'special-diets', 
                 img: '/assets/special_diets/vegan/Vegan BG.jpg'
             }
         ];

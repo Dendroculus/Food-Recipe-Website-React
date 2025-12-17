@@ -33,7 +33,7 @@
 }
 
 .carousel-slide {
-    min-width: calc(50% - 1.2rem);
+    min-width: calc(50% - 1.3rem);
     flex-shrink: 0;
     display: flex;
     justify-content: center;
