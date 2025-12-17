@@ -31,17 +31,17 @@ export default class RecipeCard extends React.Component {
 
     handlePrevious = () => {
         const { recipes } = this.props;
-        this.setState((prevState) => ({
-            currentIndex: prevState.currentIndex === 0 ? 
-            Math.ceil(recipes.length / prevState.recipesPerView) - 1 : prevState.currentIndex - 1
+        this.setState((state) => ({
+            currentIndex: state.currentIndex === 0 ? 
+            Math.ceil(recipes.length / state.recipesPerView) - 1 : state.currentIndex - 1
         }));
     }
 
     handleNext = () => {
         const { recipes } = this.props;
-        this.setState((prevState) => ({
-            currentIndex: prevState.currentIndex >= Math.ceil(recipes.length / prevState.recipesPerView) - 1 ? 0
-            : prevState.currentIndex + 1
+        this.setState((state) => ({
+            currentIndex: state.currentIndex >= Math.ceil(recipes.length / state.recipesPerView) - 1 ? 0
+            : state.currentIndex + 1
         }));
     }
     
