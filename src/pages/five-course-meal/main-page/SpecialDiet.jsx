@@ -1,163 +1,213 @@
-import React from "react";
+import React, {Fragment} from "react";
 import "../../home/Home.css";
 import "../styles/main.css";
 import RecipeNavBar from "../RecipesNavBar"; 
 import Footer from "../../home/Footer";
+import RecipeCard from "./RecipeCard";
+import TopPicks from "./TopPicks";
+import { FaCanadianMapleLeaf, FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart, FaSnowflake, FaLeaf, FaSun, FaGift } from "react-icons/fa";
+import { PiRabbit } from "react-icons/pi";
+import { GiChickenOven, GiPumpkinLantern } from "react-icons/gi";
+import { dairy_free, gluten_free, vegan, vegetarian, allSpecialDietsRecipes } from './SpecialDietsData';
+import Search from "./Search";
 
-export default class SpecialDiets extends React.Component {
-  topPicks = [
-    { img: "/assets/special_diets/vegetarian/Apple Crumble.jpg", title: "Apple Crumble" },
-    { img: "/assets/special_diets/vegetarian/Dal Tadka.jpg", title: "Dal Tadka" },
-    { img: "/assets/special_diets/vegetarian/Ratatouille.jpg", title: "Ratatouille" },
-  ];
+export default class Salad extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      savedRecipes: [],
+      currentPage: 1,
+      recipesPerPage: 8,
+      tappedHeart: null,
+      activeFilter: 'all'
+    };
+    this.topPicks = [
+      {img: "/assets/special_diets/vegetarian/Pea and Mint Soup.jpg", title: "Pea and Mint Soup"},
+      {img: "/assets/special_diets/vegetarian/Ratatouille.jpg", title: "Ratatouille"},
+      {img: "/assets/special_diets/vegetarian/Cauliflower Steaks.jpg", title: "Cauliflower Steaks"},
+      {img: "/assets/special_diets/vegan/Sapo Tofu.jpg", title: "Sapo Tofu"},
+      {img: "/assets/special_diets/vegan/Mushroom Miso Risotto.jpg", title: "Mushroom Miso Risotto"},
+      {img: "/assets/special_diets/gluten_free/Steamed Fish.jpg", title: "Steamed Fish"},
+    ];
+    this.toggleSave = this.toggleSave.bind(this);
+    this.paginate = this.paginate.bind(this);
+    this.handleHeartTap = this.handleHeartTap.bind(this);
+    this.setFilter = this.setFilter.bind(this);
+  }
 
-  vegetarian = [
-    { img: "/assets/special_diets/vegetarian/Apple Crumble.jpg", title: "Apple Crumble", href: "/five-course-meal/special-diets/recipe/vegetarian-recipes.html#apple-crumble", time: "55 mins" },
-    { img: "/assets/special_diets/vegetarian/Cauliflower Steaks.jpg", title: "Cauliflower Steaks", href: "/five-course-meal/special-diets/recipe/vegetarian-recipes.html#cauliflower-steaks", time: "40 mins" },
-    { img: "/assets/special_diets/vegetarian/Dal Tadka.jpg", title: "Dal Tadka", href: "/five-course-meal/special-diets/recipe/vegetarian-recipes.html#dal-tadka", time: "30 mins" },
-    { img: "/assets/special_diets/vegetarian/Pea and Mint Soup.jpg", title: "Pea and Mint Soup", href: "/five-course-meal/special-diets/recipe/vegetarian-recipes.html#pea-and-mint-soup", time: "30 mins" },
-    { img: "/assets/special_diets/vegetarian/Koshari.jpg", title: "Koshari", href: "/five-course-meal/recipes-html/salad-recipes.html#mediterranean-salad", time: "2 hr 30 mins" },
-    { img: "/assets/special_diets/vegetarian/Ratatouille.jpg", title: "Ratatouille", href: "/five-course-meal/recipes-html/salad-recipes.html#mexican-salad", time: "1 hr" },
-    { img: "/assets/special_diets/vegetarian/Sauteed fiddleheads.jpg", title: "Sauteed fiddleheads", href: "/five-course-meal/special-diets/recipe/vegetarian-recipes.html#sauteed-fiddleheads", time: "30 mins" },
-    { img: "/assets/special_diets/vegetarian/Vegetarian spring roll.jpg", title: "Vegetarian spring roll", href: "/five-course-meal/special-diets/recipe/vegetarian-recipes.html#vegetarian-spring-roll", time: "50 mins" },
-  ];
+  setFilter(filter) {
+    this.setState({
+      activeFilter: filter,
+      currentPage: 1
+    });
+  }
 
-  vegan = [
-    { img: "/assets/special_diets/vegan/Banana Bread.jpg", title: "Banana Bread", href: "/five-course-meal/special-diets/recipe/vegan-recipes.html#banana-bread", time: "3 hr" },
-    { img: "/assets/special_diets/vegan/Carrot Turmeric Soup.webp", title: "Carrot Turmeric Soup", href: "/five-course-meal/special-diets/recipe/vegan-recipes.html#carrot-turmeric-soup", time: "55 mins" },
-    { img: "/assets/special_diets/vegan/churros.jpg", title: "Churros", href: "/five-course-meal/special-diets/recipe/vegan-recipes.html#churros", time: "20 mins" },
-    { img: "/assets/special_diets/vegan/Jacket Potato.jpg", title: "Jacket Potato", href: "/five-course-meal/special-diets/recipe/vegan-recipes.html#jacketpotato", time: "1 hr 45 mins" },
-    { img: "/assets/special_diets/vegan/Mushroom Miso Risotto.jpg", title: "Mushroom Miso Risotto", href: "/five-course-meal/special-diets/recipe/vegan-recipes.html#miso-risotto", time: "45 mins" },
-    { img: "/assets/special_diets/vegan/Mushroom Stew.jpg", title: "Mushroom Stew", href: "/five-course-meal/special-diets/recipe/vegan-recipes.html#mushroom-stew", time: "1 hr 20 mins" },
-    { img: "/assets/special_diets/vegan/Sapo Tofu.jpg", title: "Claypot Tofu", href: "/five-course-meal/special-diets/recipe/vegan-recipes.html#claypot-tofu", time: "40 mins" },
-    { img: "/assets/special_diets/vegan/Vegan Waffles.jpg", title: "Vegan Waffles", href: "/five-course-meal/special-diets/recipe/vegan-recipes.html#vegan-waffles", time: "15 mins" },
-  ];
+  getFilteredRecipes() {
+    const { activeFilter } = this.state;
+    if (activeFilter === 'all') return allSpecialDietsRecipes;
+    return allSpecialDietsRecipes.filter((recipe) => recipe.tags && recipe.tags.includes(activeFilter) ? true : false)
+  }
 
-  gluten_free = [
-    { img: "/assets/special_diets/gluten_free/Air-fried Root Vegetables.jpg", title: "Air-fried Root Vegetables", href: "/five-course-meal/special-diets/recipe/gluten-free-recipes.html#root-vegetables", time: "35 mins" },
-    { img: "/assets/special_diets/gluten_free/Chicken Enchiladas.webp", title: "Chicken Enchiladas", href: "/five-course-meal/special-diets/recipe/gluten-free-recipes.html#chicken-enchiladas", time: "1 hr 5 mins" },
-    { img: "/assets/special_diets/gluten_free/Chicken Fajitas.webp", title: "Chicken Fajitas", href: "/five-course-meal/special-diets/recipe/gluten-free-recipes.html#chicken-fajitas", time: "30 mins" },
-    { img: "/assets/special_diets/gluten_free/Coconut Lime Chicken.jpg", title: "Coconut Lime Chicken", href: "/five-course-meal/special-diets/recipe/gluten-free-recipes.html#coconut-lime-chicken", time: "30 mins" },
-    { img: "/assets/special_diets/gluten_free/Garlic Chicken.jpg", title: "Garlic Chicken", href: "/five-course-meal/special-diets/recipe/gluten-free-recipes.html#garlic-chicken", time: "35 mins" },
-    { img: "/assets/special_diets/gluten_free/Gluten-free Pizza.jpg", title: "Gluten-free Pizza", href: "/five-course-meal/special-diets/recipe/gluten-free-recipes.html#pizza", time: "1 hr 40 mins" },
-    { img: "/assets/special_diets/gluten_free/Labneh.jpg", title: "Labneh", href: "/five-course-meal/special-diets/recipe/gluten-free-recipes.html#labneh", time: "1 D 5 mins" },
-    { img: "/assets/special_diets/gluten_free/Steamed Fish.jpg", title: "Steamed Fish", href: "/five-course-meal/special-diets/recipe/gluten-free-recipes.html#steamed-fish", time: "20 mins" },
-  ];
+  handleHeartTap(recipeTitle) {
+    this.toggleSave(recipeTitle);
+    this.setState({tappedHeart: recipeTitle});
+    setTimeout(() => {
+      this.setState({tappedHeart: null});
+    }, 300);
+  }
 
-  dairy_free = [
-    { img: "/assets/special_diets/dairy_free/Caponata.jpg", title: "Caponata", href: "/five-course-meal/special-diets/recipe/dairy-free-recipes.html#caponata", time: "1 hr 45 mins" },
-    { img: "/assets/special_diets/dairy_free/Dairy-Free Chicken.jpg", title: "Dairy-Free Chicken", href: "/five-course-meal/special-diets/recipe/dairy-free-recipes.html#dairy-free-chicken", time: "45 mins" },
-    { img: "/assets/special_diets/dairy_free/Peanut Butter Noodle.webp", title: "Peanut Butter Noodle", href: "/five-course-meal/special-diets/recipe/dairy-free-recipes.html#peanut-noodle", time: "15 mins" },
-    { img: "/assets/special_diets/dairy_free/Potstickers.jpg", title: "Potstickers", href: "/five-course-meal/special-diets/recipe/dairy-free-recipes.html#potstickers", time: "55 mins" },
-    { img: "/assets/special_diets/dairy_free/Rendang Beef.jpg", title: "Rendang Beef", href: "/five-course-meal/special-diets/recipe/dairy-free-recipes.html#rendang", time: "1 hr 45 mins" },
-    { img: "/assets/special_diets/dairy_free/Sesame Lemon Chicken.jpg", title: "Sesame Lemon Chicken", href: "/five-course-meal/special-diets/recipe/dairy-free-recipes.html#lemon-chicken", time: "25 mins" },
-    { img: "/assets/special_diets/dairy_free/Southwestern Goulash.webp", title: "Southwestern Goulash", href: "/five-course-meal/special-diets/recipe/dairy-free-recipes.html#southwestern-goulash", time: "25 mins" },
-    { img: "/assets/special_diets/dairy_free/Turkey Pot Pie.jpg", title: "Turkey Pot Pie", href: "/five-course-meal/special-diets/recipe/dairy-free-recipes.html#turkey-pie", time: "1 hr 20 mins" },
-  ]
+  toggleSave(recipeTitle) {
+    this.setState((state) => {
+      const { savedRecipes } = state;
+      if (savedRecipes.includes(recipeTitle)) {
+        return {
+          savedRecipes: savedRecipes.filter(title => title !== recipeTitle)
+        };
+      } else {
+        return {
+          savedRecipes: [...savedRecipes, recipeTitle]
+        };
+      }
+    });
+  }
 
-  renderTopPicks() {
+  isRecipesSaved(recipeTitle) {
+    return this.state.savedRecipes.includes(recipeTitle);
+  }
+
+  paginate(pageNumber) {
+    this.setState({currentPage: pageNumber});
+    const allRecipesTitle = document.querySelector('.all-recipes');
+    if (allRecipesTitle) {
+      allRecipesTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  renderCategoryRecipes() {
     return (
-      <div className="recommended-img">
-        {this.topPicks.map((item) => (
-          <div className="recommended-card" key={item.title}>
-            <img src={item.img} alt={item.title} />
-            <div className="overlay">
-              <p className="text">{item.title}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
+      <Fragment>
+        <RecipeCard recipes={dairy_free} title="Dairy Free" />
+        <RecipeCard recipes={gluten_free} title="Gluten Free" />
+        <RecipeCard recipes={vegan} title="Vegan" />
+        <RecipeCard recipes={vegetarian} title="Vegetarian" />
+      </Fragment>
+    )
   }
 
   renderAllRecipes() {
+    const { currentPage, recipesPerPage, activeFilter } = this.state;
+    const filteredRecipes = this.getFilteredRecipes();
+    const indexOfLastRecipe = currentPage * recipesPerPage;
+    const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
+    const currentRecipes = filteredRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
+    const totalPages = Math.ceil(filteredRecipes.length / recipesPerPage);
+    const pageNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+      pageNumbers.push(i);
+    }
+
     return (
-        <section className="all-recipe-section">
-            <div className="all-recipes">
-                <h3 class="all-recipes">V<span class="blink">e</span>ge<span class="long-blink">t</span>ar<span class="blink">i</span>an</h3>
-            </div>
-            <section className="recipe-section">
-                {this.vegetarian.map((r) => (
-                <div className="card" key={r.title}>
-                    <div className="card-image">
-                    <img src={r.img} alt={r.title} />
-                    </div>
-                    <div className="text">
+      <Fragment>
+        <div className="filter-container">
+          <button className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`} 
+            onClick={() => this.setFilter('all')}>
+              All Recipes
+          </button>
+          <div className="filter-divider"></div>
+          <h4 className="filter-category-title">Seasons</h4>
+          <button className={`filter-btn ${activeFilter === 'winter' ? 'active': ''}`} 
+            onClick={() => this.setFilter('winter')}>
+              <FaSnowflake /> Winter
+          </button>
+          <button className={`filter-btn ${activeFilter === 'spring' ? 'active': ''}`} 
+            onClick={() => this.setFilter('spring')}>
+              <FaLeaf /> Spring
+          </button>
+          <button className={`filter-btn ${activeFilter === 'summer' ? 'active': ''}`} 
+            onClick={() => this.setFilter('summer')}>
+              <FaSun /> Summer
+          </button>
+          <button className={`filter-btn ${activeFilter === 'fall' ? 'active': ''}`} 
+            onClick={() => this.setFilter('fall')}>
+              <FaCanadianMapleLeaf /> Fall
+          </button>
+
+          <div className="filter-divider"></div>
+
+          <h4 className="filter-category-title">Events</h4>
+
+          <button className={`filter-btn ${activeFilter === 'christmas' ? 'active': ''}`} 
+              onClick={() => this.setFilter('christmas')}>
+              <FaGift /> Christmas
+          </button>
+          <button 
+            className={`filter-btn ${activeFilter === 'thanksgiving' ? 'active' : ''}`}
+            onClick={() => this.setFilter('thanksgiving')}>
+            <GiChickenOven /> Thanksgiving
+          </button>
+          <button 
+            className={`filter-btn ${activeFilter === 'valentine' ? 'active' : ''}`}
+            onClick={() => this.setFilter('valentine')}>
+            <FaHeart /> Valentine
+          </button>
+          <button 
+            className={`filter-btn ${activeFilter === 'easter' ? 'active' : ''}`}
+            onClick={() => this.setFilter('easter')}>
+            <PiRabbit /> Easter
+          </button>
+          <button 
+            className={`filter-btn ${activeFilter === 'halloween' ? 'active' : ''}`}
+            onClick={() => this.setFilter('halloween')}>
+            <GiPumpkinLantern /> Halloween
+          </button>
+        </div>
+        <section className="recipe-section">
+          {currentRecipes.map((r) => {
+            const isSaved = this.isRecipesSaved(r.title);
+            return (
+            <div className="card-container" key={r.title}>
+              <div className="card">
+                <div className="card-image">
+                  <img src={r.img} alt={r.title} />
+                  <span 
+                    className="fa-heart"
+                    data-tooltip={isSaved ? "Recipe Saved" : "Save Recipe"}
+                    onClick={() => this.handleHeartTap(r.title)}
+                    role="button">
+                    {isSaved ? <FaHeart /> : <FaRegHeart />}
+                  </span>
+                </div>
+                <div className="card-content">
+                  <div className="text">
                     <a href={r.href}>{r.title}</a>
                     <p>{r.time}</p>
-                    </div>
+                  </div>
                 </div>
-                ))}
-            </section>
-            <section className="button">
-                <div className="text-center mt-4">
-                <button type="button" className="btn btn-secondary">More &gt;</button>
-                </div>
-            </section>
-            <div className="all-recipes">
-                <h3 class="all-recipes">V<span class="blink">e</span>g<span class="long-blink">a</span>n</h3>
+              </div>
             </div>
-            <section className="recipe-section">
-                {this.vegetarian.map((r) => (
-                <div className="card" key={r.title}>
-                    <div className="card-image">
-                    <img src={r.img} alt={r.title} />
-                    </div>
-                    <div className="text">
-                    <a href={r.href}>{r.title}</a>
-                    <p>{r.time}</p>
-                    </div>
-                </div>
-                ))}
-            </section>
-            <section className="button">
-                <div className="text-center mt-4">
-                <button type="button" className="btn btn-secondary">More &gt;</button>
-                </div>
-            </section>
-            <div className="all-recipes">
-                <h3 class="all-recipes">G<span class="blink">lu</span>te<span class="long-blink">n F</span>r<span class="blink">e</span>e</h3>
-            </div>
-            <section className="recipe-section">
-                {this.vegetarian.map((r) => (
-                <div className="card" key={r.title}>
-                    <div className="card-image">
-                    <img src={r.img} alt={r.title} />
-                    </div>
-                    <div className="text">
-                    <a href={r.href}>{r.title}</a>
-                    <p>{r.time}</p>
-                    </div>
-                </div>
-                ))}
-            </section>
-            <section className="button">
-                <div className="text-center mt-4">
-                <button type="button" className="btn btn-secondary">More &gt;</button>
-                </div>
-            </section>
-            <div className="all-recipes">
-                <h3 class="all-recipes">D<span class="blink">a</span>ir<span class="long-blink">y</span> F<span class="blink">r</span>ee</h3>
-            </div>
-            <section className="recipe-section">
-                {this.vegetarian.map((r) => (
-                <div className="card" key={r.title}>
-                    <div className="card-image">
-                    <img src={r.img} alt={r.title} />
-                    </div>
-                    <div className="text">
-                    <a href={r.href}>{r.title}</a>
-                    <p>{r.time}</p>
-                    </div>
-                </div>
-                ))}
-            </section>
-            <section className="button">
-                <div className="text-center mt-4">
-                <button type="button" className="btn btn-secondary">More &gt;</button>
-                </div>
-            </section>
+          )
+          })}
         </section>
+        <div className="pagination-container">
+          {currentPage > 1 && (
+            <button className="pagination-btn pagination-prev" onClick={() => this.paginate(currentPage - 1)}>
+              <FaChevronLeft />
+            </button>
+          )}
+
+          {pageNumbers.map((number) => (
+            <button key={number} className={`pagination-btn ${currentPage === number ? 'active' : ''}`} onClick={() => this.paginate(number)}>
+              {number}
+            </button>
+          ))}
+
+          {currentPage < totalPages && (
+            <button className="pagination-btn pagination-next" onClick={() => this.paginate(currentPage + 1)}>
+              <FaChevronRight />
+            </button>
+          )}
+        </div>
+      </Fragment>
     );
   }
 
@@ -166,26 +216,24 @@ export default class SpecialDiets extends React.Component {
       <div className="page-wrapper">
         <RecipeNavBar />
 
+        <Search />
         <main>
-          <h1 className="head-title">Special Diets</h1>
-
-          <div className="salad text-container">
-            <div className="content">
-              <p className="check-out">
-                Explore our website's full special diets recipe collection. Log in or create your account to easily save, revisit and review all your favourite appetizer dishes!
-              </p>
-            </div>
+          <h1 class="head-title">Special Diets</h1>
+          <div class="diet text-container">
+              <div class="content">
+                  <p class="check-out">Explore our website's full appetizer recipe collection. Log in or create your account to easily save, revisit and review all your favourite appetizer dishes!</p>
+              </div>
           </div>
 
-          <section className="recommended-section">
-            <div className="heading-container">
-              <h3 className="top-pick-heading">
-                <span className="top-line">Top Picks</span>
-                <span className="bottom-line">Main Course</span>
-              </h3>
-            </div>
-            {this.renderTopPicks()}
-          </section>
+          <TopPicks topPicks={this.topPicks} title="Dessert" />
+
+          {this.renderCategoryRecipes()}
+
+          <div className="all-recipes">
+            <h3 className="all-recipes">
+              A<span className="blink">l</span>l R<span className="long-blink">e</span>ci<span className="blink">p</span>es
+            </h3>
+          </div>
 
           {this.renderAllRecipes()}
 
@@ -194,11 +242,11 @@ export default class SpecialDiets extends React.Component {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="cooking-badge">COOKING FOR EVERYONE</div>
-                  <h1 className="more-section-title">SALAD</h1>
+                  <h1 className="more-section-title">SPECIAL DIETS</h1>
                   <p className="description-text">
-                    For more best salad recipe ideas, Celestial's got you covered!
+                    For more best special diets recipe ideas, Celestial's got you covered!
                   </p>
-                  <button type="button" className="cta-button">MORE SALAD RECIPE</button>
+                  <button type="button" className="cta-button">MORE SPECIAL DIETS RECIPE</button>
                 </div>
               </div>
             </div>

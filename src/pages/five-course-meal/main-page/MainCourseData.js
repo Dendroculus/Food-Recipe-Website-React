@@ -180,7 +180,7 @@ const allMainCourseRecipes = [
     id: 13, 
     category: 'mainCourse',
     subcategory: 'lamb',
-    img: "/assets/main_course/Lamb/Fig Arugula and Prosciutto Salad. jpg", 
+    img: "/assets/main_course/Lamb/Fig Arugula and Prosciutto Salad.jpg", 
     title: "Fig Arugula and Prosciutto Salad", 
     href: "/five-course-meal/recipes-html/main-course-recipes.html#arugula-prosciutto-salad", 
     time: "2 hr 10 mins", 
