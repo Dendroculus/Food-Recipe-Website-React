@@ -8,7 +8,8 @@ import TopPicks from "./TopPicks";
 import { FaCanadianMapleLeaf, FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart, FaSnowflake, FaLeaf, FaSun, FaGift } from "react-icons/fa";
 import { PiRabbit } from "react-icons/pi";
 import { GiChickenOven, GiPumpkinLantern } from "react-icons/gi";
-import { chicken, beef, lamb, pork, seafood, allRecipes } from './MainCourseData';
+import { chicken, beef, lamb, pork, seafood, allMainCourseRecipes } from './MainCourseData';
+import Search from "./Search";
 
 export default class MainCourse extends React.Component {
 
@@ -36,8 +37,8 @@ export default class MainCourse extends React.Component {
 
   getFilteredRecipes() {
     const { activeFilter } = this.state;
-    if (activeFilter === 'all') return allRecipes;
-    return allRecipes.filter((recipe) => recipe.tags && recipe.tags.includes(activeFilter) ? true : false)
+    if (activeFilter === 'all') return allMainCourseRecipes;
+    return allMainCourseRecipes.filter((recipe) => recipe.tags && recipe.tags.includes(activeFilter) ? true : false)
   }
 
   handleHeartTap(recipeTitle) {
@@ -209,6 +210,7 @@ export default class MainCourse extends React.Component {
       <div className="page-wrapper">
         <RecipeNavBar />
 
+        <Search />
         <main>
           <h1 className="head-title">Main Course</h1>
 
