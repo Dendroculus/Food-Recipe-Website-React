@@ -37,7 +37,7 @@ const pork = [
 const seafood = [
       { img: "/assets/main_course/Seafood/Lobster Mango Salad.png", title: "Lobster Mango Salad", href: "/five-course-meal/recipes/main-course#lobster-mango-salad", time: "1 hr", tags: ['summer', 'spring', 'valentine'] },
       { img: "/assets/main_course/Seafood/Lobster Thermidor.jpg", title: "Lobster Thermidor", href: "/five-course-meal/recipes/main-course#lobster-thermidor", time: "50 mins", tags: ['winter', 'valentine', 'christmas'] },
-      { img: "/assets/main_course/Seafood/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak in Coconut Milk with Peas", href: "/five-course-meal/recipes/main-course#salmon-steak", time: "24 mins", tags: ['summer', 'spring'] },
+      { img: "/assets/main_course/Seafood/Salmon Steak in Coconut Milk with Peas.png", title: "Salmon Steak in Coconut Milk", href: "/five-course-meal/recipes/main-course#salmon-steak", time: "24 mins", tags: ['summer', 'spring'] },
       { img: "/assets/main_course/Seafood/Shrimp Avocado Cocktail.png", title: "Shrimp Avocado Cocktail", href: "/five-course-meal/recipes/main-course#shrimp-avocado-cocktail", time: "1 hr 45 mins", tags: ['summer', 'spring', 'valentine'] },
       { img: "/assets/main_course/Seafood/Paella.jpeg", title: "Paella", href: "/five-course-meal/recipes/main-course#paella", time: "1 hr 10 mins", tags: ['fall', 'winter', 'halloween'] },
       { img: "/assets/main_course/Seafood/Sole and Salmon Mousse Terrine with Indian Sauce.jpg", title: "Sole and Salmon Mousse Terrine", href: "/five-course-meal/recipes/main-course#mousse-terrine", time: "1 hr 5 mins", tags: ['winter', 'christmas', 'valentine'] },
@@ -149,7 +149,7 @@ const allMainCourseRecipes = [
     subcategory: 'beef',
     img: "/assets/main_course/Beef/Grilled Rib-Eyed Steak.jpg", 
     title: "Grilled Rib-Eyed Steak", 
-    href: "/five-course-meal/recipes/main-course#rib-eye-steak", 
+    href: "/five-course-meal/recipes/main-course#rib-eyed-steak", 
     time: "1 hr 10 mins", 
     keywords: ['beef', 'steak', 'rib eye', 'grilled', 'main course'], 
     tags:  ['summer', 'spring'] 

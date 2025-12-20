@@ -82,7 +82,7 @@ export default class Search extends React.Component {
         const { searchTerm, isFocused, searchResults } = this.state;
         const showDropdown = isFocused;
         const trendingSearches = [
-            'Chicken Cordon Blue',
+            'Chicken Cordon Bleu',
             'Sapo Tofu',
             'Panacotta',
             'Palmiers',
