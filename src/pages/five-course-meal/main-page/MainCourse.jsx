@@ -10,6 +10,7 @@ import { PiRabbit } from "react-icons/pi";
 import { GiChickenOven, GiPumpkinLantern } from "react-icons/gi";
 import { chicken, beef, lamb, pork, seafood, allMainCourseRecipes } from './MainCourseData';
 import Search from "./Search";
+import { Link } from 'react-router-dom';
 
 export default class MainCourse extends React.Component {
   constructor(props) {
@@ -183,7 +184,7 @@ export default class MainCourse extends React.Component {
                 </div>
                 <div className="card-content">
                   <div className="text">
-                    <a href={r.href}>{r.title}</a>
+                    <Link to={r.href}>{r.title}</Link>
                     <p>{r.time}</p>
                   </div>
                 </div>
