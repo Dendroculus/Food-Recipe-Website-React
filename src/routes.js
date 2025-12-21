@@ -51,19 +51,19 @@ const routes = [
   },
   {
     path: '/five-course-meal/recipes/appetizer', 
-    component: React.lazy(() => import('./pages/five-course-meal/recipe-page/main-course-recipe-page/AppetizerRecipe')),
+    component: React.lazy(() => import('./pages/five-course-meal/recipe-page/appetizer-recipe-page/AppetizerRecipe')),
   },
   {
     path: '/five-course-meal/recipes/dessert', 
-    component: React.lazy(() => import('./pages/five-course-meal/recipe-page/main-course-recipe-page/DessertRecipe')),
+    component: React.lazy(() => import('./pages/five-course-meal/recipe-page/dessert-recipe-page/DessertRecipe')),
   },
   {
     path: '/five-course-meal/recipes/salad', 
-    component: React.lazy(() => import('./pages/five-course-meal/recipe-page/main-course-recipe-page/SaladRecipe')),
+    component: React.lazy(() => import('./pages/five-course-meal/recipe-page/salad-recipe-page/SaladRecipe')),
   },
   {
     path: '/five-course-meal/recipes/special-diets', 
-    component: React.lazy(() => import('./pages/five-course-meal/recipe-page/main-course-recipe-page/SpecialDietsRecipe')),
+    component: React.lazy(() => import('./pages/five-course-meal/recipe-page/special-diet-recipe-page/SpecialDietsRecipe')),
   },
 
 ];

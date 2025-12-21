@@ -85,7 +85,7 @@ ${recipe.instructions.map(section => {
                             <span>{recipe.meta.difficulty}</span>
                             </div>
                         </div>
-                        <StarRating rating={recipe.rating} reviews={recipe.meta.reviews} />
+                        <StarRating rating={recipe.meta.rating} reviews={recipe.meta.reviews} />
                         </div>
                         <div className="recipe-image">
                         <img src={recipe.image} alt={recipe.title} />
