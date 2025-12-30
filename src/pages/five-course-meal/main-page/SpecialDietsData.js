@@ -2,56 +2,56 @@ const dairy_free = [
   { 
     img: "/assets/special_diets/dairy_free/Caponata.jpg", 
     title: "Caponata", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#caponata", 
+    href: "/five-course-meal/recipes/special-diets#caponata", 
     time: "45 mins", 
     tags: ['summer', 'fall'] 
   },
   { 
     img: "/assets/special_diets/dairy_free/Dairy-Free Chicken.jpg", 
     title: "Dairy-Free Chicken", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#dairy-free-chicken", 
+    href: "/five-course-meal/recipes/special-diets#dairy-free-chicken", 
     time: "40 mins", 
     tags:  ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/dairy_free/Peanut Butter Noodle.webp", 
     title: "Peanut Butter Noodle", 
-    href:  "/five-course-meal/recipes-html/special-diets-recipes.html#peanut-butter-noodle", 
+    href:  "/five-course-meal/recipes/special-diets#peanut-butter-noodle", 
     time: "20 mins", 
     tags:  ['summer', 'spring'] 
   },
   { 
     img: "/assets/special_diets/dairy_free/Potstickers.jpg", 
     title: "Potstickers", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#potstickers", 
+    href: "/five-course-meal/recipes/special-diets#potstickers", 
     time: "1 hr", 
     tags: ['winter', 'fall'] 
   },
   { 
     img: "/assets/special_diets/dairy_free/Rendang Beef.jpg", 
     title: "Rendang Beef", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#rendang-beef", 
+    href: "/five-course-meal/recipes/special-diets#rendang-beef", 
     time: "2 hr 30 mins", 
     tags: ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/dairy_free/Sesame Lemon Chicken.jpg", 
     title: "Sesame Lemon Chicken", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#sesame-lemon-chicken", 
+    href: "/five-course-meal/recipes/special-diets#sesame-lemon-chicken", 
     time: "35 mins", 
     tags:  ['spring', 'summer'] 
   },
   { 
     img: "/assets/special_diets/dairy_free/Southwestern Goulash.webp", 
     title: "Southwestern Goulash", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#southwestern-goulash", 
+    href: "/five-course-meal/recipes/special-diets#southwestern-goulash", 
     time: "1 hr 15 mins", 
     tags:  ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/dairy_free/Turkey Pot Pie.jpg", 
     title: "Turkey Pot Pie", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#turkey-pot-pie", 
+    href: "/five-course-meal/recipes/special-diets#turkey-pot-pie", 
     time: "1 hr 30 mins", 
     tags: ['fall', 'winter', 'thanksgiving'] 
   },
@@ -61,56 +61,56 @@ const gluten_free = [
   { 
     img:  "/assets/special_diets/gluten_free/Air-fried Root Vegetables.jpg", 
     title: "Air-fried Root Vegetables", 
-    href:  "/five-course-meal/recipes-html/special-diets-recipes.html#air-fried-root-vegetables", 
+    href:  "/five-course-meal/recipes/special-diets#air-fried-root-vegetables", 
     time: "30 mins", 
     tags: ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/gluten_free/Chicken Enchiladas.webp", 
     title: "Chicken Enchiladas", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#chicken-enchiladas", 
+    href: "/five-course-meal/recipes/special-diets#chicken-enchiladas", 
     time: "45 mins", 
     tags:  ['summer', 'spring'] 
   },
   { 
     img: "/assets/special_diets/gluten_free/Chicken Fajitas.webp", 
     title: "Chicken Fajitas", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#chicken-fajitas", 
+    href: "/five-course-meal/recipes/special-diets#chicken-fajitas", 
     time: "30 mins", 
     tags:  ['summer', 'spring'] 
   },
   { 
     img: "/assets/special_diets/gluten_free/Coconut Lime Chicken.jpg", 
     title: "Coconut Lime Chicken", 
-    href:  "/five-course-meal/recipes-html/special-diets-recipes.html#coconut-lime-chicken", 
+    href:  "/five-course-meal/recipes/special-diets#coconut-lime-chicken", 
     time:  "35 mins", 
     tags: ['summer', 'spring'] 
   },
   { 
     img: "/assets/special_diets/gluten_free/Garlic Chicken.jpg", 
     title: "Garlic Chicken", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#garlic-chicken", 
+    href: "/five-course-meal/recipes/special-diets#garlic-chicken", 
     time: "40 mins", 
     tags: ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/gluten_free/Gluten-free Pizza.jpg", 
     title: "Gluten-free Pizza", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#gluten-free-pizza", 
+    href: "/five-course-meal/recipes/special-diets#gluten-free-pizza", 
     time: "1 hr", 
     tags: ['summer', 'fall'] 
   },
   { 
     img: "/assets/special_diets/gluten_free/Labneh.jpg", 
     title: "Labneh", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#labneh", 
+    href: "/five-course-meal/recipes/special-diets#labneh", 
     time: "12 hr", 
     tags: ['summer', 'spring'] 
   },
   { 
     img: "/assets/special_diets/gluten_free/Steamed Fish.jpg", 
     title: "Steamed Fish", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#steamed-fish", 
+    href: "/five-course-meal/recipes/special-diets#steamed-fish", 
     time: "25 mins", 
     tags:  ['spring', 'summer'] 
   },
@@ -120,56 +120,56 @@ const vegan = [
   { 
     img: "/assets/special_diets/vegan/Banana Bread.jpg", 
     title: "Banana Bread", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#banana-bread", 
+    href: "/five-course-meal/recipes/special-diets#banana-bread", 
     time:  "1 hr 15 mins", 
     tags: ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/vegan/Carrot Turmeric Soup.webp", 
     title: "Carrot Turmeric Soup", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#carrot-turmeric-soup", 
+    href: "/five-course-meal/recipes/special-diets#carrot-turmeric-soup", 
     time: "40 mins", 
     tags:  ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/vegan/churros.jpg", 
     title: "Churros", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#churros", 
+    href: "/five-course-meal/recipes/special-diets#churros", 
     time: "30 mins", 
     tags:  ['summer', 'spring'] 
   },
   { 
     img: "/assets/special_diets/vegan/Jacket Potato.jpg", 
     title: "Jacket Potato", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#jacket-potato", 
+    href: "/five-course-meal/recipes/special-diets#jacket-potato", 
     time: "1 hr", 
     tags: ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/vegan/Mushroom Miso Risotto.jpg", 
     title: "Mushroom Miso Risotto", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#mushroom-miso-risotto", 
+    href: "/five-course-meal/recipes/special-diets#mushroom-miso-risotto", 
     time: "45 mins", 
     tags:  ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/vegan/Mushroom Stew.jpg", 
     title: "Mushroom Stew", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#mushroom-stew", 
+    href: "/five-course-meal/recipes/special-diets#mushroom-stew", 
     time: "1 hr", 
     tags: ['fall', 'winter'] 
   },
   { 
     img:  "/assets/special_diets/vegan/Sapo Tofu.jpg", 
     title: "Sapo Tofu", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes. html#sapo-tofu", 
+    href: "/five-course-meal/recipes/special-diets#sapo-tofu", 
     time: "35 mins", 
     tags:  ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/vegan/Vegan Waffles.jpg", 
     title: "Vegan Waffles", 
-    href:  "/five-course-meal/recipes-html/special-diets-recipes.html#vegan-waffles", 
+    href:  "/five-course-meal/recipes/special-diets#vegan-waffles", 
     time:  "25 mins", 
     tags:  ['spring', 'summer'] 
   },
@@ -179,56 +179,56 @@ const vegetarian = [
   { 
     img: "/assets/special_diets/vegetarian/Apple Crumble.jpg", 
     title: "Apple Crumble", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes. html#apple-crumble", 
+    href: "/five-course-meal/recipes/special-diets#apple-crumble", 
     time: "1 hr", 
     tags: ['fall', 'winter'] 
   },
   { 
     img:  "/assets/special_diets/vegetarian/Cauliflower Steaks.jpg", 
     title: "Cauliflower Steaks", 
-    href:  "/five-course-meal/recipes-html/special-diets-recipes.html#cauliflower-steaks", 
+    href:  "/five-course-meal/recipes/special-diets#cauliflower-steaks", 
     time: "35 mins", 
     tags:  ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/vegetarian/Dal Tadka.jpg", 
     title: "Dal Tadka", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#dal-tadka", 
+    href: "/five-course-meal/recipes/special-diets#dal-tadka", 
     time: "40 mins", 
     tags:  ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/vegetarian/Koshari.jpg", 
     title: "Koshari", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#koshari", 
+    href: "/five-course-meal/recipes/special-diets#koshari", 
     time: "50 mins", 
     tags:  ['fall', 'winter'] 
   },
   { 
     img: "/assets/special_diets/vegetarian/Pea and Mint Soup.jpg", 
     title: "Pea and Mint Soup", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#pea-mint-soup", 
+    href: "/five-course-meal/recipes/special-diets#pea-mint-soup", 
     time:  "30 mins", 
     tags:  ['spring', 'summer'] 
   },
   { 
     img: "/assets/special_diets/vegetarian/Ratatouille.jpg", 
     title: "Ratatouille", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#ratatouille", 
+    href: "/five-course-meal/recipes/special-diets#ratatouille", 
     time: "1 hr 15 mins", 
     tags: ['summer', 'fall'] 
   },
   { 
     img: "/assets/special_diets/vegetarian/Sauteed fiddleheads.jpg", 
     title: "Sauteed Fiddleheads", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#sauteed-fiddleheads", 
+    href: "/five-course-meal/recipes/special-diets#sauteed-fiddleheads", 
     time: "15 mins", 
     tags:  ['spring'] 
   },
   { 
     img: "/assets/special_diets/vegetarian/Vegetarian spring roll.jpg", 
     title: "Vegetarian Spring Roll", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#vegetarian-spring-roll", 
+    href: "/five-course-meal/recipes/special-diets#vegetarian-spring-roll", 
     time: "45 mins", 
     tags:  ['spring', 'summer'] 
   },
@@ -241,7 +241,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'dairyFree',
     img: "/assets/special_diets/dairy_free/Caponata.jpg", 
     title: "Caponata", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#caponata", 
+    href: "/five-course-meal/recipes/special-diets#caponata", 
     time: "45 mins", 
     keywords: ['special diet', 'dairy free', 'caponata', 'eggplant', 'italian', 'vegetable'],
     tags: ['summer', 'fall'] 
@@ -252,7 +252,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'dairyFree',
     img: "/assets/special_diets/dairy_free/Dairy-Free Chicken.jpg", 
     title: "Dairy-Free Chicken", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#dairy-free-chicken", 
+    href: "/five-course-meal/recipes/special-diets#dairy-free-chicken", 
     time: "40 mins", 
     keywords: ['special diet', 'dairy free', 'chicken', 'protein'],
     tags: ['fall', 'winter'] 
@@ -263,7 +263,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'dairyFree',
     img:  "/assets/special_diets/dairy_free/Peanut Butter Noodle.webp", 
     title: "Peanut Butter Noodle", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#peanut-butter-noodle", 
+    href: "/five-course-meal/recipes/special-diets#peanut-butter-noodle", 
     time: "20 mins", 
     keywords: ['special diet', 'dairy free', 'noodle', 'peanut butter', 'asian'],
     tags: ['summer', 'spring'] 
@@ -274,7 +274,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'dairyFree',
     img: "/assets/special_diets/dairy_free/Potstickers.jpg", 
     title: "Potstickers", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#potstickers", 
+    href: "/five-course-meal/recipes/special-diets#potstickers", 
     time: "1 hr", 
     keywords: ['special diet', 'dairy free', 'potstickers', 'dumplings', 'asian'],
     tags: ['winter', 'fall'] 
@@ -285,7 +285,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'dairyFree',
     img: "/assets/special_diets/dairy_free/Rendang Beef.jpg", 
     title: "Rendang Beef", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#rendang-beef", 
+    href: "/five-course-meal/recipes/special-diets#rendang-beef", 
     time: "2 hr 30 mins", 
     keywords: ['special diet', 'dairy free', 'rendang', 'beef', 'indonesian', 'spicy'],
     tags: ['fall', 'winter'] 
@@ -296,7 +296,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'dairyFree',
     img: "/assets/special_diets/dairy_free/Sesame Lemon Chicken.jpg", 
     title: "Sesame Lemon Chicken", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#sesame-lemon-chicken", 
+    href: "/five-course-meal/recipes/special-diets#sesame-lemon-chicken", 
     time: "35 mins", 
     keywords: ['special diet', 'dairy free', 'chicken', 'sesame', 'lemon', 'asian'],
     tags: ['spring', 'summer'] 
@@ -307,7 +307,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'dairyFree',
     img: "/assets/special_diets/dairy_free/Southwestern Goulash.webp", 
     title: "Southwestern Goulash", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#southwestern-goulash", 
+    href: "/five-course-meal/recipes/special-diets#southwestern-goulash", 
     time: "1 hr 15 mins", 
     keywords: ['special diet', 'dairy free', 'goulash', 'southwestern', 'stew'],
     tags: ['fall', 'winter'] 
@@ -318,7 +318,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'dairyFree',
     img: "/assets/special_diets/dairy_free/Turkey Pot Pie.jpg", 
     title: "Turkey Pot Pie", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#turkey-pot-pie", 
+    href: "/five-course-meal/recipes/special-diets#turkey-pot-pie", 
     time: "1 hr 30 mins", 
     keywords: ['special diet', 'dairy free', 'turkey', 'pot pie', 'comfort food'],
     tags: ['fall', 'winter', 'thanksgiving'] 
@@ -329,7 +329,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'glutenFree',
     img: "/assets/special_diets/gluten_free/Air-fried Root Vegetables.jpg", 
     title: "Air-fried Root Vegetables", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#air-fried-root-vegetables", 
+    href: "/five-course-meal/recipes/special-diets#air-fried-root-vegetables", 
     time: "30 mins", 
     keywords: ['special diet', 'gluten free', 'vegetables', 'root vegetables', 'air fried'],
     tags: ['fall', 'winter'] 
@@ -340,7 +340,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'glutenFree',
     img: "/assets/special_diets/gluten_free/Chicken Enchiladas.webp", 
     title: "Chicken Enchiladas", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#chicken-enchiladas", 
+    href: "/five-course-meal/recipes/special-diets#chicken-enchiladas", 
     time: "45 mins", 
     keywords: ['special diet', 'gluten free', 'enchiladas', 'chicken', 'mexican'],
     tags: ['summer', 'spring'] 
@@ -351,7 +351,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'glutenFree',
     img: "/assets/special_diets/gluten_free/Chicken Fajitas.webp", 
     title: "Chicken Fajitas", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#chicken-fajitas", 
+    href: "/five-course-meal/recipes/special-diets#chicken-fajitas", 
     time: "30 mins", 
     keywords: ['special diet', 'gluten free', 'fajitas', 'chicken', 'mexican'],
     tags: ['summer', 'spring'] 
@@ -362,7 +362,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'glutenFree',
     img: "/assets/special_diets/gluten_free/Coconut Lime Chicken.jpg", 
     title: "Coconut Lime Chicken", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#coconut-lime-chicken", 
+    href: "/five-course-meal/recipes/special-diets#coconut-lime-chicken", 
     time: "35 mins", 
     keywords: ['special diet', 'gluten free', 'chicken', 'coconut', 'lime', 'tropical'],
     tags: ['summer', 'spring'] 
@@ -373,7 +373,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'glutenFree',
     img: "/assets/special_diets/gluten_free/Garlic Chicken.jpg", 
     title: "Garlic Chicken", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#garlic-chicken", 
+    href: "/five-course-meal/recipes/special-diets#garlic-chicken", 
     time: "40 mins", 
     keywords:  ['special diet', 'gluten free', 'chicken', 'garlic'],
     tags: ['fall', 'winter'] 
@@ -384,7 +384,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'glutenFree',
     img: "/assets/special_diets/gluten_free/Gluten-free Pizza.jpg", 
     title: "Gluten-free Pizza", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#gluten-free-pizza", 
+    href: "/five-course-meal/recipes/special-diets#gluten-free-pizza", 
     time: "1 hr", 
     keywords: ['special diet', 'gluten free', 'pizza', 'italian'],
     tags: ['summer', 'fall'] 
@@ -395,7 +395,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'glutenFree',
     img: "/assets/special_diets/gluten_free/Labneh.jpg", 
     title: "Labneh", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#labneh", 
+    href: "/five-course-meal/recipes/special-diets#labneh", 
     time: "12 hr", 
     keywords: ['special diet', 'gluten free', 'labneh', 'yogurt', 'middle eastern'],
     tags: ['summer', 'spring'] 
@@ -406,7 +406,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'glutenFree',
     img: "/assets/special_diets/gluten_free/Steamed Fish.jpg", 
     title: "Steamed Fish", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#steamed-fish", 
+    href: "/five-course-meal/recipes/special-diets#steamed-fish", 
     time: "25 mins", 
     keywords: ['special diet', 'gluten free', 'fish', 'steamed', 'healthy'],
     tags: ['spring', 'summer'] 
@@ -417,7 +417,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegan',
     img: "/assets/special_diets/vegan/Banana Bread.jpg", 
     title: "Banana Bread", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#banana-bread", 
+    href: "/five-course-meal/recipes/special-diets#banana-bread", 
     time: "1 hr 15 mins", 
     keywords: ['special diet', 'vegan', 'banana bread', 'baked', 'dessert'],
     tags: ['fall', 'winter'] 
@@ -428,7 +428,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegan',
     img: "/assets/special_diets/vegan/Carrot Turmeric Soup.webp", 
     title: "Carrot Turmeric Soup", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#carrot-turmeric-soup", 
+    href: "/five-course-meal/recipes/special-diets#carrot-turmeric-soup", 
     time: "40 mins", 
     keywords: ['special diet', 'vegan', 'soup', 'carrot', 'turmeric'],
     tags: ['fall', 'winter'] 
@@ -439,7 +439,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegan',
     img: "/assets/special_diets/vegan/churros.jpg", 
     title: "Churros", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#churros", 
+    href: "/five-course-meal/recipes/special-diets#churros", 
     time: "30 mins", 
     keywords: ['special diet', 'vegan', 'churros', 'dessert', 'spanish'],
     tags: ['summer', 'spring'] 
@@ -450,7 +450,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegan',
     img: "/assets/special_diets/vegan/Jacket Potato.jpg", 
     title: "Jacket Potato", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#jacket-potato", 
+    href: "/five-course-meal/recipes/special-diets#jacket-potato", 
     time: "1 hr", 
     keywords: ['special diet', 'vegan', 'potato', 'baked', 'comfort food'],
     tags: ['fall', 'winter'] 
@@ -461,7 +461,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegan',
     img: "/assets/special_diets/vegan/Mushroom Miso Risotto.jpg", 
     title: "Mushroom Miso Risotto", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes. html#mushroom-miso-risotto", 
+    href: "/five-course-meal/recipes/special-diets#mushroom-miso-risotto", 
     time: "45 mins", 
     keywords: ['special diet', 'vegan', 'risotto', 'mushroom', 'miso', 'japanese'],
     tags: ['fall', 'winter'] 
@@ -472,7 +472,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegan',
     img: "/assets/special_diets/vegan/Mushroom Stew.jpg", 
     title: "Mushroom Stew", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#mushroom-stew", 
+    href: "/five-course-meal/recipes/special-diets#mushroom-stew", 
     time: "1 hr", 
     keywords: ['special diet', 'vegan', 'stew', 'mushroom', 'comfort food'],
     tags: ['fall', 'winter'] 
@@ -483,7 +483,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegan',
     img: "/assets/special_diets/vegan/Sapo Tofu.jpg", 
     title: "Sapo Tofu", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes. html#sapo-tofu", 
+    href: "/five-course-meal/recipes/special-diets#sapo-tofu", 
     time: "35 mins", 
     keywords: ['special diet', 'vegan', 'tofu', 'sapo', 'asian'],
     tags: ['fall', 'winter'] 
@@ -494,7 +494,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegan',
     img: "/assets/special_diets/vegan/Vegan Waffles.jpg", 
     title: "Vegan Waffles", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#vegan-waffles", 
+    href: "/five-course-meal/recipes/special-diets#vegan-waffles", 
     time: "25 mins", 
     keywords: ['special diet', 'vegan', 'waffles', 'breakfast'],
     tags: ['spring', 'summer'] 
@@ -505,7 +505,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegetarian',
     img: "/assets/special_diets/vegetarian/Apple Crumble.jpg", 
     title: "Apple Crumble", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#apple-crumble", 
+    href: "/five-course-meal/recipes/special-diets#apple-crumble", 
     time: "1 hr", 
     keywords: ['special diet', 'vegetarian', 'apple', 'crumble', 'dessert'],
     tags: ['fall', 'winter'] 
@@ -516,7 +516,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegetarian',
     img: "/assets/special_diets/vegetarian/Cauliflower Steaks.jpg", 
     title: "Cauliflower Steaks", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#cauliflower-steaks", 
+    href: "/five-course-meal/recipes/special-diets#cauliflower-steaks", 
     time: "35 mins", 
     keywords: ['special diet', 'vegetarian', 'cauliflower', 'steaks', 'roasted'],
     tags: ['fall', 'winter'] 
@@ -527,7 +527,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegetarian',
     img: "/assets/special_diets/vegetarian/Dal Tadka.jpg", 
     title: "Dal Tadka", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#dal-tadka", 
+    href: "/five-course-meal/recipes/special-diets#dal-tadka", 
     time: "40 mins", 
     keywords:  ['special diet', 'vegetarian', 'dal', 'indian', 'lentils'],
     tags: ['fall', 'winter'] 
@@ -538,7 +538,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegetarian',
     img: "/assets/special_diets/vegetarian/Koshari.jpg", 
     title: "Koshari", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#koshari", 
+    href: "/five-course-meal/recipes/special-diets#koshari", 
     time: "50 mins", 
     keywords: ['special diet', 'vegetarian', 'koshari', 'egyptian', 'rice'],
     tags: ['fall', 'winter'] 
@@ -549,7 +549,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegetarian',
     img: "/assets/special_diets/vegetarian/Pea and Mint Soup.jpg", 
     title: "Pea and Mint Soup", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#pea-mint-soup", 
+    href: "/five-course-meal/recipes/special-diets#pea-mint-soup", 
     time:  "30 mins", 
     keywords:  ['special diet', 'vegetarian', 'soup', 'pea', 'mint'],
     tags: ['spring', 'summer'] 
@@ -560,7 +560,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegetarian',
     img: "/assets/special_diets/vegetarian/Ratatouille.jpg", 
     title: "Ratatouille", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#ratatouille", 
+    href: "/five-course-meal/recipes/special-diets#ratatouille", 
     time: "1 hr 15 mins", 
     keywords: ['special diet', 'vegetarian', 'ratatouille', 'french', 'vegetables'],
     tags: ['summer', 'fall'] 
@@ -571,7 +571,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegetarian',
     img: "/assets/special_diets/vegetarian/Sauteed fiddleheads.jpg", 
     title: "Sauteed Fiddleheads", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#sauteed-fiddleheads", 
+    href: "/five-course-meal/recipes/special-diets#sauteed-fiddleheads", 
     time: "15 mins", 
     keywords:  ['special diet', 'vegetarian', 'fiddleheads', 'sauteed', 'spring vegetable'],
     tags: ['spring'] 
@@ -582,7 +582,7 @@ const allSpecialDietsRecipes = [
     subcategory: 'vegetarian',
     img: "/assets/special_diets/vegetarian/Vegetarian spring roll.jpg", 
     title: "Vegetarian Spring Roll", 
-    href: "/five-course-meal/recipes-html/special-diets-recipes.html#vegetarian-spring-roll", 
+    href: "/five-course-meal/recipes/special-diets#vegetarian-spring-roll", 
     time: "45 mins", 
     keywords:  ['special diet', 'vegetarian', 'spring roll', 'asian', 'fresh'],
     tags: ['spring', 'summer'] 
