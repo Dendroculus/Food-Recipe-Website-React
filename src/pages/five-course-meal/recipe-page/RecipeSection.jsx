@@ -10,7 +10,8 @@ import {
     FaTags, 
     FaPrint, 
     FaBookmark,
-    FaClock
+    FaClock,
+    FaShareAlt
 } from "react-icons/fa";
 
 export default class RecipeSection extends React.Component {
@@ -57,6 +58,22 @@ ${recipe.instructions.map(section => {
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
+    }
+
+    handleShare = () => {
+        const { recipe } = this.props;
+
+        const shareData = {
+            title: recipe.title,
+            text: `Check out this recipe ${recipe.title}`,
+            url: window.location.href,
+        };
+
+        if (navigator.share) {
+            navigator.share(shareData);
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+        }
     }
 
     render() {
@@ -146,29 +163,29 @@ ${recipe.instructions.map(section => {
                     </div>
                     <div className="right-column">
                         <div className="recipe-info-card">
-                        <h2 className="title">Nutrition Information</h2>
-                        <p>Per serving</p>
-                        <div className="nutrition-grid">
-                            {Object.entries(recipe.nutrition).map(([key, value]) => (
-                            <div key={key} className="nutrition-item">
-                                <div className="nutrition-value">{value}</div>
-                                <div className="nutrition-label">
-                                {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                            <h2 className="title">Nutrition Information</h2>
+                            <p>Per serving</p>
+                            <div className="nutrition-grid">
+                                {Object.entries(recipe.nutrition).map(([key, value]) => (
+                                <div key={key} className="nutrition-item">
+                                    <div className="nutrition-value">{value}</div>
+                                    <div className="nutrition-label">
+                                    {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                                    </div>
                                 </div>
+                                ))}
                             </div>
-                            ))}
-                        </div>
                         </div>
 
                         <div className="info-box">
-                        <h3 className="info-title">
-                            <FaTags /> Tags
-                        </h3>
-                        <div className="tags">
-                            {recipe.tags.map((tag, index) => (
-                            <span key={index} className="tag">{tag}</span>
-                            ))}
-                        </div>
+                            <h3 className="info-title">
+                                <FaTags /> Tags
+                            </h3>
+                            <div className="tags">
+                                {recipe.tags.map((tag, index) => (
+                                <span key={index} className="tag">{tag}</span>
+                                ))}
+                            </div>
                         </div>
 
                         {recipe.video && (
@@ -184,12 +201,15 @@ ${recipe.instructions.map(section => {
                         )}
 
                         <div className="action-buttons">
-                        <button className="btn btn-block" onClick={this.handlePrint}>
-                            <FaPrint /> Print Recipe
-                        </button>
-                        <button className="btn btn-outline btn-block" onClick={this.handleSave}>
-                            <FaBookmark /> Save Recipe
-                        </button>
+                            <button className="btn btn-block" onClick={this.handlePrint}>
+                                <FaPrint /> Print Recipe
+                            </button>
+                            <button className="btn btn-outline btn-block" onClick={this.handleSave}>
+                                <FaBookmark /> Save Recipe
+                            </button>
+                            <button className="btn btn-outline btn-block" onClick={this.handleShare}>
+                                <FaShareAlt /> Share Recipe
+                            </button>
                         </div>
                     </div>
 
