@@ -148,7 +148,7 @@ export default class Payment extends React.Component {
                   <a href="/" className="btn-secondary">
                     Cancel
                   </a>
-                  <button type="submit" className="btn-primary" disabled={!this.canSubmit()}>
+                  <button type="submit" className="btn-primary sbmt" disabled={!this.canSubmit()}>
                     Complete Purchase
                   </button>
                 </div>
