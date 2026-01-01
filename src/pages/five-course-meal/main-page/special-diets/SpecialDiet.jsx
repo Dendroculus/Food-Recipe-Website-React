@@ -1,7 +1,7 @@
 import React, {Fragment} from "react";
 import "../../../home/Home.css";
 import "../../styles/main.css";
-import RecipeNavBar from "../../RecipesNavBar"; 
+import RecipeNavBar from "../../../../components/navigations/RecipesNavBar"; 
 import Footer from "../../../../components/footer/Footer";
 import Modal from "../../../../components/modals/Modals";
 import RecipeCard from "../RecipeCard";

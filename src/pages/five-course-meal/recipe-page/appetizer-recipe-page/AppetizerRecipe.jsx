@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import RecipeSection from '../RecipeSection';
 import { breadRecipes, dipRecipes, fingerFoodRecipes } from './AppetizerRecipeData';
-import RecipeNavbar from '../../RecipesNavBar';
+import RecipeNavBar from "../../../../components/navigations/RecipesNavBar"; 
 import '../../styles/recipe.css';
 import Footer from "../../../../components/footer/Footer";
 import Modal from "../../../../components/modals/Modals";
@@ -32,7 +32,7 @@ export default class AppetizerRecipe extends React.Component {
     render() {
         return (
             <Fragment>
-                <RecipeNavbar />
+                <RecipeNavBar />
                 <Search />
                 <main>
                     <section className='bread'>
