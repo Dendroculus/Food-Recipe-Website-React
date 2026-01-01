@@ -162,7 +162,7 @@ export default class Appetizer extends React.Component {
 
   render() {
     return (
-      <div className="page-wrapper">
+      <div className="page-wrapper recipe-page">
         <RecipeNavBar />
 
         <Search />
