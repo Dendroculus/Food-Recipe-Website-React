@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const recipesItems = [
   { image: '/assets/main_course/main_course_pfp.jpg', alt: 'Main course', label: 'Main Course', href: '/five-course-meal/main-page/main-course' },
@@ -30,6 +30,11 @@ const aboutItems = [
   { image: '/assets/about us/our_mission_pfp.png', alt: 'Our Mission', label: 'Our Mission', href: '/about-us/AboutUs#our-mission' },
   { image: '/assets/about us/contact_us_pfp.png', alt: 'Contact Us', label: 'Contact Us', href: '/about-us/AboutUs#contact-us' },
 ];
+
+function NavbarWithLocation(props) {
+  const location = useLocation();
+  return <Navbar {...props} location={location} />;
+}
 
 class Dropdown extends React.Component {
   render() {
@@ -65,6 +70,8 @@ class Dropdown extends React.Component {
 
 class Navbar extends React.Component {
   render() {
+    const { location } = this.props;
+    const isHomePage = location.pathname === '/';
     return (
       <nav className="navtop container-fluid">
         <ul className="list-unstyled">
@@ -85,6 +92,11 @@ class Navbar extends React.Component {
           </li>
 
           <li className="right">
+            {!isHomePage && (
+            <Link to="/">
+              <img className="img-fluid" src="/assets/icons/house.png" alt="home" width="32" height="32" />
+            </Link>
+            )}
             <Link to="/account">
               <img className="img-fluid" src="/assets/icons/user.png" alt="user" width="32" height="32" />
             </Link>
@@ -98,4 +110,4 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar;
+export default NavbarWithLocation;

@@ -65,6 +65,10 @@ const routes = [
     path: '/five-course-meal/recipes/special-diets', 
     component: React.lazy(() => import('./pages/five-course-meal/recipe-page/special-diet-recipe-page/SpecialDietsRecipe')),
   },
+  {
+    path: '/shop/digital-products', 
+    component: React.lazy(() => import('./pages/shop/digital-product/DigitalProduct')),
+  },
 
 ];
 

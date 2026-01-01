@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import routes from './routes';
+import './pages/home/Home.css';
 
 function RouteMap() {
   return routes.map((r) => {
