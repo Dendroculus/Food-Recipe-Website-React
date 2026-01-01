@@ -33,10 +33,10 @@ export default class InspirationNav extends React.Component {
       label: "SHOP",
       active: false,
       items: [
-        { href: "/shop/ingredients_shop.html", img: "/assets/shop/Ingredients/ingredients_pfp.jpg", alt: "Cooking Ingredients", text: "Cooking Ingredients" },
-        { href: "/shop/kitchen_tools.html", img: "/assets/shop/Kitchen Tools/kitchen_tools_pfp.jpg", alt: "Kitchen Tools", text: "Kitchen Tools" },
-        { href: "/shop/recipe_themed_merch.html", img: "/assets/shop/Recipe Themed/recipe_themed_merch_pfp.png", alt: "Recipe Themed Merch", text: "Recipe Themed Merch" },
-        { href: "/shop/digital_products.html", img: "/assets/shop/Digital Products/digital_products_pfp.png", alt: "Digital Products", text: "Digital Products" }
+        { href: "/shop/ingredients", img: "/assets/shop/Ingredients/ingredients_pfp.jpg", alt: "Cooking Ingredients", text: "Cooking Ingredients" },
+        { href: "/shop/kitchen-tools", img: "/assets/shop/Kitchen Tools/kitchen_tools_pfp.jpg", alt: "Kitchen Tools", text: "Kitchen Tools" },
+        { href: "/shop/recipe-themed-merch", img: "/assets/shop/Recipe Themed/recipe_themed_merch_pfp.png", alt: "Recipe Themed Merch", text: "Recipe Themed Merch" },
+        { href: "/shop/digital-products", img: "/assets/shop/Digital Products/digital_products_pfp.png", alt: "Digital Products", text: "Digital Products" }
       ]
     },
     {

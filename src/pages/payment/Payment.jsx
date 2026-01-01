@@ -14,7 +14,7 @@ import ShippingInformation from "./ShippingInformation";
 import PaymentInformation from "./PaymentInformation";
 import PaymentMethods from "./PaymentMethod";
 import PaymentFooter from "./PaymentFooter";
-
+import { parseIdrToNumber, idrToUsd, formatUsd } from "./CurrencyConverter";
 
 export default class Payment extends React.Component {
   constructor(props) {
@@ -30,10 +30,59 @@ export default class Payment extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.money = this.money.bind(this);
+    this.handleCartUpdated = this.handleCartUpdated.bind(this);
+    this.syncCart = this.syncCart.bind(this);
+    this.recalcSummary = this.recalcSummary.bind(this);
+    this.removeFromCart = this.removeFromCart.bind(this);
+  }
+
+  componentDidMount() {
+    this.syncCart();
+    window.addEventListener("cart-updated", this.handleCartUpdated);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("cart-updated", this.handleCartUpdated);
+  }
+
+  handleCartUpdated(e) {
+    const cart = e?.detail ?? [];
+    this.setState({ cart }, this.recalcSummary);
+  }
+
+  syncCart() {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    this.setState({ cart }, this.recalcSummary);
+  }
+
+  recalcSummary() {
+    const subtotalIdr = (this.state.cart || []).reduce((sum, item) => {
+      const idr = parseIdrToNumber(item.price);
+      return sum + idr * (item.quantity || 1);
+    }, 0);
+
+    const subtotalUsd = idrToUsd(subtotalIdr);
+
+    this.setState(({ summary }) => ({
+      summary: {
+        summary,
+        subtotal: subtotalUsd, 
+        subtotalIdr,          
+        shipping: 0,
+        tax: 0,
+      },
+    }));
+  }
+
+  removeFromCart(id) {
+    const next = (this.state.cart || []).filter((item) => item.id !== id);
+    localStorage.setItem("cart", JSON.stringify(next));
+    window.dispatchEvent(new CustomEvent("cart-updated", { detail: next }));
+    this.setState({ cart: next }, this.recalcSummary);
   }
 
   money(n) {
-    return `$${Number(n || 0).toFixed(2)}`;
+    return formatUsd(n);
   }
 
   total() {
@@ -42,7 +91,7 @@ export default class Payment extends React.Component {
   }
 
   cartCount() {
-    return this.state.cart.length;
+    return (this.state.cart || []).length;
   }
 
   canSubmit() {
@@ -76,7 +125,6 @@ export default class Payment extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (!this.canSubmit()) return;
-
     alert("Purchase completed (demo).");
   }
 
@@ -100,11 +148,29 @@ export default class Payment extends React.Component {
           </div>
         ) : (
           <div className="cart-items">
-            {this.state.cart.map((item) => (
-              <div className="cart-item" key={item.id}>
-                {item.name}
-              </div>
-            ))}
+            {this.state.cart.map((item) => {
+              const idr = parseIdrToNumber(item.price);
+              const qty = item.quantity || 1;
+              const lineUsd = idrToUsd(idr * qty);
+              return (
+                <div className="cart-item" key={item.id}>
+                  <div className="cart-item-main">
+                    <div className="cart-item-title">{item.title || item.name}</div>
+                    <div className="cart-item-meta">
+                      {qty} × {item.price}
+                      <span className="cart-item-usd">({formatUsd(lineUsd)})</span>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    className="btn cart-remove"
+                    onClick={() => this.removeFromCart(item.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
+              );
+            })}
           </div>
         )}
       </section>
