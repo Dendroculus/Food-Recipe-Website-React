@@ -66,10 +66,13 @@ const routes = [
     component: React.lazy(() => import('./pages/five-course-meal/recipe-page/special-diet-recipe-page/SpecialDietsRecipe')),
   },
   {
+    path: '/shop/ingredients', 
+    component: React.lazy(() => import('./pages/shop/ingredients/Ingredients')),
+  },
+  {
     path: '/shop/digital-products', 
     component: React.lazy(() => import('./pages/shop/digital-product/DigitalProduct')),
   },
-
 ];
 
 export default routes;

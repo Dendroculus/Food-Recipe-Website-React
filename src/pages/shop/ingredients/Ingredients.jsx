@@ -1,9 +1,9 @@
 import React from 'react';
 import ShopLayout from '../ShopLayout';
 import Shop from '../Shop';
-import { products, filters } from './DigitalProductData';
+import { products, filters } from './IngredientsData.js';
 
-class DigitalProduct extends React.Component {
+class Ingredients extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -102,12 +102,16 @@ class DigitalProduct extends React.Component {
     return (
       <div className="modal" role="dialog" aria-modal="true" style={{ display: 'flex' }}>
         <div className="modal-content">
-          <button className="close" aria-label="Close" onClick={() => this.setState({ selected: null })}>
+          <button
+            className="close"
+            aria-label="Close"
+            onClick={() => this.setState({ selected: null })}
+          >
             ×
           </button>
           <h2>{selected.title}</h2>
           <div className="modal-image-wrapper">
-            <img src={selected.img} alt={selected.title} />
+            <img src={selected.img} alt={selected.alt} />
           </div>
           <p>{selected.details}</p>
         </div>
@@ -125,7 +129,9 @@ class DigitalProduct extends React.Component {
             ×
           </button>
           <h2>Add to Cart</h2>
-          <p className="mb-2"><strong>{addItem.title}</strong></p>
+          <p className="mb-2">
+            <strong>{addItem.title}</strong>
+          </p>
           <p>{addItem.price}</p>
 
           <div className="quantity-control" aria-label="Quantity selector">
@@ -163,8 +169,8 @@ class DigitalProduct extends React.Component {
     return (
       <Shop>
         <ShopLayout
-          title="Digital Products"
-          searchPlaceholder="Search digital products..."
+          title="Cooking Ingredients"
+          searchPlaceholder="Search ingredients..."
           searchValue={this.state.search}
           onSearchChange={this.handleSearchChange}
           filters={filters}
@@ -182,4 +188,4 @@ class DigitalProduct extends React.Component {
   }
 }
 
-export default DigitalProduct;
+export default Ingredients;

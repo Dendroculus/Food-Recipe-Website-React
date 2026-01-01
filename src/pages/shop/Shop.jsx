@@ -1,9 +1,20 @@
-import './Shop.css';
+import React from 'react';
+import Navbar from '../../components/navigations/Navbar';
+import Footer from '../../components/footer/Footer';
+import Modals from "../../components/modals/Modals";
 
-import DigitalProduct from './digital-product/DigitalProduct';
-// import KitchenTools from './kitchen-tools/KitchenTools';
-// import Ingredients from './ingredients/Ingredients';
-// import RecipeThemed from './recipe-themed-merch/RecipeThemed';
-// import ShopLayout from './ShopLayout';
 
-export { DigitalProduct };
+class ShopPageLayout extends React.Component {
+  render() {
+    return (
+      <div className='shop-page'>
+        <Navbar />
+        {this.props.children}
+        <Footer />
+        <Modals />
+      </div>
+    );
+  }
+}
+
+export default ShopPageLayout;
