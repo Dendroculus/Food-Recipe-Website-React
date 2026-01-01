@@ -4,6 +4,7 @@ import { cakeRecipes, pastryRecipes, puddingRecipes, tiramisuRecipes } from './D
 import RecipeNavbar from '../../RecipesNavBar';
 import '../../styles/recipe.css';
 import Footer from "../../../home/Footer";
+import Modal from "../../../home/Modals";
 import Search from "../../main-page/Search";
 
 export default class DessertRecipe extends React.Component {
@@ -60,6 +61,7 @@ export default class DessertRecipe extends React.Component {
                     </section>
                 </main>
                 <Footer />
+                <Modal />
             </Fragment>
         )
     }

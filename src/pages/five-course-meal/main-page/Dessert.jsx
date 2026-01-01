@@ -3,11 +3,11 @@ import "../../home/Home.css";
 import "../styles/main.css";
 import RecipeNavBar from "../RecipesNavBar"; 
 import Footer from "../../home/Footer";
+import Modal from "../../home/Modals";
 import RecipeCard from "./RecipeCard";
 import TopPicks from "./TopPicks";
-import { FaCanadianMapleLeaf, FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart, FaSnowflake, FaLeaf, FaSun, FaGift } from "react-icons/fa";
-import { PiRabbit } from "react-icons/pi";
-import { GiChickenOven, GiPumpkinLantern } from "react-icons/gi";
+import { FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart} from "react-icons/fa";
+import FilterRecipe from './FilterRecipe';
 import { cake, pastry, pudding, tiramisu, allDessertRecipes } from './DessertData';
 import Search from "./Search";
 
@@ -113,59 +113,9 @@ export default class Dessert extends React.Component {
 
     return (
       <Fragment>
-        <div className="filter-container">
-          <button className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`} 
-            onClick={() => this.setFilter('all')}>
-              All Recipes
-          </button>
-          <div className="filter-divider"></div>
-          <h4 className="filter-category-title">Seasons</h4>
-          <button className={`filter-btn ${activeFilter === 'winter' ? 'active': ''}`} 
-            onClick={() => this.setFilter('winter')}>
-              <FaSnowflake /> Winter
-          </button>
-          <button className={`filter-btn ${activeFilter === 'spring' ? 'active': ''}`} 
-            onClick={() => this.setFilter('spring')}>
-              <FaLeaf /> Spring
-          </button>
-          <button className={`filter-btn ${activeFilter === 'summer' ? 'active': ''}`} 
-            onClick={() => this.setFilter('summer')}>
-              <FaSun /> Summer
-          </button>
-          <button className={`filter-btn ${activeFilter === 'fall' ? 'active': ''}`} 
-            onClick={() => this.setFilter('fall')}>
-              <FaCanadianMapleLeaf /> Fall
-          </button>
-
-          <div className="filter-divider"></div>
-
-          <h4 className="filter-category-title">Events</h4>
-
-          <button className={`filter-btn ${activeFilter === 'christmas' ? 'active': ''}`} 
-              onClick={() => this.setFilter('christmas')}>
-              <FaGift /> Christmas
-          </button>
-          <button 
-            className={`filter-btn ${activeFilter === 'thanksgiving' ? 'active' : ''}`}
-            onClick={() => this.setFilter('thanksgiving')}>
-            <GiChickenOven /> Thanksgiving
-          </button>
-          <button 
-            className={`filter-btn ${activeFilter === 'valentine' ? 'active' : ''}`}
-            onClick={() => this.setFilter('valentine')}>
-            <FaHeart /> Valentine
-          </button>
-          <button 
-            className={`filter-btn ${activeFilter === 'easter' ? 'active' : ''}`}
-            onClick={() => this.setFilter('easter')}>
-            <PiRabbit /> Easter
-          </button>
-          <button 
-            className={`filter-btn ${activeFilter === 'halloween' ? 'active' : ''}`}
-            onClick={() => this.setFilter('halloween')}>
-            <GiPumpkinLantern /> Halloween
-          </button>
-        </div>
+        <FilterRecipe 
+          activeFilter={activeFilter} 
+          onChangeFilter={this.setFilter} />
         <section className="recipe-section">
           {currentRecipes.map((r) => {
             const isSaved = this.isRecipesSaved(r.title);
@@ -264,6 +214,7 @@ export default class Dessert extends React.Component {
         </main>
 
         <Footer />
+        <Modal />
       </div>
     );
   }

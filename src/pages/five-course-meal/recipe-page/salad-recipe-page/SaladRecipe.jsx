@@ -4,6 +4,7 @@ import { lettuceBasedRecipes, mixedVegetableRecipes, specialtySaladRecipes } fro
 import RecipeNavbar from '../../RecipesNavBar';
 import '../../styles/recipe.css';
 import Footer from "../../../home/Footer";
+import Modal from "../../../home/Modals";
 import Search from "../../main-page/Search";
 
 export default class SaladRecipe extends React.Component {
@@ -54,6 +55,7 @@ export default class SaladRecipe extends React.Component {
                     </section>
                 </main>
                 <Footer />
+                <Modal />
             </Fragment>
         )
     }
