@@ -4,6 +4,7 @@ import { chickenRecipes, beefRecipes, porkRecipes, lambRecipes, seafoodRecipes }
 import RecipeNavbar from '../../RecipesNavBar';
 import '../../styles/recipe.css';
 import Footer from "../../../home/Footer";
+import Modal from "../../../home/Modals";
 import Search from "../../main-page/Search";
 
 export default class MainCourseRecipe extends React.Component {
@@ -66,6 +67,7 @@ export default class MainCourseRecipe extends React.Component {
                     </section>
                 </main>
                 <Footer />
+                <Modal />
             </Fragment>
         )
     }

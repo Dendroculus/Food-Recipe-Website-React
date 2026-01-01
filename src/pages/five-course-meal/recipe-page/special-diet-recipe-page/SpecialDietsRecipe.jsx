@@ -4,6 +4,7 @@ import { dairyfreerecipes, glutenFreeRecipes, veganRecipes, vegetarianRecipes } 
 import RecipeNavbar from '../../RecipesNavBar';
 import '../../styles/recipe.css';
 import Footer from "../../../home/Footer";
+import Modal from "../../../home/Modals";
 import Search from "../../main-page/Search";
 
 export default class SpecialDietsRecipe extends React.Component {
@@ -60,6 +61,7 @@ export default class SpecialDietsRecipe extends React.Component {
                     </section>
                 </main>
                 <Footer />
+                <Modal />
             </Fragment>
         )
     }
