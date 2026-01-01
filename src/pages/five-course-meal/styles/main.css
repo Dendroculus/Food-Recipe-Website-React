@@ -15,13 +15,6 @@ body {
     min-width: 100vw;  
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
 img {
     display: block;
     max-width: 100%;
@@ -301,7 +294,7 @@ main {
 .main-title::before { left: 20%; }
 .main-title::after { right: 20%; }
 
-.section-title {
+.recipe-page .section-title {
     padding-top: 1rem;
     text-align: center;
     font-size: 3.5rem;
@@ -1029,7 +1022,7 @@ main {
     }
 }
 
-:is(.card, .card a:visited) {
+.recipe-page :is(.card, .card a:visited) {
     background-color: #fff;
     border-radius: 20%;
     overflow: hidden;
@@ -1068,7 +1061,7 @@ main {
     justify-content: center;
 }
 
-:is(.card-content a, .card-content a:visited) {
+.recipe-page .card a {
     text-decoration: none;
     color: #007A70;
     font-weight: 600;
@@ -1079,11 +1072,11 @@ main {
     transition: color 0.2s ease;
 }
 
-:is(.card-content a:hover, .card-content a:active) {
+.recipe-page :is(.card-content a:hover, .card-content a:active) {
     color: #35c5ad;
 }
 
-.card-content p {
+.recipe-page .card p {
     font-size: 1.2rem;
     color: #333;
     font-family: 'Montserrat', sans-serif;
@@ -1215,6 +1208,7 @@ main {
     color: white;
 }
 
+/* media queries unchanged from original file */
 @media screen and (max-width: 1300px) {
 
    .main-title {
@@ -1360,7 +1354,7 @@ main {
         transition: color 0.2s ease;
     }
 
-    .card p {
+    .recipe-page .card p {
         font-size: 1.4rem;
         color: #333;
         font-family: 'Montserrat', sans-serif;
@@ -1369,11 +1363,11 @@ main {
         opacity: 0.5;
     }
 
-    :is(.card-content a:hover, .card-content a:active) {
+    .recipe-page :is(.card-content a:hover, .card-content a:active) {
         color: #35c5ad;
     }
 
-    .card text {
+    .recipe-page .card text {
         padding: 2rem;
     }
 
@@ -1832,7 +1826,7 @@ main {
         transition: color 0.2s ease;
     }
 
-    .card p {
+    .recipe-page .card p {
         font-size: 1rem;
         color: #333;
         font-family: 'Montserrat', sans-serif;

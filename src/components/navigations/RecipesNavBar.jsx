@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
-import "../../pages/home/Home.css";
 import "../../pages/five-course-meal/styles/main.css";
 
 class RecipeNavbar extends React.Component {
