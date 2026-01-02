@@ -1,5 +1,6 @@
 import React from "react";
 import "../Inspiration.css";
+import "./StellarSections.css";
 import TipsCategory from "./TipsCategory";
 import ChefSecretCard from "./ChefSecretCard";
 import QuickTipsSection from "./QuickTipsSection";

@@ -1,0 +1,74 @@
+.section-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-family: 'Playwrite', sans-serif;
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+.quick-tip {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-tip:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.quick-icon {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.quick-tip h4 {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 0.5rem;
+}
+
+.quick-tip p {
+  font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+  color: var(--color-text-muted);
+  margin: 0;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) and (min-width: 601px) {
+  .quick-tips-section {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 421px) {
+  .quick-tips-section {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 420px) and (min-width: 361px) {
+  .quick-tip {
+    padding: 1.25rem;
+  }
+
+  .quick-tips-section {
+    margin-bottom: 2.25rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .quick-tips-section {
+    margin-bottom: 2rem;
+  }
+
+  .quick-tip {
+    padding: 1.15rem;
+  }
+}

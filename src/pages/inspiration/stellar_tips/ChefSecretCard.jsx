@@ -1,4 +1,5 @@
 import React from "react";
+import './ChefSecretCard.css'
 
 export default class ChefSecretCard extends React.Component {
   renderStatItem(stat, index) {

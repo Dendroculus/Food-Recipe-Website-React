@@ -1,4 +1,5 @@
 import React from "react";
+import './TipCard.css';
 
 export default class TipCard extends React.Component {
   render() {

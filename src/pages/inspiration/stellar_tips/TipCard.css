@@ -1,0 +1,188 @@
+.tip-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-3);
+  padding: 2rem;
+  box-shadow: var(--shadow-1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-brand), var(--color-brand-2));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover::before {
+  transform: scaleX(1);
+}
+
+.tip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-2);
+}
+
+.tip-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: rgba(0, 122, 112, 0.1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tip-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(0, 122, 112, 0.1), rgba(0, 180, 160, 0.1));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.tip-card:hover .tip-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tip-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-brand);
+}
+
+.tip-title {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.tip-description {
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.tip-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.badge-custom {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.bg-prep {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-technique {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bg-flavor {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.bg-safety {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.bg-pro {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.difficulty {
+  color: #f39c12;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) and (min-width: 601px) {
+  .tip-card {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tip-card {
+    padding: 1.65rem;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 421px) {
+  .tip-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 420px) and (min-width: 361px) {
+  .tip-card {
+    padding: 1.35rem;
+  }
+
+  .tip-icon-wrapper {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1.25rem;
+  }
+
+  .tip-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .tip-card {
+    padding: 1.2rem;
+  }
+
+  .tip-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.15rem;
+  }
+
+  .tip-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .tip-description {
+    margin-bottom: 1.25rem;
+  }
+
+  .badge-custom {
+    padding: 0.35rem 0.85rem;
+  }
+}
