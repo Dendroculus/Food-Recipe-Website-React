@@ -1,5 +1,6 @@
 import React from "react";
-import Modals from "../../components/modals/Modals";
+import Modals from "../../../components/modals/Modals";
+import './PaymentFooter.css';
 
 export default class PaymentFooter extends React.Component {
   renderMorePaymentsModal() {

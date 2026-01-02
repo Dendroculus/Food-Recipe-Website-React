@@ -9,11 +9,11 @@ import {
   state as initialState,
 } from "./PaymentData";
 
-import OrderSummary from "./OrderSummary";
-import ShippingInformation from "./ShippingInformation";
-import PaymentInformation from "./PaymentInformation";
-import PaymentMethods from "./PaymentMethod";
-import PaymentFooter from "./PaymentFooter";
+import OrderSummary from "./OrderSummary/OrderSummary";
+import ShippingInformation from "./PaymentForms/ShippingInformation";
+import PaymentInformation from "./PaymentForms/PaymentInformation";
+import PaymentMethods from "./PaymentMethod/PaymentMethod";
+import PaymentFooter from "./PaymentFooter/PaymentFooter";
 import { parseIdrToNumber, idrToUsd, formatUsd } from "./CurrencyConverter";
 
 export default class Payment extends React.Component {
