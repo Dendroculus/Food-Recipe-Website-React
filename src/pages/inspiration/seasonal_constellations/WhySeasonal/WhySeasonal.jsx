@@ -1,4 +1,5 @@
 import React from "react";
+import "./WhySeasonal.css";
 
 export default class WhySeasonal extends React.Component {
   renderBenefit(b, idx) {

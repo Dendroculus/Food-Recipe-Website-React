@@ -1,5 +1,5 @@
 import React from "react";
-import TipCard from "./TipCard";
+import TipCard from "../TipCard/TipCard";
 import './TipsCategory.css';
 
 export default class TipsCategory extends React.Component {

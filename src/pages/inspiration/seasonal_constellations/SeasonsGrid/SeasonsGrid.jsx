@@ -1,5 +1,6 @@
 import React from "react";
-import SeasonCard from "./SeasonCard";
+import SeasonCard from "../SeasonCard/SeasonCard";
+import './SeasonsGrid.css';
 
 export default class SeasonsGrid extends React.Component {
   render() {

@@ -1,0 +1,38 @@
+.why-seasonal .section-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.benefit-card {
+  background: white;
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-1);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.benefit-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--shadow-2);
+}
+
+.benefit-card .card-body {
+  padding: 2rem;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  color: var(--color-heading);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.benefit-card p {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}

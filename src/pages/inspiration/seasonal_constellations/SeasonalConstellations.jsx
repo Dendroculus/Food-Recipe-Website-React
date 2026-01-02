@@ -1,13 +1,14 @@
 import React from "react";
-import "../Inspiration.css";
-import "./seasonal.css";
+import "../stellar_tips/StellarSections/StellarSections.css";
+import './Seasonal.css';
+import "./SeasonalConstellations.css";
 import Footer from "../../../components/footer/Footer";
 import Modals from "../../../components/modals/Modals";
-import InspirationNav from '../../../components/navigations/InspirationNav'; 
-import SeasonsGrid from "./SeasonsGrid";
-import Calendar from "./Calendar";
-import WhySeasonal from "./WhySeasonal";
-import Spotlight from "./Spotlight";
+import InspirationNav from "../../../components/navigations/InspirationNav";
+import SeasonsGrid from "./SeasonsGrid/SeasonsGrid";
+import Calendar from "./Calendar/Calendar";
+import WhySeasonal from "./WhySeasonal/WhySeasonal";
+import Spotlight from "./Spotlight/Spotlight";
 
 class SeasonalConstellations extends React.Component {
   constructor(props) {

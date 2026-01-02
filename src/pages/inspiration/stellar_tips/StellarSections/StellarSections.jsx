@@ -1,10 +1,10 @@
 import React from "react";
-import "../Inspiration.css";
+import "../../stellar_tips/StellarTips.css";
 import "./StellarSections.css";
-import TipsCategory from "./TipsCategory";
-import ChefSecretCard from "./ChefSecretCard";
-import QuickTipsSection from "./QuickTipsSection";
-import { essentialTips, flavorTips, proTips, quickTips, chefSecret } from "./tipData";
+import TipsCategory from "../TipsCategory/TipsCategory";
+import ChefSecretCard from "../ChefSecretCard/ChefSecretCard";
+import QuickTipsSection from "../QuickTipsSection/QuickTipsSection";
+import { essentialTips, flavorTips, proTips, quickTips, chefSecret } from "../tipData";
 
 class StellarSections extends React.Component {
   constructor(props) {

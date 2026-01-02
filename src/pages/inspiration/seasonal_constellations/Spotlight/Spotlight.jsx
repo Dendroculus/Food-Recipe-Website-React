@@ -1,16 +1,5 @@
 import React from "react";
-
-/*
- Spotlight — shows the current season's badge, title and short description.
-
- - Class component (extends React.Component)
- - Receives `season` via props (object from SeasonalConstellations state)
- - Keeps Autumn title & description EXACTLY as requested
- - Uses linear-gradient per season via CSS variables:
-     --spring, --summer, --autumn, --winter
- - Renders a big faded background emoji (like the old ::after),
-   but driven by the season's emoji instead of a hard-coded 🍂.
-*/
+import './Spotlight.css';
 
 export default class Spotlight extends React.Component {
   // Map season name -> CSS gradient variable

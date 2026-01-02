@@ -1,0 +1,45 @@
+.month-card {
+  background: white;
+  border-radius: var(--radius-1);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.month-card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: var(--shadow-1);
+}
+
+.month-card .card-body {
+  padding: 1.5rem;
+}
+
+.month-header {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.1875rem solid var(--color-brand);
+}
+
+.month-produce {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.month-produce span {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  padding: 0.4rem;
+  background: rgba(0, 122, 112, 0.05);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.month-produce span:hover {
+  background: rgba(0, 122, 112, 0.1);
+  transform: translateX(0.3125rem);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./SeasonCard.css";
 
 export default class SeasonCard extends React.Component {
   render() {

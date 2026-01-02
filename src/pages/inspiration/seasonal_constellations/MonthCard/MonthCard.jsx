@@ -1,4 +1,5 @@
 import React from "react";
+import "./MonthCard.css";
 
 export default class MonthCard extends React.Component {
   render() {

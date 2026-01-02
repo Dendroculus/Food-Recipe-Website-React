@@ -1,0 +1,109 @@
+.current-season-spotlight {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-2);
+  color: white;
+  margin-bottom: 4rem;
+  box-shadow: var(--shadow-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.current-season-spotlight.dynamic-spotlight {
+  transition: background 0.3s ease;
+}
+
+.spotlight-bg-emoji {
+  position: absolute;
+  font-size: 15rem; 
+  line-height: 1;
+  opacity: 0.7;
+  top: 50%;
+  right: -6%;
+  transform: translateY(-50%) rotate(-15deg) scale(1.05);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  will-change: transform, opacity;
+  animation: emoji-drift 5s ease-in-out infinite alternate;
+}
+
+@keyframes emoji-drift {
+  0% {
+    transform: translateY(-50%) translateX(0) rotate(-15deg) scale(1.05);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translateY(-52%) translateX(-3%) rotate(-12deg) scale(1.06);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-48%) translateX(2%) rotate(-18deg) scale(1.04);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-51%) translateX(-2%) rotate(-14deg) scale(1.06);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-50%) translateX(0) rotate(-15deg) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.season-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(0.625rem);
+}
+
+.season-icon {
+  font-size: 1.5rem;
+}
+
+.season-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.spotlight-title {
+  font-family: 'Playwrite', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.spotlight-description {
+  font-size: 1.2rem;
+  max-width: 43.75rem;
+  margin: 0 auto;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+@media (max-width: 992px) {
+  .spotlight-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .current-season-spotlight {
+    padding: 2rem 1.5rem;
+  }
+
+  .spotlight-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .spotlight-title {
+    font-size: 1.75rem;
+  }
+}
