@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
-import "../../pages/five-course-meal/styles/main.css";
+import "./RecipesNavBar.css";
 
 class RecipeNavbar extends React.Component {
   getMenuItems() {
