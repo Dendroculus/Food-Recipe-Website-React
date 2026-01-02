@@ -1,0 +1,42 @@
+.order-summary {
+  background: linear-gradient(135deg, #e0f9f4 0%, #f0f6f6 100%);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.06);
+}
+
+.order-summary h2 {
+  font-size: 1.25rem;
+  color: #007A70;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-summary td {
+  padding: 0.5rem 0;
+  color: #4c4b4b;
+  font-weight: 600;
+}
+
+.order-summary tbody tr + tr td {
+  border-top: none;
+}
+
+.order-summary td:last-child {
+  color: #007A70;
+  font-weight: 800;
+  text-align: right;
+}
+
+.order-summary tfoot td {
+  border-top: 2px solid #007A70;
+  padding-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #007A70;
+}
