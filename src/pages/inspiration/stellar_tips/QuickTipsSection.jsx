@@ -1,4 +1,5 @@
 import React from "react";
+import './QuickTipsSection.css'
 
 export default class QuickTipsSection extends React.Component {
   renderQuickTip(tip, index) {
