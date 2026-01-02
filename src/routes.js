@@ -81,6 +81,10 @@ const routes = [
     path: '/shop/digital-products', 
     component: React.lazy(() => import('./pages/shop/digital-product/DigitalProduct')),
   },
+  {
+    path: '/login',
+    component: React.lazy(() => import('./pages/logination-form/form')),
+  }
 ];
 
 export default routes;

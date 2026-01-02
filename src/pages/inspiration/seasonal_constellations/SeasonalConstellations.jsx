@@ -1,6 +1,6 @@
 import React from "react";
 import "../stellar_tips/StellarSections/StellarSections.css";
-import './Seasonal.css';
+import './seasonal.css';
 import "./SeasonalConstellations.css";
 import Footer from "../../../components/footer/Footer";
 import Modals from "../../../components/modals/Modals";

@@ -98,7 +98,7 @@ class Navbar extends React.Component {
               <img className="img-fluid" src="/assets/icons/house.png" alt="home" width="32" height="32" />
             </Link>
             )}
-            <Link to="/account">
+            <Link to="/login">
               <img className="img-fluid" src="/assets/icons/user.png" alt="user" width="32" height="32" />
             </Link>
             <Link to="/payment/Payment">
