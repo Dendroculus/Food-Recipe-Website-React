@@ -1,8 +1,6 @@
-/**
- * TodayPickCard — simple presentational card for a single pick.
- */
 import React from 'react';
 import PropTypes from 'prop-types';
+import './TodayPicksCard.css';
 
 class TodayPickCard extends React.Component {
   render() {

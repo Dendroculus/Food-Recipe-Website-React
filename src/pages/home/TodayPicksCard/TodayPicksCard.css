@@ -1,0 +1,45 @@
+.fyp-image {
+  width: 17rem;
+  border-radius: 16px;
+  display: flex;
+  object-fit: cover;
+  margin-right: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0.625rem 2rem rgba(0,0,0,0.08);
+  flex-direction: column;
+  background: white;
+}
+.fyp-image img {
+  width: 100%;
+  height: 9rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px 16px 0 0;
+}
+.fyp-image a {
+  max-width: 17rem;
+  margin: 0.5rem 0.75rem 0;
+  color: rgb(209, 53, 209);
+  font-weight: bold;
+  background-color: white;
+  word-spacing: 0.15rem;
+}
+.fyp-image p {
+  margin: 0.25rem 0.75rem;
+  color: gray;
+  font-size: 0.875rem;
+}
+.fyp-image:hover { transform: scale(1.05); box-shadow: 0 0.75rem 2.5rem rgba(0,0,0,0.12); }
+.fyp-image a:hover { color: #00bfa5; transform: scale(1.02); }
+
+@media (max-width: 768px) {
+  .fyp-image { width: 100%; max-width: 20rem; margin-right: 0; }
+}
+
+@media (max-width: 480px) {
+  .fyp-image { max-width: 100%; }
+}
+
+@media (width: 1024px) and (height: 1366px) {
+  .fyp-image { width: 15rem; }
+}

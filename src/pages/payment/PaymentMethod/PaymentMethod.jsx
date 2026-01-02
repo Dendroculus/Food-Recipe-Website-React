@@ -1,4 +1,5 @@
 import React from "react";
+import "./PaymentMethod.css";
 
 export default class PaymentMethods extends React.Component {
   render() {

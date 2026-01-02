@@ -1,0 +1,94 @@
+.today-picks {
+  margin: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+.today-picks.tp-fade-out { opacity: 0; transform: translateY(8px); }
+.today-picks.tp-fade-in { opacity: 1; transform: translateY(0); }
+
+.today-picks-fyp {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.today-picks h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.quick-recipes {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background: #e0f0ed;
+  border-radius: 16px;
+  box-shadow: 0 0.625rem 2rem rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.quick-recipes form { display: flex; flex-direction: column; gap: 0.5rem; }
+.quick-recipes .input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+.quick-recipes input {
+  outline: none;
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: 0.1px solid white;
+}
+.quick-recipes .btn {
+  border-radius: 12px;
+  background-color: #00bfa5;
+  border-color: #00bfa5;
+  color: #fff;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.quick-recipes .btn:hover { background-color: #007a70; transform: translateY(-0.125rem); }
+.quick-recipes label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #007a70;
+}
+.quick-recipes input:focus { box-shadow: none; border-color: white; }
+.quick-recipes:hover { transform: translateY(-0.125rem); box-shadow: 0 0.75rem 2.5rem rgba(0,0,0,0.12); }
+.quick-recipes input::placeholder { color: #a0a0a0; }
+#quick-recipes-form .input-group > .form-control { border-radius: 12px; }
+#quick-recipes-form .input-group > .btn { border-radius: 12px; }
+
+@media (max-width: 1200px) {
+  .today-picks { margin: 2rem 2rem; }
+}
+
+@media (max-width: 768px) {
+  .today-picks { margin: 1.25rem 0; }
+  .today-picks h1 { font-size: 1.25rem; text-align: center; }
+  .today-picks-fyp { flex-direction: column; align-items: center; }
+  .fyp-image { width: 100%; max-width: 20rem; margin-right: 0; }
+  .quick-recipes .input-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    z-index: 0;
+  }
+  .quick-recipes .input-group .btn { width: 100%; }
+  .quick-recipes .input-group input.form-control { width: 100%; }
+  .quick-recipes .form-control, .quick-recipes .btn { min-height: 42px; }
+}
+
+@media (max-width: 480px) {
+  .today-picks h1 { font-size: 1.1rem; }
+  .fyp-image { max-width: 100%; }
+  .quick-recipes label { font-size: 0.85rem; }
+}
+
+@media (width: 1024px) and (height: 1366px) {
+  .today-picks { margin: 2rem 3rem; }
+  .today-picks-fyp { gap: 1.2rem; }
+}

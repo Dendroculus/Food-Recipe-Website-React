@@ -19,3 +19,4 @@ class StellarTips extends React.Component {
 }
 
 export default StellarTips;
+

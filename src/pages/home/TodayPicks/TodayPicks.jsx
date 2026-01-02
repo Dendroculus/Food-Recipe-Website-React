@@ -1,6 +1,7 @@
 import React from 'react';
-import TodayPickCard from './TodayPickCard';
+import TodayPickCard from '../TodayPicksCard/TodayPicksCard';
 import todayPicks from './TodayPicksData';
+import './TodayPicks.css';
 
 class TodayPicks extends React.Component {
   constructor(props) {

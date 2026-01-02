@@ -1,4 +1,5 @@
 import React from "react";
+import "./PaymentForms.css";
 
 export default class ShippingInformation extends React.Component {
   render() {

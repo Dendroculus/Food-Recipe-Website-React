@@ -1,4 +1,5 @@
 import React from 'react';
+import './FeaturedSection.css';
 
 class FeaturedSection extends React.Component {
   constructor(props) {

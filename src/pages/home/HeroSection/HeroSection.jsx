@@ -1,8 +1,6 @@
-/**
- * HeroSection — hero text, CTAs and site search; includes TodayPicks.
- */
 import React from 'react';
-import TodayPicks from './TodayPicks';
+import TodayPicks from '../TodayPicks/TodayPicks';
+import './HeroSection.css';
 
 class HeroSection extends React.Component {
   constructor(props) {
