@@ -14,7 +14,7 @@ class ComingSoon extends React.Component {
       <div className="coming-soon-page">
         {this.renderBubbles()}
 
-        <div className="container">
+        <div className="coming-soon-container">
           <div className="content" role="main">
             <h1 className="title">Coming Soon</h1>
             <p className="subtitle">We're cooking up something delicious!</p>

@@ -26,7 +26,7 @@ class Footer extends React.Component {
       <footer className="main-footer">
         <h2 className="footer-title">Socials</h2>
 
-        <div className="socials-logo">
+        <div className="socials-logo" id="footer-socials">
           {this.socialLinks.map((item) => (
             <a key={item.href} href={item.href} aria-label={item.alt}>
               <img className={`img-fluid ${item.extraClass}`} src={item.src} alt={item.alt} loading="lazy" width="48" height="48" />
