@@ -2,29 +2,27 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import routes from './routes';
 import './pages/home/Home.css';
+import Loader from './components/loader/Loader';
 
-function RouteMap() {
-  return routes.map((r) => {
+const RouteMap = () =>
+  routes.map((r) => {
     const C = r.component;
     return (
       <Route
         key={r.path}
         path={r.path}
-        element={
-          <React.Suspense fallback={<div style={{ padding: 20 }}>Loading…</div>}>
-            <C />
-          </React.Suspense>
-        }
+        element={<C />}
       />
     );
   });
-}
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Routes>{RouteMap()}</Routes>
+        <React.Suspense fallback={<Loader />}>
+          <Routes>{RouteMap()}</Routes>
+        </React.Suspense>
       </BrowserRouter>
     );
   }
