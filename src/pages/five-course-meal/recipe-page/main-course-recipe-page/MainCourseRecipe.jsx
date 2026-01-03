@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import RecipeSection from '../RecipeSection';
 import { chickenRecipes, beefRecipes, porkRecipes, lambRecipes, seafoodRecipes } from './MainCourseRecipeData';
 import RecipeNavBar from "../../../../components/navigations/RecipesNavBar"; 
@@ -31,7 +31,7 @@ export default class MainCourseRecipe extends React.Component {
 
     render() {
         return (
-            <Fragment>
+            <div className='recipe-page-wrapper'>
                 <RecipeNavBar />
                 <Search />
                 <main>
@@ -68,7 +68,7 @@ export default class MainCourseRecipe extends React.Component {
                 </main>
                 <Footer />
                 <Modal />
-            </Fragment>
+            </div>
         )
     }
 }

@@ -6,7 +6,7 @@ class Footer extends React.Component {
     super(props);
 
     this.socialLinks = [
-      { href: 'https://github.com/Dendroculus/Food-Recipe-Website', src: '/assets/logo/Github.png', alt: 'Github', extraClass: '' },
+      { href: 'https://github.com/Dendroculus/Food-Recipe-Website-React', src: '/assets/logo/Github.png', alt: 'Github', extraClass: '' },
       { href: 'https://www.instagram.com/', src: '/assets/logo/Instagram.png', alt: 'Instagram', extraClass: '' },
       { href: 'https://www.facebook.com/', src: '/assets/logo/Facebook.png', alt: 'Facebook', extraClass: 'Facebook' },
       { href: 'https://twitter.com/', src: '/assets/logo/X.png', alt: 'X', extraClass: '' },

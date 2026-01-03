@@ -1,27 +1,18 @@
-html, body {
-    overflow-x: hidden;
-    min-height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
+.recipe-page-wrapper {
     background-image: linear-gradient(174.2deg, rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4%);
     background-attachment: fixed;  
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-width: 100vw;  
 }
 
-img {
+.recipe-page-wrapper img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-main {
+.recipe-page-wrapper main {
     background-image: linear-gradient(174.2deg, rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4%);
     background-attachment: fixed;
     background-size: 100% 100%;  
@@ -1352,7 +1343,7 @@ main {
         gap: 1rem;
     }
 
-    body {
+    .recipe-page-wrapper {
         overflow-x: hidden;
     }
 

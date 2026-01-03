@@ -72,7 +72,8 @@ class RecipeNavbar extends React.Component {
             </li>
 
             <li className="celestial-logo">
-              <a href="/about-us/about-us.html">CELESTIAL 💫</a>
+              {/* change to Link to */}
+              <Link to="/">CELESTIAL 💫</Link>
             </li>
 
             <li className="other-logo">

@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import RecipeSection from '../RecipeSection';
 import { dairyfreerecipes, glutenFreeRecipes, veganRecipes, vegetarianRecipes } from './SpecialDietsRecipeData';
 import RecipeNavBar from "../../../../components/navigations/RecipesNavBar"; 
@@ -31,7 +31,7 @@ export default class SpecialDietsRecipe extends React.Component {
 
     render() {
         return (
-            <Fragment>
+            <div className='recipe-page-wrapper'>
                 <RecipeNavBar />
                 <Search />
                 <main>
@@ -62,7 +62,7 @@ export default class SpecialDietsRecipe extends React.Component {
                 </main>
                 <Footer />
                 <Modal />
-            </Fragment>
+            </div>
         )
     }
 }

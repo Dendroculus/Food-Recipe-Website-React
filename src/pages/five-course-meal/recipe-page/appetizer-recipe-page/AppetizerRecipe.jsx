@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import RecipeSection from '../RecipeSection';
 import { breadRecipes, dipRecipes, fingerFoodRecipes } from './AppetizerRecipeData';
 import RecipeNavBar from "../../../../components/navigations/RecipesNavBar"; 
@@ -31,7 +31,7 @@ export default class AppetizerRecipe extends React.Component {
 
     render() {
         return (
-            <Fragment>
+            <div className='recipe-page-wrapper'>
                 <RecipeNavBar />
                 <Search />
                 <main>
@@ -56,7 +56,7 @@ export default class AppetizerRecipe extends React.Component {
                 </main>
                 <Footer />
                 <Modal />
-            </Fragment>
+            </div>
         )
     }
 }
