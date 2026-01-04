@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCanadianMapleLeaf, FaHeart, FaSnowflake, FaLeaf, FaSun, FaGift } from "react-icons/fa";
-import "../styles/main.css";
+import "../styles/FilterRecipe.css";
 import { PiRabbit } from "react-icons/pi";
 import { GiChickenOven, GiPumpkinLantern } from "react-icons/gi";
 

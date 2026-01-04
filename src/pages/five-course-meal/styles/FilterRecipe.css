@@ -1,0 +1,86 @@
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem auto 2rem;
+    padding: 2rem;
+    max-width: 75rem;
+    background: #ffffffcc;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.1rem 0.2rem #00000033;
+}
+
+.filter-category-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #007A70;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.filter-divider {
+    width: 100%;
+    height: 0.125rem;
+    background: linear-gradient(90deg, transparent, #007A70, transparent);
+    margin: 0.5rem 0;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #fff;
+    color: #007A70;
+    border: 2px solid #007A70;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #007A70;
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #007A70, #00B4A0);
+    color: #fff;
+    border-color: #007A70;
+}
+
+.filter-btn svg {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .filter-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+    }
+
+    .filter-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .filter-category-title,
+    .filter-divider {
+        display: none;
+    }
+
+}
