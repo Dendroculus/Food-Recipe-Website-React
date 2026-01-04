@@ -24,7 +24,7 @@
   --winter: linear-gradient(135deg, #7EC8FF 0%, #4A90E2 100%);
 }
 
-body {
+.seasonal-constellations-page {
   font-family: 'Montserrat', sans-serif;
   background: var(--bg-grad-page);
   color: var(--color-text);

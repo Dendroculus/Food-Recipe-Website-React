@@ -13,12 +13,12 @@ class SeasonalConstellations extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="seasonal-constellations-page">
         <InspirationNav />
         <SeasonalSections />
         <Footer />
         <Modals />
-      </>
+      </div>
     );
   }
 }

@@ -19,7 +19,7 @@
   --radius-pill: 25px;
 }
 
-body {
+.stellar-tips-page {
   font-family: 'Montserrat', sans-serif;
   background: var(--bg-grad-page);
   color: var(--color-text);

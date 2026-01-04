@@ -1,11 +1,9 @@
-html { scroll-behavior: smooth; }
-
 .home-page * {
   font-family: 'Montserrat', sans-serif;
   transition: all 0.2s ease-in-out;
 }
 
-body {
+.home-page {
   font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(174.2deg, rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4%);
   color: #007A70;

@@ -8,12 +8,12 @@ import InspirationNav from '../../../components/navigations/InspirationNav';
 class StellarTips extends React.Component {
   render() {
     return (
-      <>
+      <div className="stellar-tips-page">
         <InspirationNav />
         <StellarSections />
         <Footer />
         <Modals />
-      </>
+      </div>
     );
   }
 }
