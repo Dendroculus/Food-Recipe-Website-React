@@ -115,11 +115,6 @@
   box-shadow: 0 0.25rem 0.75rem rgba(0, 191, 165, 0.3);
   transform: translateY(-0.125rem);
 }
-.today-picks h1:hover, .more .subscribe:hover {
-  color: #00bfa5;
-  text-shadow: 0 0.25rem 0.625rem rgba(0, 191, 165, 0.3);
-  transform: translateY(-0.125rem);
-}
 
 @media (max-width: 1200px) {
   .hero-search-container { padding: 2rem 5rem 0.5rem; }
@@ -128,7 +123,6 @@
 @media (max-width: 992px){
   .hero-search-container { flex-direction: column; padding: 2rem 3rem 0.5rem; align-items: center; }
   .site-search .search { margin: 2rem 0; }
-  .modal-content p { margin-bottom: 1rem; }
 }
 
 @media (max-width: 768px) {
@@ -144,34 +138,9 @@
   .hero h1 { font-size: 1.5rem; text-align: center; }
   .herodesc { font-size: 1rem; text-align: center; }
   .more { flex-wrap: wrap; justify-content: center; }
-  .today-picks { margin: 1.25rem 0; }
-  .today-picks h1 { font-size: 1.25rem; text-align: center; }
-  .today-picks-fyp { flex-direction: column; align-items: center; }
-  .fyp-image { width: 100%; max-width: 20rem; margin-right: 0; }
-  .quick-recipes .input-group {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    z-index: 0;
-  }
-  .quick-recipes .input-group .btn { width: 100%; }
-  .quick-recipes .input-group input.form-control { width: 100%; }
-  .quick-recipes .form-control, .quick-recipes .btn { min-height: 42px; }
   #site-search { scroll-margin-top: calc(var(--nav-mobile-h) + 0.5rem); }
-  .celestial { animation: float 3s ease-in-out infinite; }
-  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-0.4rem); } }
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
-  .cookie-body { max-height: calc(95vh - 180px); }
-}
-
-@media (max-width: 768px) {
-  .cookie-group summary { min-height: 48px; padding: 0.25rem 0; }
-  .switch { min-height: 44px; min-width: 44px; display: inline-flex; justify-content: center; align-items: center; }
-  .ghost-action { min-height: 44px; display: inline-flex; align-items: center; }
-  .cookie-group details + details { margin-top: 0.25rem; }
-}
 
 #site-search { scroll-margin-top: calc(var(--nav-mobile-h) + 3rem); }
 #site-search:target .search {
@@ -185,8 +154,6 @@
   .more .explore, .more .subscribe { font-size: 0.75rem; padding: 0.4rem 0.6rem; }
   .site-search .search { height: 3rem; }
   .site-search .search input { font-size: 0.9rem; }
-  .today-picks h1 { font-size: 1.1rem; }
-  .fyp-image { max-width: 100%; }
   .quick-recipes label { font-size: 0.85rem; }
 }
 
