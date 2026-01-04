@@ -12,7 +12,7 @@
   --img-height: 160px;
   --nav-mobile-h: 56px;
 }
-.shop-page .modal-content {
+.shop-page .shop-modal-content {
   position: relative;
   background-color: #fff;
   padding: 1.5rem;
@@ -274,7 +274,7 @@
   border-color: #007A70;
 }
 
-.shop-page .modal {
+.shop-page .shop-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -286,22 +286,6 @@
   justify-content: center;
   align-items: center;
   z-index: 2000;
-}
-
-.shop-page .modal:target {
-  display: flex;
-}
-
-
-@keyframes pop {
-  from {
-    transform: scale(0.96);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 .shop-page .modal-image-wrapper {
@@ -319,7 +303,7 @@
   object-fit: cover;
 }
 
-.shop-page .close {
+.shop-page .shop-modal-close {
   position: absolute;
   top: 0.75rem;
   right: 1rem;
@@ -330,24 +314,11 @@
   background: transparent;
 }
 
-.shop-page .close:hover {
+.shop-page .shop-modal-close:hover {
   color: #000;
   transform: scale(1.2);
 }
 
-
-.shop-page .ghost-action {
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  font-weight: 700;
-  color: #1c6a63;
-  text-decoration: none;
-}
-
-.shop-page .ghost-action:hover {
-  color: #0e4f49;
-  text-decoration: underline;
-}
 
 .shop-page .h3 {
   color: #007A70;
@@ -505,7 +476,7 @@
     aspect-ratio: 4 / 3;
   }
 
-  .shop-page .close {
+  .shop-page .shop-modal-close {
     font-size: 1.75rem;
     top: 0.5rem;
     left: 40%;

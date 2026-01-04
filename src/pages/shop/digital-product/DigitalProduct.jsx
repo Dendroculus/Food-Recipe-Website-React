@@ -100,9 +100,9 @@ class DigitalProduct extends React.Component {
     const { selected } = this.state;
     if (!selected) return null;
     return (
-      <div className="modal" role="dialog" aria-modal="true" style={{ display: 'flex' }}>
-        <div className="modal-content">
-          <button className="close" aria-label="Close" onClick={() => this.setState({ selected: null })}>
+      <div className="shop-modal" role="dialog" aria-modal="true" style={{ display: 'flex' }}>
+        <div className="shop-modal-content">
+          <button className="shop-modal-close" aria-label="Close" onClick={() => this.setState({ selected: null })}>
             ×
           </button>
           <h2>{selected.title}</h2>
@@ -119,9 +119,9 @@ class DigitalProduct extends React.Component {
     const { addItem, quantity } = this.state;
     if (!addItem) return null;
     return (
-      <div className="modal" role="dialog" aria-modal="true" style={{ display: 'flex' }}>
-        <div className="modal-content">
-          <button className="close" aria-label="Close" onClick={this.closeAddModal}>
+      <div className="shop-modal" role="dialog" aria-modal="true" style={{ display: 'flex' }}>
+        <div className="shop-modal-content">
+          <button className="shop-modal-close" aria-label="Close" onClick={this.closeAddModal}>
             ×
           </button>
           <h2>Add to Cart</h2>

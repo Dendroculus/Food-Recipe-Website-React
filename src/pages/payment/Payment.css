@@ -69,11 +69,6 @@
   justify-content: center;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-0.5rem); }
-}
-
 .subtitle {
   color: #929292;
   font-size: 1rem;

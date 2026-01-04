@@ -70,7 +70,6 @@
   .today-picks { margin: 1.25rem 0; }
   .today-picks h1 { font-size: 1.25rem; text-align: center; }
   .today-picks-fyp { flex-direction: column; align-items: center; }
-  .fyp-image { width: 100%; max-width: 20rem; margin-right: 0; }
   .quick-recipes .input-group {
     flex-direction: column;
     align-items: stretch;
@@ -84,7 +83,6 @@
 
 @media (max-width: 480px) {
   .today-picks h1 { font-size: 1.1rem; }
-  .fyp-image { max-width: 100%; }
   .quick-recipes label { font-size: 0.85rem; }
 }
 
