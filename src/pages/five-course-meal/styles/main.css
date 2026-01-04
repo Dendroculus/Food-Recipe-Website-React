@@ -1,3 +1,11 @@
+.page-wrapper {
+    background-image: linear-gradient(174.2deg, rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4%);
+    background-attachment: fixed;  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .recipe-page-wrapper {
     background-image: linear-gradient(174.2deg, rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4%);
     background-attachment: fixed;  
@@ -273,7 +281,7 @@
   border-radius: 10%;
 }
 
-.diet {
+.specialdiets {
   background-image: url("/public/assets/special_diets/vegan/Vegan BG.jpg");
   background-size: cover;
   background-position: center;

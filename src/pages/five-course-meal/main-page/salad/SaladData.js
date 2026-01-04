@@ -1,3 +1,14 @@
+export const description = "Explore our website's full salad recipe collection. Log in or create your account to easily save, revisit and review all your favourite salad dishes!";
+    
+export const topPicks = [
+      {img: "/assets/salad/Mixed Vegetable/Mediterranean ChickPea Salad.jpg", title: "Mediterranean ChickPea Salad"},
+      {img: "/assets/salad/Mixed Vegetable/Mediterranean Salad.jpg", title: "Mediterranean Salad"},
+      {img: "/assets/salad/Specialty/Watermelon Cucumber Salad.webp", title: "Watermelon Cucumber Salad"},
+      {img: "/assets/salad/Specialty/Endive Salad Bites.jpg", title: "Endive Salad Bites"},
+      {img: "/assets/salad/Specialty/Apple Salad.png", title: "Apple Salad"},
+      {img: "/assets/salad/Mixed Vegetable/Italian Salad.png", title: "Italian Salad"},
+    ];
+
 export const allSaladRecipes = [
   { 
     id: 62,

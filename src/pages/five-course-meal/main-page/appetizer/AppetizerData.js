@@ -1,3 +1,14 @@
+export const topPicks = [
+  {img: "/assets/appetizers/Finger-Food/Ham n Cheese Biscuit Stacks.jpg", title: "Ham n Cheese Biscuit Stacks"},
+  {img: "/assets/appetizers/Dip-Based/Tex Mex Skillet Poblano Dip.jpg", title: "Tex Mex Skillet Poblano Dip"},
+  {img: "/assets/appetizers/Finger-Food/Fried Prosciutto Tortellini.jpg", title: "Fried Prosciutto Tortellini"},
+  {img: "/assets/appetizers/Bread/Sourdough Garlic Knots.jpg", title: "Sourdough Garlic Knots"},
+  {img: "/assets/appetizers/Bread/Grilled Tomato-Peach Pizza.jpg", title: "Grilled Tomato-Peach Pizza"},
+  {img: "/assets/appetizers/Finger-Food/Tanghulu.jpg", title: "Tanghulu"},
+];
+
+export const description = "Explore our website's full appetizer recipe collection. Log in or create your account to easily save, revisit and review all your favourite appetizer dishes!";
+
 export const allAppetizerRecipes = [
   { 
     id: 31,

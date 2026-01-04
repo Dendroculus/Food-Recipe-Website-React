@@ -1,3 +1,14 @@
+export const description = "Explore our website's full special diets recipe collection. Log in or create your account to easily save, revisit and review all your favourite special diet dishes!";
+
+export const topPicks = [
+  {img: "/assets/special_diets/vegetarian/Pea and Mint Soup.jpg", title: "Pea and Mint Soup"},
+  {img: "/assets/special_diets/vegetarian/Ratatouille.jpg", title: "Ratatouille"},
+  {img: "/assets/special_diets/vegetarian/Cauliflower Steaks.jpg", title: "Cauliflower Steaks"},
+  {img: "/assets/special_diets/vegan/Sapo Tofu.jpg", title: "Sapo Tofu"},
+  {img: "/assets/special_diets/vegan/Mushroom Miso Risotto.jpg", title: "Mushroom Miso Risotto"},
+  {img: "/assets/special_diets/gluten_free/Steamed Fish.jpg", title: "Steamed Fish"},
+];
+
 export const allSpecialDietsRecipes = [
   { 
     id: 74,

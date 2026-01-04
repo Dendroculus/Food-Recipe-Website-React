@@ -1,3 +1,14 @@
+export const description = "Dessert, a delectable treat enjoyed after a meal, is the sweet finale that brings joy to our taste buds.";
+
+export const topPicks = [
+  {img: "/assets/desserts/Cake/Blueberry Heaven on Earth Cake.jpg", title: "Blueberry Heaven on Earth Cake"},
+  {img: "/assets/desserts/Cake/Italian Lemon Ricotta Cake.jpeg", title: "Italian Lemon Ricotta Cake"},
+  {img: "/assets/desserts/Tiramisu/Oreo Tiramisu Trifle.webp", title: "Oreo Tiramisu Trifle"},
+  {img: "/assets/desserts/Tiramisu/Pumpkin Chai Tiramisu.webp", title: "Pumpkin Chai Tiramisu"},
+  {img:  "/assets/desserts/Cake/Chocolate Sheet Cake.jpg", title: "Chocolate Sheet Cake"},
+  {img: "/assets/desserts/Cake/Boston Cream Poke Cake.jpg", title: "Boston Cream Poke Cake"},
+];
+
 export const allDessertRecipes = [
   { 
     id: 46,
