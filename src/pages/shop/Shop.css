@@ -479,7 +479,7 @@
   .shop-page .shop-modal-close {
     font-size: 1.75rem;
     top: 0.5rem;
-    left: 40%;
+    left: auto;
     z-index: 1;
   }
 }
