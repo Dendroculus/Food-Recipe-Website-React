@@ -9,25 +9,28 @@ class SignUpForm extends React.Component {
       email: '',
       password: '',
       confirmPassword: '',
+      termsAccepted: false,
       errors: {},
       isLoading: false,
     };
   }
 
   handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
+    const finalValue = type === 'checkbox' ? checked : value;
+
     this.setState({ 
-      [name]: value,
+      [name]: finalValue,
       errors: { ...this.state.errors, [name]: '' }
     });
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { username, email, password, confirmPassword } = this.state;
+    const { username, email, password, confirmPassword, termsAccepted } = this.state;
     
     // 1. USE EXTERNAL VALIDATOR
-    const validationErrors = validateRegisterForm(username, email, password, confirmPassword);
+    const validationErrors = validateRegisterForm(username, email, password, confirmPassword, termsAccepted);
 
     // 2. CHECK ERRORS
     if (Object.keys(validationErrors).length > 0) {
@@ -49,7 +52,7 @@ class SignUpForm extends React.Component {
 
   render() {
     const { isActive, onSwitchMode } = this.props;
-    const { username, email, password, confirmPassword, errors, isLoading } = this.state;
+    const { username, email, password, confirmPassword, errors, isLoading, termsAccepted } = this.state;
 
     return (
       <div className={`auth-panel right-panel ${isActive ? 'active' : ''}`}>
@@ -126,11 +129,18 @@ class SignUpForm extends React.Component {
 
           </section>
 
-          <div id="footer_signup">
-            <label className="remember-wrap">
-              <input type="checkbox" id="kotak2" />
+          <div id="footer_signup" style={{ position: 'relative' }}> {/* <--- ADD THIS STYLE */}
+            <label className="remember-wrap" style={{ cursor: 'pointer' }}>
+              <input 
+                type="checkbox" 
+                id="terms" 
+                name="termsAccepted"       
+                checked={termsAccepted}   
+                onChange={this.handleChange} 
+              />
               <span>I agree to the Terms of Service and Privacy Policy</span>
             </label>
+            {errors.terms && <small className="error-msg" style={{ bottom: '-1rem', left: 0 }}>{errors.terms}</small>}
           </div>
 
           <button type="submit" className="auth-btn" disabled={isLoading}>

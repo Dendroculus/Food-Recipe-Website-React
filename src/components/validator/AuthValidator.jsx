@@ -26,7 +26,7 @@ const validateLoginForm = (email, password) => {
   return errors;
 };
 
-const validateRegisterForm = (username, email, password, confirmPassword) => {
+const validateRegisterForm = (username, email, password, confirmPassword, termsAccepted) => {
   const errors = {};
 
   if (!username.trim()) {
@@ -39,6 +39,7 @@ const validateRegisterForm = (username, email, password, confirmPassword) => {
     errors.email = 'Please enter a valid email address';
   }
 
+  
   if (!password) {
     errors.password = 'Password cannot be empty';
   } else if (password.length < 8) {
@@ -46,15 +47,21 @@ const validateRegisterForm = (username, email, password, confirmPassword) => {
   } else if (!validatePassword(password)) {
     errors.password = 'Password must include uppercase, lowercase, number, & special char';
   }
-
+  
   if (password !== confirmPassword) {
     errors.confirmPassword = 'Passwords do not match';
   }
-
+  
   if (username === password && username !== '') {
     errors.password = 'Username and password should not be the same';
   }
-
+  
+  if (Object.keys(errors).length === 0) {
+    if (!termsAccepted) {
+      errors.terms = 'You must agree to the Terms of Service and Privacy Policy';
+    }
+  }
+  
   return errors;
 };
 
