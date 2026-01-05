@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/top_pick_carousel.css';
+import './styles/TopPickCarousel.css';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default class TopPicks extends React.Component {

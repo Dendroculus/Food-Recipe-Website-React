@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/carousel.css';
+import './styles/Carousel.css';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default class RecipeCard extends React.Component {

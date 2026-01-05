@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { IoTrendingUp } from 'react-icons/io5';
-import '../styles/search.css';
+import './styles/Search.css';
 import { allMainCourseRecipes } from './main-course/MainCourseData';
 import { allAppetizerRecipes } from './appetizer/AppetizerData';
 import { allDessertRecipes } from './dessert/DessertData';

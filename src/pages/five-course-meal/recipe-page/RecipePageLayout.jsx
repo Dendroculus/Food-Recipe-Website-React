@@ -1,7 +1,7 @@
 import React from 'react';
 import RecipeSection from './RecipeSection';
 import RecipeNavBar from "../../../components/navigations/RecipesNavBar"; 
-import '../styles/recipe.css';
+import './styles/RecipePage.css';
 import Footer from "../../../components/footer/Footer";
 import Modal from "../../../components/modals/Modals";
 import Search from "../main-page/Search";
