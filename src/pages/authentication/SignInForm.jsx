@@ -2,7 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { validateLoginForm } from '../../components/validator/AuthValidator'; 
 
+/**
+ * SignInForm component renders the login form and handles local form state and validation.
+ *
+ * Props:
+ * - isActive: boolean - whether the sign-in panel is currently active/visible
+ * - onSwitchMode: function - callback to switch to the sign-up mode
+ *
+ * @extends React.Component
+ */
 class SignInForm extends React.Component {
+  /**
+   * Initialize component state for the sign-in form.
+   * state:
+   * - email: string
+   * - password: string
+   * - errors: object
+   * - isLoading: boolean
+   * @param {object} props
+   */
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +31,11 @@ class SignInForm extends React.Component {
     };
   }
 
+  /**
+   * Handle form input changes and clear field-specific errors immediately.
+   * @param {Event} e - Input change event.
+   * @returns {void}
+   */
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ 
@@ -22,6 +45,11 @@ class SignInForm extends React.Component {
     });
   };
 
+  /**
+   * Handle form submission: validate using external validator, show errors, or simulate login.
+   * @param {Event} e - Form submit event.
+   * @returns {void}
+   */
   handleSubmit = (e) => {
     e.preventDefault();
     const { email, password } = this.state;
@@ -48,6 +76,10 @@ class SignInForm extends React.Component {
     }, 800);
   };
 
+  /**
+   * Render the sign-in form panel.
+   * @returns {JSX.Element} Sign-in panel JSX.
+   */
   render() {
     const { isActive, onSwitchMode } = this.props;
     const { email, password, errors, isLoading } = this.state;

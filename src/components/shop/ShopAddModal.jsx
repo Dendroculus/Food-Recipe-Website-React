@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles/ShopModals.css';
 
 /**
  * Modal UI for adding a product to the shopping cart.

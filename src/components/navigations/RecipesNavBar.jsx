@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
-import "./RecipesNavBar.css";
+import "./styles/RecipesNavBar.css";
 
 /**
  * RecipeNavbar component renders a responsive header navigation for recipe categories.

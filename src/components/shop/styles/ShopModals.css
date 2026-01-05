@@ -1,0 +1,122 @@
+.shop-page .shop-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 32, 37, 0.55);
+  backdrop-filter: blur(4px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.shop-page .shop-modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 90%;          
+  max-width: 500px;   
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.shop-page .shop-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #333;
+  border: none;
+  background: transparent;
+}
+
+.shop-page .shop-modal-close:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+.shop-page .modal-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.shop-page .modal-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-page .quantity-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.shop-page .quantity-control input[type="number"] {
+  width: 4rem;
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+  background: #f7f7f8;
+  font-weight: 700;
+}
+
+.shop-page .quantity-control input[type="number"]::-webkit-outer-spin-button,
+.shop-page .quantity-control input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.shop-page .qty-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #00BFA5;
+  background: #00BFA5;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.shop-page .qty-btn:hover {
+  background: #007A70;
+  border-color: #007A70;
+}
+
+.shop-page .btn-add-cart {
+  background-color: #00BFA5;
+  border-color: #00BFA5;
+}
+
+.shop-page .btn-add-cart:hover {
+  background-color: #007A70;
+  border-color: #007A70;
+}
+
+@media (max-width: 768px) {
+  .shop-page .modal-image-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+  .shop-page .shop-modal-close {
+    font-size: 1.75rem;
+    top: 0.5rem;
+    left: auto;
+    z-index: 1;
+  }
+}

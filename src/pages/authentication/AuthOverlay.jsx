@@ -1,6 +1,20 @@
 import React from 'react';
 
+/**
+ * AuthOverlay component renders the split overlay panels for auth pages.
+ * Provides buttons to switch between sign-in and sign-up modes via callbacks.
+ *
+ * Props:
+ * - onSwitchToSignIn: function - callback invoked when the "Sign In" button is clicked
+ * - onSwitchToSignUp: function - callback invoked when the "Sign Up" button is clicked
+ *
+ * @extends React.Component
+ */
 class AuthOverlay extends React.Component {
+  /**
+   * Render the overlay panels with action buttons.
+   * @returns {JSX.Element} Overlay section JSX.
+   */
   render() {
     const { onSwitchToSignIn, onSwitchToSignUp } = this.props;
 

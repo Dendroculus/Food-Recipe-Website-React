@@ -1,7 +1,21 @@
 import React from 'react';
 import { validateRegisterForm } from '../../components/validator/AuthValidator';
 
+/**
+ * SignUpForm component renders the registration form and handles validation and submission.
+ *
+ * Props:
+ * - isActive: boolean - whether this sign-up panel is currently active/visible
+ * - onSwitchMode: function - callback to switch to sign-in mode
+ *
+ * @extends React.Component
+ */
 class SignUpForm extends React.Component {
+  /**
+   * Initialize component state for the sign-up form.
+   * state includes username, email, password, confirmPassword, termsAccepted, errors, isLoading.
+   * @param {object} props
+   */
   constructor(props) {
     super(props);
     this.state = {
@@ -15,6 +29,12 @@ class SignUpForm extends React.Component {
     };
   }
 
+  /**
+   * Handle input changes for text and checkbox inputs.
+   * Updates the corresponding state field and clears field-specific errors.
+   * @param {Event} e - Input change event.
+   * @returns {void}
+   */
   handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const finalValue = type === 'checkbox' ? checked : value;
@@ -25,6 +45,12 @@ class SignUpForm extends React.Component {
     });
   };
 
+  /**
+   * Handle registration form submission.
+   * Uses external validator to collect errors, shows them briefly, or simulates success.
+   * @param {Event} e - Form submit event.
+   * @returns {void}
+   */
   handleSubmit = (e) => {
     e.preventDefault();
     const { username, email, password, confirmPassword, termsAccepted } = this.state;
@@ -50,6 +76,10 @@ class SignUpForm extends React.Component {
     }, 800);
   };
 
+  /**
+   * Render the sign-up form panel.
+   * @returns {JSX.Element} Sign-up panel JSX.
+   */
   render() {
     const { isActive, onSwitchMode } = this.props;
     const { username, email, password, confirmPassword, errors, isLoading, termsAccepted } = this.state;

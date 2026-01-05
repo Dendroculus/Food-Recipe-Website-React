@@ -1,7 +1,18 @@
 import React from "react";
 import "./SeasonCard.css";
 
+/**
+ * SeasonCard component displays a single season with image, highlights, and recipes.
+ * Expects a `season` prop containing details like img, name, emoji, ingredients, recipes and cta.
+ * @param {object} props
+ * @param {object} props.season - Season data object
+ * @extends React.Component
+ */
 export default class SeasonCard extends React.Component {
+  /**
+   * Render the season card showing image, highlights and call-to-action.
+   * @returns {JSX.Element} Season card markup.
+   */
   render() {
     const { season = {} } = this.props;
     return (

@@ -7,17 +7,39 @@ import Footer from "../../components/footer/Footer";
 import Modals from "../../components/modals/Modals";
 
 function withLocation(Component) {
+  /**
+   * Higher-order component to inject router location into a component's props.
+   * @param {object} props - Props passed to the wrapped component.
+   * @returns {JSX.Element} Wrapped component with an added `location` prop.
+   */
   return function Wrapped(props) {
     const location = useLocation();
     return <Component {...props} location={location} />;
   };
 }
 
+/**
+ * AboutUs page component.
+ * Renders the About Us content, team members, mission, contact section, and includes navigation, modals, and footer.
+ * Handles scrolling to hash fragments on mount and update.
+ * @extends React.Component
+ */
 class AboutUs extends React.Component {
+  /**
+   * Lifecycle method called after the component is mounted.
+   * Triggers scrolling to any hash in the URL.
+   * @returns {void}
+   */
   componentDidMount() {
     this.scrollToHash();
   }
 
+  /**
+   * Lifecycle method called after component updates.
+   * Checks for location changes and scrolls to the new hash if necessary.
+   * @param {object} prevProps - Previous props before the update.
+   * @returns {void}
+   */
   componentDidUpdate(prevProps) {
     const prevPath = prevProps.location?.pathname;
     const currPath = this.props.location?.pathname;
@@ -29,6 +51,11 @@ class AboutUs extends React.Component {
     }
   }
 
+  /**
+   * Scrolls smoothly to the element referenced by the current URL hash (if present).
+   * Uses requestAnimationFrame to ensure DOM is ready.
+   * @returns {void}
+   */
   scrollToHash() {
     const hash = this.props.location?.hash || window.location.hash;
     if (!hash) return;
@@ -41,6 +68,16 @@ class AboutUs extends React.Component {
     });
   }
 
+  /**
+   * Render a team member block.
+   * @param {object} member - Team member data object.
+   * @param {string} member.img - Image URL for the member.
+   * @param {string} member.name - Member's name.
+   * @param {string} member.role - Member's role/title.
+   * @param {string} member.bio - Short biography or description.
+   * @param {boolean} [reverse=false] - If true, reverses layout for alternating rows.
+   * @returns {JSX.Element} JSX for a team member row.
+   */
   renderTeamMember({ img, name, role, bio }, reverse = false) {
     return (
       <div className={`row align-items-center team-member ${reverse ? "flex-md-row-reverse" : ""} mb-5`}>
@@ -61,6 +98,11 @@ class AboutUs extends React.Component {
     );
   }
 
+  /**
+   * Main render method for the AboutUs page.
+   * Assembles the team data and renders the full page content.
+   * @returns {JSX.Element} The About Us page JSX.
+   */
   render() {
     const team = [
       {

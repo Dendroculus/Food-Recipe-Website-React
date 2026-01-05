@@ -1,8 +1,16 @@
 import React from "react";
 import './Spotlight.css';
 
+/**
+ * Spotlight component highlights the current season with a themed background and text.
+ * @extends React.Component
+ */
 export default class Spotlight extends React.Component {
-  // Map season name -> CSS gradient variable
+  /**
+   * Map season name to a CSS gradient variable.
+   * @param {string} name - Season name (e.g., "Autumn", "Spring").
+   * @returns {string} CSS variable containing the gradient.
+   */
   gradientForSeason(name) {
     switch (name) {
       case "Spring":
@@ -18,6 +26,11 @@ export default class Spotlight extends React.Component {
     }
   }
 
+  /**
+   * Render the spotlight section for the provided season.
+   * Special-cases Autumn to keep text exactly as authored.
+   * @returns {JSX.Element|null} Spotlight JSX or null if no valid season provided.
+   */
   render() {
     const { season = {} } = this.props;
     if (!season || !season.name) return null;

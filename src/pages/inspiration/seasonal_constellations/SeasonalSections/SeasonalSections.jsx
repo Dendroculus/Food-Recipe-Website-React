@@ -7,7 +7,16 @@ import SeasonsGrid from "../SeasonsGrid/SeasonsGrid";
 import Calendar from "../Calendar/Calendar";
 import WhySeasonal from "../WhySeasonal/WhySeasonal";
 
+/**
+ * SeasonalSections composes the seasonal content for Seasonal Constellations.
+ * It holds seasons data, calendar data, and benefits and selects the current season.
+ * @extends React.Component
+ */
 export default class SeasonalSections extends React.Component {
+  /**
+   * Initialize seasonal data for the component.
+   * @param {object} props - React props.
+   */
   constructor(props) {
     super(props);
 
@@ -85,6 +94,15 @@ export default class SeasonalSections extends React.Component {
     };
   }
 
+  /**
+   * Determine the current season object.
+   * Priority:
+   * 1. props.currentSeasonName override (case-insensitive)
+   * 2. Current month mapping to season
+   * 3. Explicit `current: true` season in state
+   * 4. First season in the list
+   * @returns {object|null} Season object or null if none available.
+   */
   getCurrentSeason() {
     const { seasons } = this.state;
 
@@ -113,6 +131,10 @@ export default class SeasonalSections extends React.Component {
     return seasons[0] || null;
   }
 
+  /**
+   * Render the seasonal sections including spotlight, seasons grid, calendar and benefits.
+   * @returns {JSX.Element} Sections JSX.
+   */
   render() {
     const { seasons, calendar, benefits } = this.state;
     const currentSeason = this.getCurrentSeason();

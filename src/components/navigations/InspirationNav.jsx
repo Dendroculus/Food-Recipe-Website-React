@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./InspirationNav.css";
+import "./styles/InspirationNav.css";
 
 /**
  * InspirationNav component - a navigation bar with grouped dropdowns and right-side icon links.

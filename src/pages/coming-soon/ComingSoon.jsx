@@ -1,7 +1,16 @@
 import React from "react";
 import "./ComingSoon.css";
 
+/**
+ * ComingSoon page component that displays an animated background and a
+ * message indicating a feature/page is coming soon.
+ * @extends React.Component
+ */
 class ComingSoon extends React.Component {
+  /**
+   * Render a set of animated bubble elements used in the page background.
+   * @returns {JSX.Element} A container with bubble divs.
+   */
   renderBubbles() {
     const bubbles = Array.from({ length: 11 }, (_, i) => (
       <div key={i} className={`bubble bubble-${i + 1}`} />
@@ -9,6 +18,10 @@ class ComingSoon extends React.Component {
     return <div className="animated-background">{bubbles}</div>;
   }
 
+  /**
+   * Render the ComingSoon page UI including animated background and content.
+   * @returns {JSX.Element} The coming soon page markup.
+   */
   render() {
     return (
       <div className="coming-soon-page">
