@@ -16,7 +16,7 @@ export const allDessertRecipes = [
     subcategory: 'cake',
     img: "/assets/desserts/Cake/Blueberry Heaven on Earth Cake.jpg", 
     title: "Blueberry Heaven on Earth Cake", 
-    href: "/five-course-meal/recipes/dessert#blueberry-heaven-cake", 
+    href: "/recipes/recipes/dessert#blueberry-heaven-cake", 
     time: "1 hr 10 mins", 
     keywords: ['dessert', 'cake', 'blueberry', 'layer cake', 'baked'],
     tags: ['summer', 'spring'] 
@@ -27,7 +27,7 @@ export const allDessertRecipes = [
     subcategory: 'cake',
     img: "/assets/desserts/Cake/Boston Cream Poke Cake.jpg", 
     title: "Boston Cream Poke Cake", 
-    href: "/five-course-meal/recipes/dessert#boston-cream-poke-cake", 
+    href: "/recipes/recipes/dessert#boston-cream-poke-cake", 
     time: "1 hr 15 mins", 
     keywords: ['dessert', 'cake', 'boston cream', 'poke cake', 'custard'],
     tags: ['fall', 'winter'] 
@@ -38,7 +38,7 @@ export const allDessertRecipes = [
     subcategory: 'cake',
     img: "/assets/desserts/Cake/Chocolate Sheet Cake.jpg", 
     title: "Chocolate Sheet Cake", 
-    href: "/five-course-meal/recipes/dessert#chocolate-sheet-cake", 
+    href: "/recipes/recipes/dessert#chocolate-sheet-cake", 
     time: "40 mins", 
     keywords: ['dessert', 'cake', 'chocolate', 'sheet cake', 'party'],
     tags: ['winter', 'christmas', 'valentine'] 
@@ -49,7 +49,7 @@ export const allDessertRecipes = [
     subcategory: 'cake',
     img: "/assets/desserts/Cake/Italian Lemon Ricotta Cake.jpeg", 
     title: "Italian Lemon Ricotta Cake", 
-    href: "/five-course-meal/recipes/dessert#italian-lemon-ricotta-cake", 
+    href: "/recipes/recipes/dessert#italian-lemon-ricotta-cake", 
     time: "1 hr 15 mins", 
     keywords: ['dessert', 'cake', 'lemon', 'ricotta', 'italian'],
     tags: ['spring', 'summer', 'easter'] 
@@ -60,7 +60,7 @@ export const allDessertRecipes = [
     subcategory: 'pastry',
     img: "/assets/desserts/Pastry/Palmiers.jpeg", 
     title: "Palmiers", 
-    href: "/five-course-meal/recipes/dessert#palmiers", 
+    href: "/recipes/recipes/dessert#palmiers", 
     time: "35 mins", 
     keywords: ['dessert', 'pastry', 'palmiers', 'puff pastry', 'french'],
     tags:  ['winter', 'christmas', 'valentine'] 
@@ -71,7 +71,7 @@ export const allDessertRecipes = [
     subcategory: 'pastry',
     img: "/assets/desserts/Pastry/Peanut Butter Cup Napoleons.jpg", 
     title: "Peanut Butter Cup Napoleons", 
-    href: "/five-course-meal/recipes/dessert#peanut-butter-cup-napoleons", 
+    href: "/recipes/recipes/dessert#peanut-butter-cup-napoleons", 
     time: "1 hr", 
     keywords: ['dessert', 'pastry', 'napoleons', 'peanut butter', 'layered'],
     tags: ['fall', 'winter'] 
@@ -82,7 +82,7 @@ export const allDessertRecipes = [
     subcategory: 'pastry',
     img: "/assets/desserts/Pastry/Profiteroles.png", 
     title: "Profiteroles", 
-    href: "/five-course-meal/recipes/dessert#profiteroles", 
+    href: "/recipes/recipes/dessert#profiteroles", 
     time: "1 hr 10 mins", 
     keywords: ['dessert', 'pastry', 'profiteroles', 'cream puff', 'chocolate', 'french'],
     tags:  ['winter', 'christmas', 'valentine'] 
@@ -93,7 +93,7 @@ export const allDessertRecipes = [
     subcategory: 'pastry',
     img: "/assets/desserts/Pastry/Raspberry Chocolate Puffs.jpg", 
     title: "Raspberry Chocolate Puffs", 
-    href: "/five-course-meal/recipes/dessert#raspberry-chocolate-puffs", 
+    href: "/recipes/recipes/dessert#raspberry-chocolate-puffs", 
     time: "45 mins", 
     keywords: ['dessert', 'pastry', 'raspberry', 'chocolate', 'cream puff'],
     tags: ['spring', 'summer', 'valentine'] 
@@ -104,7 +104,7 @@ export const allDessertRecipes = [
     subcategory: 'pudding',
     img: "/assets/desserts/Pudding/Lemon Pudding Parfait.jpg", 
     title: "Lemon Pudding Parfait", 
-    href: "/five-course-meal/recipes/dessert#lemon-pudding-parfait", 
+    href: "/recipes/recipes/dessert#lemon-pudding-parfait", 
     time: "25 mins", 
     keywords: ['dessert', 'pudding', 'lemon', 'parfait', 'layered'],
     tags: ['summer', 'spring'] 
@@ -115,7 +115,7 @@ export const allDessertRecipes = [
     subcategory: 'pudding',
     img: "/assets/desserts/Pudding/Matcha Green Tea Pudding.jpg", 
     title: "Matcha Green Tea Pudding", 
-    href: "/five-course-meal/recipes/dessert#matcha-green-tea-pudding", 
+    href: "/recipes/recipes/dessert#matcha-green-tea-pudding", 
     time: "3 hrs 35 mins", 
     keywords: ['dessert', 'pudding', 'matcha', 'green tea', 'japanese'],
     tags: ['spring', 'summer'] 
@@ -126,7 +126,7 @@ export const allDessertRecipes = [
     subcategory: 'pudding',
     img: "/assets/desserts/Pudding/Panacotta.png", 
     title: "Panacotta", 
-    href: "/five-course-meal/recipes/dessert#panacotta", 
+    href: "/recipes/recipes/dessert#panacotta", 
     time: "4 hrs 20 mins", 
     keywords: ['dessert', 'pudding', 'panacotta', 'panna cotta', 'italian', 'creamy'],
     tags:  ['summer', 'spring', 'valentine'] 
@@ -137,7 +137,7 @@ export const allDessertRecipes = [
     subcategory: 'pudding',
     img: "/assets/desserts/Pudding/Pumpkin Spice Cup.jpg", 
     title: "Pumpkin Spice Cup", 
-    href: "/five-course-meal/recipes/dessert#pumpkin-spice-cup", 
+    href: "/recipes/recipes/dessert#pumpkin-spice-cup", 
     time: "2 hrs 35 mins", 
     keywords: ['dessert', 'pudding', 'pumpkin', 'spice', 'fall'],
     tags: ['fall', 'thanksgiving', 'halloween'] 
@@ -148,7 +148,7 @@ export const allDessertRecipes = [
     subcategory: 'tiramisu',
     img: "/assets/desserts/Tiramisu/Limoncello Tiramisu.jpg", 
     title: "Limoncello Tiramisu", 
-    href: "/five-course-meal/recipes/dessert#limoncello-tiramisu", 
+    href: "/recipes/recipes/dessert#limoncello-tiramisu", 
     time: "6 hrs 30 mins", 
     keywords: ['dessert', 'tiramisu', 'limoncello', 'lemon', 'italian'],
     tags: ['summer', 'spring'] 
@@ -159,7 +159,7 @@ export const allDessertRecipes = [
     subcategory: 'tiramisu',
     img: "/assets/desserts/Tiramisu/Oreo Tiramisu Trifle.webp", 
     title: "Oreo Tiramisu Trifle", 
-    href: "/five-course-meal/recipes/dessert#oreo-tiramisu-trifle", 
+    href: "/recipes/recipes/dessert#oreo-tiramisu-trifle", 
     time: "4 hrs 25 mins", 
     keywords: ['dessert', 'tiramisu', 'oreo', 'trifle', 'cookies'],
     tags: ['fall', 'winter', 'halloween'] 
@@ -170,7 +170,7 @@ export const allDessertRecipes = [
     subcategory: 'tiramisu',
     img: "/assets/desserts/Tiramisu/Pumpkin Chai Tiramisu.webp", 
     title: "Pumpkin Chai Tiramisu", 
-    href: "/five-course-meal/recipes/dessert#pumpkin-chai-tiramisu", 
+    href: "/recipes/recipes/dessert#pumpkin-chai-tiramisu", 
     time: "6 hrs 45 mins", 
     keywords: ['dessert', 'tiramisu', 'pumpkin', 'chai', 'spice'],
     tags: ['fall', 'thanksgiving', 'halloween'] 
@@ -181,7 +181,7 @@ export const allDessertRecipes = [
     subcategory: 'tiramisu',
     img: "/assets/desserts/Tiramisu/Strawberry Tiramisu.jpg", 
     title: "Strawberry Tiramisu", 
-    href: "/five-course-meal/recipes/dessert#strawberry-tiramisu", 
+    href: "/recipes/recipes/dessert#strawberry-tiramisu", 
     time: "5 hrs 30 mins", 
     keywords: ['dessert', 'tiramisu', 'strawberry', 'fruit', 'italian'],
     tags: ['spring', 'summer', 'valentine'] 

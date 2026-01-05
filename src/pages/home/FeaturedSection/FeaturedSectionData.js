@@ -7,7 +7,7 @@ let featuredRecipe = {
       meta: '30 min • Medium • ★ 4.8',
       description:
         'A quick star-worthy main that balances savory and bright flavors — perfect for weeknight dinners.',
-      href: '/five-course-meal/recipes/main-course#pork-chops',
+      href: '/recipes/recipes/main-course#pork-chops',
     };
 
 let spotlightRecipes = [
