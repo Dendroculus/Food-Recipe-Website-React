@@ -505,8 +505,8 @@
     font-family: "Playwrite";
     color: #e1fdfc;
     margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight:  400;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
     letter-spacing: 0.1rem;
     position: relative;
     text-shadow: 
@@ -727,7 +727,6 @@
 
 .recipe-page :is(.card, .card a:visited) {
     background-color: #fff;
-    border-radius: 10%;
     overflow: hidden;
     box-shadow: 0 0.625rem 2rem rgba(0,0,0,0.08);
     transition: box-shadow 0.2s ease;
@@ -736,6 +735,10 @@
     display: flex;
     flex-direction: column;
     animation: rainbow-border 3s infinite;
+}
+
+.recipe-page .card-container :is(.card, .card a:visited) {
+    border-radius: 10%;
 }
 
 @keyframes rainbow-border {

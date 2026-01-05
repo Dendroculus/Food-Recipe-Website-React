@@ -93,6 +93,10 @@
     color: #35c5ad;
 }
 
+.carousel-slide :is(.card, .card a:visited) {
+    border-radius: 18%;
+}
+
 .carousel-slide .card .text p {
     font-size: 1.2rem;
     color: #333;
