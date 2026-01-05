@@ -665,7 +665,7 @@ export const fingerFoodRecipes = [
       sodium: "480mg"
     },
     tags: ["Sausages", "Party", "Quick", "Appetizer"],
-    video: "https://www.youtube.com/embed/example12"
+    video: "https://www.youtube.com/embed/tZUPReMX8AI?si=j1XHXNDVLotpLxTj"
   },
   {
     id: "orange-marmalade-meatballs",

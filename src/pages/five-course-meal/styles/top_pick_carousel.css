@@ -3,6 +3,7 @@
     padding: 2rem;
     position: relative;
     z-index: 1;
+    width: 75%;
 }
 
 .alice-carousel-wrapper {

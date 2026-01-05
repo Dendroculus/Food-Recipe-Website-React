@@ -408,7 +408,7 @@
     color: #7f8c8d;
     font-style: italic;
     letter-spacing: 0.1rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2.5rem;
 }
 
 .recommended-section, .recommended-img {
@@ -594,7 +594,8 @@
 .recipe-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 0 2rem;
+    width: 85%;
+    margin: 0 auto;
     gap: 2rem;
 }
 
@@ -724,7 +725,7 @@
 
 .recipe-page :is(.card, .card a:visited) {
     background-color: #fff;
-    border-radius: 20%;
+    border-radius: 10%;
     overflow: hidden;
     box-shadow: 0 0.625rem 2rem rgba(0,0,0,0.08);
     transition: box-shadow 0.2s ease;
