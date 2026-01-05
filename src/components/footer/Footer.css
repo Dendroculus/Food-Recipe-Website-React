@@ -86,7 +86,7 @@
 .footer-policy-links a { 
   text-decoration: none; 
   color: darkgrey;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer-policy-links:hover a { 
@@ -95,13 +95,13 @@
 
 .footer-policy-links a:hover { 
   color: black; 
-  transform: scale(1.03); 
-  font-weight: 600; 
+  transform: scale(1.08) translateZ(0);
+  text-shadow: 0 0 0.5px black;
 }
 
 .footer-policy-links:hover a:not(:hover) { 
   opacity: 0.4;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 @media (max-width: 768px) {

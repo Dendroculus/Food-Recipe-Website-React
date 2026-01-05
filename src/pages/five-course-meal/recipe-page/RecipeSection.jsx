@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import StarRating from './StarRating';
-import '../styles/recipe.css'
+import './styles/RecipePage.css'
 import { 
     FaRegClock, 
     FaFire, 

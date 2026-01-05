@@ -8,7 +8,9 @@ import FilterRecipe from './FilterRecipe';
 import Search from "./Search";
 import { FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import "../styles/main.css";
+import "./styles/MainPage.css";
+import "./styles/RecipeCard.css";
+import "./styles/Pagination.css";
 import "../../home/Home.css";
 
 class MainPageLayout extends React.Component {
@@ -51,7 +53,6 @@ class MainPageLayout extends React.Component {
     });
   }
 
-  // Exposed method to scroll to recipes
   scrollToRecipes = () => {
     const allRecipesTitle = document.querySelector('.all-recipes');
     if (allRecipesTitle) allRecipesTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
