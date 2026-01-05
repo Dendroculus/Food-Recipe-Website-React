@@ -1,3 +1,50 @@
+/**
+ * @typedef {Object} RecipeMeta
+ * @property {string} prepTime
+ * @property {string} cookTime
+ * @property {string} totalTime
+ * @property {string} difficulty
+ * @property {number} rating
+ * @property {number} reviews
+ */
+
+/**
+ * @typedef {Object} InstructionSection
+ * @property {string} section
+ * @property {string[]} steps
+ */
+
+/**
+ * @typedef {Object} Nutrition
+ * @property {number} calories
+ * @property {string} carbs
+ * @property {string} protein
+ * @property {string} fat
+ * @property {string} saturatedFat
+ * @property {string} transFat
+ * @property {string} sodium
+ * @property {string} fiber
+ * @property {string} sugar
+ */
+
+/**
+ * @typedef {Object} Recipe
+ * @property {string} id
+ * @property {string} title
+ * @property {string} image
+ * @property {string} description
+ * @property {RecipeMeta} meta
+ * @property {string[]} ingredients
+ * @property {InstructionSection[]} instructions
+ * @property {Nutrition} nutrition
+ * @property {string[]} tags
+ * @property {string} video
+ */
+
+/**
+ * Dairy-free recipes collection
+ * @type {Recipe[]}
+ */
 export const dairyfreerecipes = [
   {
     id: "caponata",
@@ -643,6 +690,56 @@ export const dairyfreerecipes = [
   }
 ];
 
+/**
+ * @typedef {Object} RecipeMeta
+ * @property {string} prepTime
+ * @property {string} cookTime
+ * @property {string} totalTime
+ * @property {string} difficulty
+ * @property {number} rating
+ * @property {number} reviews
+ */
+
+/**
+ * @typedef {Object} InstructionSection
+ * @property {string} section
+ * @property {string[]} steps
+ */
+
+/**
+ * @typedef {Object} Nutrition
+ * @property {number} calories
+ * @property {string} carbs
+ * @property {string} protein
+ * @property {string} fat
+ * @property {string} saturatedFat
+ * @property {string} transFat
+ * @property {string} sodium
+ * @property {string} fiber
+ * @property {string} sugar
+ * @property {string} [potassium]
+ * @property {string} [calcium]
+ * @property {string} [iron]
+ */
+
+/**
+ * @typedef {Object} Recipe
+ * @property {string} id
+ * @property {string} title
+ * @property {string} image
+ * @property {string} description
+ * @property {RecipeMeta} meta
+ * @property {string[]} ingredients
+ * @property {InstructionSection[]} instructions
+ * @property {Nutrition} nutrition
+ * @property {string[]} tags
+ * @property {string} video
+ */
+
+/**
+ * Gluten-free recipes collection
+ * @type {Recipe[]}
+ */
 export const glutenFreeRecipes = [
   {
     id: "air-fried-root-vegetables",
@@ -1347,6 +1444,58 @@ export const glutenFreeRecipes = [
     video: "https://www.youtube.com/embed/JMKdKGNt9LA?si=vJ6cp5ezO9-CnCGz"
   }
 ];
+
+/**
+ * @typedef {Object} RecipeMeta
+ * @property {string} prepTime
+ * @property {string} cookTime
+ * @property {string} totalTime
+ * @property {string} difficulty
+ * @property {number} rating
+ * @property {number} reviews
+ */
+
+/**
+ * @typedef {Object} InstructionSection
+ * @property {string} section
+ * @property {string[]} steps
+ */
+
+/**
+ * @typedef {Object} Nutrition
+ * @property {number} calories
+ * @property {string} carbs
+ * @property {string} protein
+ * @property {string} fat
+ * @property {string} saturatedFat
+ * @property {string} transFat
+ * @property {string} [cholestrol]
+ * @property {string} sodium
+ * @property {string} [potassium]
+ * @property {string} fiber
+ * @property {string} sugar
+ * @property {string} [calcium]
+ * @property {string} [iron]
+ */
+
+/**
+ * @typedef {Object} Recipe
+ * @property {string} id
+ * @property {string} title
+ * @property {string} image
+ * @property {string} description
+ * @property {RecipeMeta} meta
+ * @property {string[]} ingredients
+ * @property {InstructionSection[]} instructions
+ * @property {Nutrition} nutrition
+ * @property {string[]} tags
+ * @property {string} video
+ */
+
+/**
+ * Vegan recipes collection
+ * @type {Recipe[]}
+ */
 
 export const veganRecipes = [
   {

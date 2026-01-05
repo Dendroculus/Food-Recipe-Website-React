@@ -12,7 +12,36 @@ import {
     FaClock
 } from "react-icons/fa";
 
+/**
+ * RecipeSection displays the full details of a single recipe including:
+ * - Header with title, meta, rating and image
+ * - Ingredients list
+ * - Instructions (one or more sections)
+ * - Nutrition information and tags
+ * - Embedded video (optional)
+ * - Action buttons (print, save, share)
+ *
+ * Props:
+ * - recipe: {
+ *     id: string|number,
+ *     title: string,
+ *     meta: { prepTime?: string, cookTime?: string, waitTime?: string, totalTime?: string, difficulty?: string, rating?: number, reviews?: number },
+ *     image: string,
+ *     description: string,
+ *     ingredients: string[],
+ *     instructions: Array<{ section?: string, steps: string[] }>,
+ *     nutrition: Object,
+ *     tags: string[],
+ *     video?: string
+ *   }
+ *
+ * @extends React.Component
+ */
 export default class RecipeSection extends React.Component {
+    /**
+     * Render the recipe section layout and content.
+     * @returns {JSX.Element} Recipe section markup.
+     */
     render() {
         const { recipe } = this.props;
         return (

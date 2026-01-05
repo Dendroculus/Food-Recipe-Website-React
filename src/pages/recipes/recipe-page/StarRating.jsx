@@ -1,7 +1,20 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 
+/**
+ * StarRating component renders a 5-star rating display based on a numeric rating.
+ *
+ * Props:
+ * - rating: number (e.g., 4.5)
+ * - reviews: number (count of reviews)
+ *
+ * @extends React.Component
+ */
 export default class StarRating extends React.Component {
+    /**
+     * Render the star icons and review count.
+     * @returns {JSX.Element} Star rating markup.
+     */
     render() {
         const { rating, reviews } = this.props;
         const stars = [];

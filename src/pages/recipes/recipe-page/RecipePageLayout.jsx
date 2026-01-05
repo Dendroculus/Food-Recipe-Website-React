@@ -6,6 +6,19 @@ import Footer from "../../../components/footer/Footer";
 import Modal from "../../../components/modals/Modals";
 import Search from "../main-page/Search";
 
+/**
+ * RecipePageLayout renders a full recipe page composed of multiple categories/sections.
+ * It handles scrolling to hash fragments on mount and update.
+ *
+ * Props:
+ * - categories: Array<{
+ *     id: string,
+ *     title: string,
+ *     data: Array<recipe>
+ *   }>
+ *
+ * @extends React.Component
+ */
 export default class RecipePageLayout extends React.Component {
     componentDidMount() {
         this.handleScroll();
@@ -15,6 +28,11 @@ export default class RecipePageLayout extends React.Component {
         this.handleScroll();
     }
 
+    /**
+     * Scroll to an element based on the current URL hash.
+     * If no hash present, scroll to top.
+     * @returns {void}
+     */
     handleScroll = () => {
         const hash = window.location.hash;
         if (hash) {
@@ -28,6 +46,10 @@ export default class RecipePageLayout extends React.Component {
         }
     }
 
+    /**
+     * Render the recipe page layout including navigation, search, sections, footer and modals.
+     * @returns {JSX.Element} Page markup.
+     */
     render() {
         const { categories } = this.props;
 

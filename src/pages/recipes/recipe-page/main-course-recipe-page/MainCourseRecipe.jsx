@@ -2,6 +2,12 @@ import React from 'react';
 import RecipePageLayout from '../RecipePageLayout';
 import { chickenRecipes, beefRecipes, porkRecipes, lambRecipes, seafoodRecipes } from './MainCourseRecipeData';
 
+/**
+ * MainCourseRecipe page that supplies main course categories (chicken, beef, lamb, pork, seafood)
+ * to the RecipePageLayout component.
+ *
+ * @extends React.Component
+ */
 export default class MainCourseRecipe extends React.Component {
     render() {
         const categories = [

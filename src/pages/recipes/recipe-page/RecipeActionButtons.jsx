@@ -1,8 +1,31 @@
 import React from 'react';
 import { FaPrint, FaBookmark, FaShareAlt } from "react-icons/fa";
 
+/**
+ * RecipeActionButtons component provides actions for a recipe:
+ * - Print the recipe section
+ * - Save the recipe to a downloadable text file
+ * - Share the recipe via Web Share API or copy link
+ *
+ * Props:
+ * - recipe: {
+ *     id: string|number,
+ *     title: string,
+ *     meta: { prepTime?: string, cookTime?: string, totalTime?: string, difficulty?: string },
+ *     description: string,
+ *     ingredients: string[],
+ *     instructions: Array<{ section?: string, steps: string[] }>
+ *   }
+ *
+ * @extends React.Component
+ */
 export default class RecipeActionButtons extends React.Component {
     
+    /**
+     * Print the recipe section by id.
+     * Adds a temporary 'print-active' class to the section element before invoking window.print().
+     * @returns {void}
+     */
     handlePrint = () => {
         const { recipe } = this.props;
         const section = document.getElementById(recipe.id);
@@ -14,6 +37,12 @@ export default class RecipeActionButtons extends React.Component {
         }
     }
 
+    /**
+     * Save the recipe as a plain text file.
+     * Builds a text representation of the recipe (meta, description, ingredients, instructions)
+     * and triggers a download using a temporary anchor element.
+     * @returns {void}
+     */
     handleSave = () => {
         const { recipe } = this.props;
         const content = `
@@ -48,6 +77,11 @@ ${recipe.instructions.map(section => {
         URL.revokeObjectURL(url);
     }
 
+    /**
+     * Share the current page or recipe using the Web Share API when available.
+     * Falls back to copying the current URL to clipboard and notifying the user.
+     * @returns {void}
+     */
     handleShare = () => {
         const { recipe } = this.props;
 
@@ -65,6 +99,10 @@ ${recipe.instructions.map(section => {
         }
     }
 
+    /**
+     * Render action buttons for print, save and share.
+     * @returns {JSX.Element} Buttons markup.
+     */
     render() {
         return (
             <div className="action-buttons">

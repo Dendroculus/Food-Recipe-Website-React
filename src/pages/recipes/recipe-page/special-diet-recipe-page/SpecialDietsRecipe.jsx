@@ -2,6 +2,12 @@ import React from 'react';
 import RecipePageLayout from '../RecipePageLayout';
 import { dairyfreerecipes, glutenFreeRecipes, veganRecipes, vegetarianRecipes } from './SpecialDietsRecipeData';
 
+/**
+ * SpecialDietsRecipe page that groups special diet recipes into categories
+ * (Vegetarian, Vegan, Gluten Free, Dairy Free) and renders them via RecipePageLayout.
+ *
+ * @extends React.Component
+ */
 export default class SpecialDietsRecipe extends React.Component {
     render() {
         const categories = [
