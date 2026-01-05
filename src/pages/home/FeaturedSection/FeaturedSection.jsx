@@ -2,7 +2,16 @@ import React from 'react';
 import './FeaturedSection.css';
 import {featuredRecipe, spotlightRecipes, tips} from './FeaturedSectionData';
 
+/**
+ * FeaturedSection component displays the weekly featured recipe, kitchen tips, and a small comparison table.
+ * Uses data imported from FeaturedSectionData.
+ * @extends React.Component
+ */
 class FeaturedSection extends React.Component {
+  /**
+   * Initialize the featured section with imported data.
+   * @param {object} props - React props.
+   */
   constructor(props) {
     super(props);
 
@@ -11,6 +20,10 @@ class FeaturedSection extends React.Component {
     this.tips = tips;
   }
 
+  /**
+   * Render the featured section with recipe card, tips, and comparison table.
+   * @returns {JSX.Element} The featured section markup.
+   */
   render() {
     const { featuredRecipe, spotlightRecipes, tips } = this;
 

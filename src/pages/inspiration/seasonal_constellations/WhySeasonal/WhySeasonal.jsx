@@ -1,7 +1,17 @@
 import React from "react";
 import "./WhySeasonal.css";
 
+/**
+ * WhySeasonal component presents benefits of eating seasonally.
+ * @extends React.Component
+ */
 export default class WhySeasonal extends React.Component {
+  /**
+   * Render a single benefit card.
+   * @param {object} b - Benefit object containing icon, title, and text.
+   * @param {number} idx - Index key for the element.
+   * @returns {JSX.Element} Benefit card JSX.
+   */
   renderBenefit(b, idx) {
     return (
       <div key={idx} className="col-lg-3 col-md-6">
@@ -16,6 +26,10 @@ export default class WhySeasonal extends React.Component {
     );
   }
 
+  /**
+   * Render the overall section listing benefits.
+   * @returns {JSX.Element} Section markup for Why Eat Seasonally.
+   */
   render() {
     const { benefits = [] } = this.props;
     return (

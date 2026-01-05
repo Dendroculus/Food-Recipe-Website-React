@@ -6,13 +6,35 @@ import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
 import AuthOverlay from './AuthOverlay';
 
+/**
+ * AuthPage component that manages sign-in / sign-up UI mode and layout.
+ * Uses local state to toggle between modes and renders SignInForm, SignUpForm, and AuthOverlay.
+ *
+ * State:
+ * - mode: 'signin' | 'signup'  Controls which panel is active.
+ *
+ * @extends React.Component
+ */
 class AuthPage extends React.Component {
+  /**
+   * Local component state controlling the active mode.
+   */
   state = {
     mode: 'signin', 
   };
 
+  /**
+   * Returns a handler that sets the auth mode when invoked.
+   * Used to switch between 'signin' and 'signup' panels.
+   * @param {string} mode - Target mode ('signin' or 'signup').
+   * @returns {Function} Event handler that updates component state.
+   */
   setMode = (mode) => () => this.setState({ mode });
 
+  /**
+   * Render the auth page, including navigation and selected auth panel.
+   * @returns {JSX.Element} Auth page JSX.
+   */
   render() {
     const { mode } = this.state;
     const isSignIn = mode === 'signin';

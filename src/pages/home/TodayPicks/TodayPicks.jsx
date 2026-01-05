@@ -3,7 +3,16 @@ import TodayPickCard from '../TodayPicksCard/TodayPicksCard';
 import todayPicks from './TodayPicksData';
 import './TodayPicks.css';
 
+/**
+ * TodayPicks carousel-like component that rotates visible picks on an interval.
+ * Manages fade transitions and exposes a small subscribe form.
+ * @extends React.Component
+ */
 class TodayPicks extends React.Component {
+  /**
+   * Initialize picks and rotation state.
+   * @param {object} props - React props.
+   */
   constructor(props) {
     super(props);
 
@@ -19,15 +28,28 @@ class TodayPicks extends React.Component {
     this.tick = this.tick.bind(this);
   }
 
+  /**
+   * Start the rotation interval when the component mounts.
+   * @returns {void}
+   */
   componentDidMount() {
     this.timer = setInterval(this.tick, this.intervalMs);
   }
 
+  /**
+   * Clean up timers when the component unmounts.
+   * @returns {void}
+   */
   componentWillUnmount() {
     if (this.timer) clearInterval(this.timer);
     if (this.fadeTimeout) clearTimeout(this.fadeTimeout);
   }
 
+  /**
+   * Advance the visible picks with a fade animation.
+   * Triggers a fade-out, advances startIndex, then fades back in.
+   * @returns {void}
+   */
   tick() {
     // trigger fade-out, then change picks, then fade-in
     this.setState({ fading: true }, () => {
@@ -40,11 +62,20 @@ class TodayPicks extends React.Component {
     });
   }
 
+  /**
+   * Compute the visible picks slice based on the current startIndex.
+   * @returns {Array<Object>} Array of pick objects to render.
+   */
   visiblePicks() {
     const { startIndex } = this.state;
     return Array.from({ length: 6 }, (_, i) => this.picks[(startIndex + i) % this.picks.length]);
   }
 
+  /**
+   * Render a single row of pick cards.
+   * @param {Array<Object>} slice - Array of pick data for the row.
+   * @returns {JSX.Element} Row markup with TodayPickCard items.
+   */
   renderRow(slice) {
     return (
       <div className="today-picks-fyp">
@@ -61,6 +92,10 @@ class TodayPicks extends React.Component {
     );
   }
 
+  /**
+   * Render the TodayPicks component including two rows of picks and subscribe form.
+   * @returns {JSX.Element} The TodayPicks markup.
+   */
   render() {
     const { fading } = this.state;
     const picks = this.visiblePicks();

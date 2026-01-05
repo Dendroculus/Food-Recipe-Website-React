@@ -2,7 +2,16 @@ import React from 'react';
 import TodayPicks from '../TodayPicks/TodayPicks';
 import './HeroSection.css';
 
+/**
+ * HeroSection component displaying main headline, description, CTAs and site search.
+ * Contains helper data for hero content and call-to-action buttons.
+ * @extends React.Component
+ */
 class HeroSection extends React.Component {
+  /**
+   * Initialize hero content and CTA button definitions.
+   * @param {object} props - React props.
+   */
   constructor(props) {
     super(props);
 
@@ -18,6 +27,10 @@ class HeroSection extends React.Component {
     ];
   }
 
+  /**
+   * Render CTA buttons based on their type definitions.
+   * @returns {Array<JSX.Element>} Array of CTA elements (button or link).
+   */
   renderCtas() {
     return this.ctaButtons.map((btn, index) => {
       if (btn.type === 'button') {
@@ -36,6 +49,10 @@ class HeroSection extends React.Component {
     });
   }
 
+  /**
+   * Render the hero section including TodayPicks and search form.
+   * @returns {JSX.Element} Hero section markup.
+   */
   render() {
     const { heroContent } = this;
 
