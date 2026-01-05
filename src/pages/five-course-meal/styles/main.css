@@ -206,7 +206,7 @@
     position: relative;
     border-radius: 1rem;
     margin: 2rem auto;
-    width: 60%;
+    width: 50%;
     max-width: 100%;
     overflow: hidden;
     box-shadow: 0 0.5rem 2rem #0000001a;
@@ -230,6 +230,7 @@
 .dessert-summary-content {
     text-align: center;
     margin-bottom: 2.5rem;
+    margin-inline: auto;
     padding: 2rem;
     background: #ffffffb3;
     border-radius: 0.75rem;
@@ -237,6 +238,7 @@
     box-shadow: 0 0.5rem 2rem #0000001a;
     position: relative;
     overflow: hidden;
+    width: 80%;
 }
 
 .text-container .content {
@@ -325,7 +327,7 @@
     gap: 0.5rem;
     background: #04313033;
     color: #fff;
-    padding: 0.8rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 500;
