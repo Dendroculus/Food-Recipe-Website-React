@@ -16,7 +16,7 @@ export const allAppetizerRecipes = [
     subcategory: 'bread',
     img: "/assets/appetizers/Bread/Florentine Ciabatta.jpg", 
     title: "Florentine Ciabatta", 
-    href: "/five-course-meal/recipes/appetizer#florentine-ciabatta", 
+    href: "/recipes/recipes/appetizer#florentine-ciabatta", 
     time: "45 mins", 
     keywords: ['appetizer', 'bread', 'ciabatta', 'florentine', 'italian'],
     tags: ['winter', 'christmas', 'valentine'] 
@@ -27,7 +27,7 @@ export const allAppetizerRecipes = [
     subcategory: 'bread',
     img:  "/assets/appetizers/Bread/Garlic Bread.webp", 
     title: "Garlic Bread", 
-    href: "/five-course-meal/recipes/appetizer#garlic-bread", 
+    href: "/recipes/recipes/appetizer#garlic-bread", 
     time: "25 mins", 
     keywords: ['appetizer', 'bread', 'garlic', 'easy', 'quick'],
     tags: ['fall', 'winter'] 
@@ -38,7 +38,7 @@ export const allAppetizerRecipes = [
     subcategory: 'bread',
     img: "/assets/appetizers/Bread/Grilled Tomato-Peach Pizza.jpg", 
     title: "Grilled Tomato-Peach Pizza", 
-    href: "/five-course-meal/recipes/appetizer#tomato-peach-pizza", 
+    href: "/recipes/recipes/appetizer#tomato-peach-pizza", 
     time: "25 mins", 
     keywords: ['appetizer', 'bread', 'pizza', 'tomato', 'peach', 'grilled'],
     tags: ['spring', 'summer', 'valentine'] 
@@ -49,7 +49,7 @@ export const allAppetizerRecipes = [
     subcategory: 'bread',
     img: "/assets/appetizers/Bread/Mini Citrus Monkey Bread.jpeg", 
     title: "Mini Citrus Monkey Bread", 
-    href: "/five-course-meal/recipes/appetizer#citrus-monkey-bread", 
+    href: "/recipes/recipes/appetizer#citrus-monkey-bread", 
     time: "50 mins", 
     keywords:  ['appetizer', 'bread', 'monkey bread', 'citrus', 'sweet'],
     tags: ['spring', 'easter'] 
@@ -60,7 +60,7 @@ export const allAppetizerRecipes = [
     subcategory: ['bread', 'dipBased'],
     img: "/assets/appetizers/Bread/Smoked Salmon Dip.jpg", 
     title: "Smoked Salmon Dip", 
-    href: "/five-course-meal/recipes/appetizer#smoked-salmon-dip", 
+    href: "/recipes/recipes/appetizer#smoked-salmon-dip", 
     time: "10 mins", 
     keywords: ['appetizer', 'bread', 'salmon', 'dip', 'smoked', 'seafood'],
     tags: ['summer', 'spring', 'valentine'] 
@@ -71,7 +71,7 @@ export const allAppetizerRecipes = [
     subcategory: 'bread',
     img: "/assets/appetizers/Bread/Sourdough Garlic Knots.jpg", 
     title: "Sourdough Garlic Knots", 
-    href: "/five-course-meal/recipes/appetizer#sourdough-knots", 
+    href: "/recipes/recipes/appetizer#sourdough-knots", 
     time: "35 mins", 
     keywords: ['appetizer', 'bread', 'sourdough', 'garlic', 'knots'],
     tags: ['fall', 'winter', 'thanksgiving'] 
@@ -82,7 +82,7 @@ export const allAppetizerRecipes = [
     subcategory: 'dipBased',
     img: "/assets/appetizers/Dip-Based/Hot Spinach Artichoke Dip.jpg", 
     title: "Hot Spinach Artichoke Dip", 
-    href: "/five-course-meal/recipes/appetizer#spinach-artichoke-dip", 
+    href: "/recipes/recipes/appetizer#spinach-artichoke-dip", 
     time: "35 mins", 
     keywords: ['appetizer', 'dip', 'spinach', 'artichoke', 'hot', 'cheese'],
     tags: ['winter', 'christmas', 'valentine'] 
@@ -93,7 +93,7 @@ export const allAppetizerRecipes = [
     subcategory: ['bread', 'dipBased'],
     img: "/assets/appetizers/Dip-Based/Party Cheese Bread.jpg", 
     title: "Party Cheese Bread", 
-    href: "/five-course-meal/recipes/appetizer#party-cheese-bread", 
+    href: "/recipes/recipes/appetizer#party-cheese-bread", 
     time: "40 mins", 
     keywords: ['appetizer', 'dip', 'cheese', 'bread', 'party'],
     tags: ['winter', 'fall', 'halloween'] 
@@ -104,7 +104,7 @@ export const allAppetizerRecipes = [
     subcategory: 'dipBased',
     img: "/assets/appetizers/Dip-Based/Tex Mex Skillet Poblano Dip.jpg", 
     title: "Tex Mex Skillet Poblano Dip", 
-    href: "/five-course-meal/recipes/appetizer#tex-mex-poblano-dip", 
+    href: "/recipes/recipes/appetizer#tex-mex-poblano-dip", 
     time: "35 mins", 
     keywords: ['appetizer', 'dip', 'tex mex', 'poblano', 'spicy', 'mexican'],
     tags: ['winter', 'christmas', 'thanksgiving'] 
@@ -115,7 +115,7 @@ export const allAppetizerRecipes = [
     subcategory: 'fingerFood',
     img: "/assets/appetizers/Finger-Food/Fried Prosciutto Tortellini.jpg", 
     title: "Fried Prosciutto Tortellini", 
-    href: "/five-course-meal/recipes/appetizer#fried-tortellini", 
+    href: "/recipes/recipes/appetizer#fried-tortellini", 
     time: "25 mins", 
     keywords: ['appetizer', 'finger food', 'tortellini', 'prosciutto', 'fried', 'italian'],
     tags: ['summer', 'spring', 'valentine'] 
@@ -126,7 +126,7 @@ export const allAppetizerRecipes = [
     subcategory: 'fingerFood',
     img: "/assets/appetizers/Finger-Food/Ham n Cheese Biscuit Stacks.jpg", 
     title: "Ham n Cheese Biscuit Stacks", 
-    href: "/five-course-meal/recipes/appetizer#ham-cheese-biscuits", 
+    href: "/recipes/recipes/appetizer#ham-cheese-biscuits", 
     time: "27 mins", 
     keywords: ['appetizer', 'finger food', 'ham', 'cheese', 'biscuit', 'stacks'],
     tags: ['summer', 'spring'] 
@@ -137,7 +137,7 @@ export const allAppetizerRecipes = [
     subcategory: 'fingerFood',
     img: "/assets/appetizers/Finger-Food/Little Smokies.jpg", 
     title: "Little Smokies", 
-    href: "/five-course-meal/recipes/appetizer#little-smokies", 
+    href: "/recipes/recipes/appetizer#little-smokies", 
     time: "25 mins", 
     keywords: ['appetizer', 'finger food', 'sausage', 'smokies', 'party'],
     tags: ['fall', 'winter', 'halloween'] 
@@ -148,7 +148,7 @@ export const allAppetizerRecipes = [
     subcategory: 'fingerFood',
     img: "/assets/appetizers/Finger-Food/Orange Marmalade Meatballs.jpg", 
     title: "Orange Marmalade Meatballs", 
-    href: "/five-course-meal/recipes/appetizer#orange-marmalade-meatballs", 
+    href: "/recipes/recipes/appetizer#orange-marmalade-meatballs", 
     time: "30 mins", 
     keywords: ['appetizer', 'finger food', 'meatballs', 'orange', 'marmalade', 'sweet'],
     tags: ['fall', 'winter'] 
@@ -159,7 +159,7 @@ export const allAppetizerRecipes = [
     subcategory: 'fingerFood',
     img: "/assets/appetizers/Finger-Food/Stuffed Cherry Tomatoes.jpg", 
     title: "Stuffed Cherry Tomatoes", 
-    href: "/five-course-meal/recipes/appetizer#stuffed-cherry-tomatoes", 
+    href: "/recipes/recipes/appetizer#stuffed-cherry-tomatoes", 
     time:  "20 mins", 
     keywords: ['appetizer', 'finger food', 'tomatoes', 'cherry', 'stuffed', 'vegetarian'],
     tags: ['summer', 'spring'] 
@@ -170,7 +170,7 @@ export const allAppetizerRecipes = [
     subcategory: 'fingerFood',
     img: "/assets/appetizers/Finger-Food/Tanghulu.jpg", 
     title: "Tanghulu", 
-    href: "/five-course-meal/recipes/appetizer#tanghulu", 
+    href: "/recipes/recipes/appetizer#tanghulu", 
     time: "25 mins", 
     keywords: ['appetizer', 'finger food', 'tanghulu', 'fruit', 'candy', 'chinese', 'sweet'],
     tags: ['spring', 'easter', 'valentine'] 

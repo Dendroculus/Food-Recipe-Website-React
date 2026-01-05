@@ -75,7 +75,7 @@ export default class Search extends React.Component {
     };
 
     handleCategoryClick = (categoryPath) => {
-        window.location.href = `/five-course-meal/main-page/${categoryPath}`;
+        window.location.href = `/recipes/main-page/${categoryPath}`;
     };
 
     render() {

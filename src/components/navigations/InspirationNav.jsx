@@ -9,11 +9,11 @@ export default class InspirationNav extends React.Component {
       label: "RECIPES",
       active: false,
       items: [
-        { href: "/five-course-meal/main-page/main-course", img: "/assets/main_course/main_course_pfp.jpg", alt: "Main course", text: "Main Course" },
-        { href: "/five-course-meal/main-page/appetizer", img: "/assets/appetizers/appetizers_pfp.jpg", alt: "Appetizers", text: "Appetizers" },
-        { href: "/five-course-meal/main-page/salad", img: "/assets/salad/salad_pfp.jpg", alt: "Salad", text: "Salad" },
-        { href: "/five-course-meal/main-page/dessert", img: "/assets/desserts/desserts_pfp.jpg", alt: "Desserts", text: "Desserts" },
-        { href: "/five-course-meal/main-page/special-diets", img: "/assets/special_diets/special_diets_pfp.jpg", alt: "Special Diets", text: "Special Diets" },
+        { href: "/recipes/main-page/main-course", img: "/assets/main_course/main_course_pfp.jpg", alt: "Main course", text: "Main Course" },
+        { href: "/recipes/main-page/appetizer", img: "/assets/appetizers/appetizers_pfp.jpg", alt: "Appetizers", text: "Appetizers" },
+        { href: "/recipes/main-page/salad", img: "/assets/salad/salad_pfp.jpg", alt: "Salad", text: "Salad" },
+        { href: "/recipes/main-page/dessert", img: "/assets/desserts/desserts_pfp.jpg", alt: "Desserts", text: "Desserts" },
+        { href: "/recipes/main-page/special-diets", img: "/assets/special_diets/special_diets_pfp.jpg", alt: "Special Diets", text: "Special Diets" },
       ]
     },
     {
