@@ -275,35 +275,49 @@
 .info-box {
     background: #fff;
     border-radius: 32px;
-    padding: 1.2rem;
+    padding: 1.2rem; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .info-title {
     font-size: 1.2rem;
     color: #00b3a1;
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-weight: 700;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.9rem;
-    margin-top: 1.5rem;
+    justify-content: center; 
+    gap: 0.7rem;
+    margin-top: 0.5rem;
 }
 
 .tag {
-    background: #b1fff7;
-    padding: 0.3rem 0.9rem;
-    border-radius: 32px;
-    font-size: 0.9rem;
-    color: #001f1c;
-    cursor: pointer;
+    background: #f0fdfc;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #007A70;
+    border: 1px solid #ccfbf6;
+    font-weight: 600;
+    cursor: default;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
+
+.tag:hover {
+    background: #007A70;
+    color: #fff;
+    border-color: #007A70;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 122, 112, 0.2);
+}
+/* --- UPDATED TAGS STYLING END --- */
 
 .youtube-video-container {
     position: relative;
@@ -596,28 +610,30 @@
         top: 0;
         width: 100%;
         margin: 0;
-        padding: 2.5rem; 
+        padding: 2.5rem;
         background: #fff;
         z-index: 9999;
-        box-shadow: none !important;
+        box-shadow: none ;
     }
 
     .action-buttons, 
     .youtube-video-container,
-    .navbar { 
-        display: none !important; 
+    .navbar,
+    .info-box { 
+        display: none ; 
     }
     
     .recipe-header {
-        display: block !important;
-        box-shadow: none; 
-        color: #000; 
-        background: none; 
+        display: block ;
+        box-shadow: none;
+        margin-top: 0;
+        color: #000;
+        background: none;
     }
 
     .recipe-title {
-        color: #007A70; 
-        text-shadow: none; 
+        color: #007A70;
+        text-shadow: none;
         animation: none;
     }
     
