@@ -28,9 +28,6 @@
   padding-top: 6.5rem;
 }
 
-.shop-page * {
-  transition: all 0.2s ease-in-out;
-}
 
 .shop-page main h1 {
   color: #0d6efd;

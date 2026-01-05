@@ -1,3 +1,10 @@
+.main-footer,
+.main-footer * {
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
 .main-footer {
   margin-top: 3.5rem;
   padding: 1rem 0;
@@ -16,17 +23,38 @@
   color: #fff;
   text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
   animation: glow 1.5s infinite alternate;
+  transition: transform 0.3s ease;
 }
-.footer-title:hover { transform: scale(1.2); }
+
+.footer-title:hover { 
+  transform: scale(1.2); 
+}
+
 @keyframes glow {
   0% { text-shadow: 0 0 5px #ff005e, 0 0 15px #ff005e; }
   100% { text-shadow: 0 0 10px #00d4ff, 0 0 30px #00d4ff; }
 }
 
-.socials-logo { display: flex; justify-content: center; gap: 0.5rem; border-radius: 8px; }
-.socials-logo img { width: 2.5rem; }
-.socials-logo img:hover { transform: translateY(-0.4rem); }
-.socials-logo a { position: relative; }
+.socials-logo { 
+  display: flex; 
+  justify-content: center; 
+  gap: 0.5rem; 
+  border-radius: 8px; 
+}
+
+.socials-logo img { 
+  width: 2.5rem; 
+  transition: transform 0.3s ease;
+}
+
+.socials-logo img:hover { 
+  transform: translateY(-0.4rem); 
+}
+
+.socials-logo a { 
+  position: relative; 
+}
+
 .socials-logo a::after {
   content: '';
   position: absolute;
@@ -37,7 +65,10 @@
   background: gray;
   transition: width 0.2s ease;
 }
-.socials-logo a:hover::after { width: 100%; }
+
+.socials-logo a:hover::after { 
+  width: 100%; 
+}
 
 .main-footer .footer-note {
   margin-top: 1rem;
@@ -51,10 +82,27 @@
   gap: 2rem;
   margin-top: 0.75rem;
 }
-.footer-policy-links a { text-decoration: none; color: darkgrey; }
-.footer-policy-links:hover a { color: gray; }
-.footer-policy-links a:hover { color: black; transform: scale(1.03); font-weight: 600; }
-.footer-policy-links:hover a:not(:hover) { opacity: 0.4; }
+
+.footer-policy-links a { 
+  text-decoration: none; 
+  color: darkgrey;
+  transition: all 0.3s ease;
+}
+
+.footer-policy-links:hover a { 
+  color: gray; 
+}
+
+.footer-policy-links a:hover { 
+  color: black; 
+  transform: scale(1.03); 
+  font-weight: 600; 
+}
+
+.footer-policy-links:hover a:not(:hover) { 
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
 
 @media (max-width: 768px) {
   .footer-policy-links {

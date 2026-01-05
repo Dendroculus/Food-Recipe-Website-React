@@ -37,7 +37,6 @@ export default class RecipePageLayout extends React.Component {
                 <Search />
                 <main>
                     {categories.map((category, index) => (
-                        // We add an ID here so your handleScroll function can find it
                         <section key={index} id={category.id} className={category.id}>
                             <h1 className="head-recipe">{category.title}</h1>
                             {category.data.map(recipe => (
