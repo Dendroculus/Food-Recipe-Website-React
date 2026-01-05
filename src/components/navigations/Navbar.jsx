@@ -2,6 +2,10 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
+/**
+ * Recipe dropdown items used by the Navbar component.
+ * @type {Array<Object>}
+ */
 const recipesItems = [
   { image: '/assets/main_course/main_course_pfp.jpg', alt: 'Main course', label: 'Main Course', href: '/recipes/main-page/main-course' },
   { image: '/assets/appetizers/appetizers_pfp.jpg', alt: 'Appetizers', label: 'Appetizers', href: '/recipes/main-page/appetizer' },
@@ -10,6 +14,10 @@ const recipesItems = [
   { image: '/assets/special_diets/special_diets_pfp.jpg', alt: 'Special Diets', label: 'Special Diets', href: '/recipes/main-page/special-diets' },
 ];
 
+/**
+ * Inspiration dropdown items used by the Navbar component.
+ * @type {Array<Object>}
+ */
 const inspirationItems = [
   { image: '/assets/inspiration/stellar_tips_pfp.jpg', alt: 'Stellar Tips', label: 'Stellar Tips', href: '/inspiration/stellar-tips' },
   { image: '/assets/inspiration/seasonal_constellation_pfp.png', alt: 'Seasonal Constellations', label: 'Seasonal Constellations', href: '/inspiration/seasonal-constellations' },
@@ -18,6 +26,10 @@ const inspirationItems = [
   { image: '/assets/inspiration/orbit_of_flavors_pfp.png', alt: 'Orbit Of Flavors', label: 'Orbit Of Flavors', href: '/coming-soon/coming-soon' },
 ];
 
+/**
+ * Shop dropdown items used by the Navbar component.
+ * @type {Array<Object>}
+ */
 const shopItems = [
   { image: '/assets/shop/Ingredients/ingredients_pfp.jpg', alt: 'Cooking Ingredients', label: 'Cooking Ingredients', href: '/shop/ingredients' },
   { image: '/assets/shop/Kitchen Tools/kitchen_tools_pfp.jpg', alt: 'Kitchen Tools', label: 'Kitchen Tools', href: '/shop/kitchen-tools' },
@@ -25,6 +37,10 @@ const shopItems = [
   { image: '/assets/shop/Digital Products/digital_products_pfp.png', alt: 'Digital Products', label: 'Digital Products', href: '/shop/digital-products' },
 ];
 
+/**
+ * About dropdown items used by the Navbar component.
+ * @type {Array<Object>}
+ */
 const aboutItems = [
   { image: '/assets/about us/about_us_pfp.png', alt: 'Our Story', label: 'Our Story', href: '/about-us/AboutUs#our-story' },
   { image: '/assets/about us/meet_the_team_pfp.png', alt: 'Meet the Team', label: 'Meet the Team', href: '/about-us/AboutUs#meet-the-team' },
@@ -32,11 +48,24 @@ const aboutItems = [
   { image: '/assets/about us/contact_us_pfp.png', alt: 'Contact Us', label: 'Contact Us', href: '/about-us/AboutUs#contact-us' },
 ];
 
+/**
+ * HOC to inject location into Navbar props using useLocation hook.
+ * @param {object} props - Component props.
+ * @returns {JSX.Element} Navbar component with location prop.
+ */
 function NavbarWithLocation(props) {
   const location = useLocation();
   return <Navbar {...props} location={location} />;
 }
 
+/**
+ * Dropdown component used inside the Navbar for grouped links.
+ * Props:
+ * - label: string
+ * - items: Array<Object>
+ * - extraClass?: string
+ * @extends React.Component
+ */
 class Dropdown extends React.Component {
   render() {
     const { label, items, extraClass } = this.props;
@@ -69,6 +98,11 @@ class Dropdown extends React.Component {
   }
 }
 
+/**
+ * Navbar component rendering site navigation and controls.
+ * Expects location prop when wrapped by NavbarWithLocation.
+ * @extends React.Component
+ */
 class Navbar extends React.Component {
   render() {
     const { location } = this.props;

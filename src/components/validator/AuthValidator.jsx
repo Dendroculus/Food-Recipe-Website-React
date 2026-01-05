@@ -1,15 +1,33 @@
+/**
+ * Validate whether a given string is a valid email address (basic check).
+ * @param {string} email - Email string to validate.
+ * @returns {boolean} True if email matches basic pattern.
+ */
 const validateEmail = (email) => {
   // Basic email format validation
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
 };
 
+/**
+ * Validate password strength.
+ * Requires at least one lowercase, one uppercase, one digit, one special character, and minimum length 8.
+ * @param {string} password - Password string to validate.
+ * @returns {boolean} True if password meets requirements.
+ */
 const validatePassword = (password) => {
   // At least one lowercase, one uppercase, one number, one special char, min 8 chars
   const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/;
   return re.test(password);
 };
 
+/**
+ * Validate login form fields.
+ * Checks presence and basic email format.
+ * @param {string} email - User email.
+ * @param {string} password - User password.
+ * @returns {Object} errors - Object with keys for fields that failed validation.
+ */
 const validateLoginForm = (email, password) => {
   const errors = {};
   
@@ -26,6 +44,16 @@ const validateLoginForm = (email, password) => {
   return errors;
 };
 
+/**
+ * Validate registration form fields.
+ * Performs checks for username, email, password strength, password confirmation, and terms acceptance.
+ * @param {string} username
+ * @param {string} email
+ * @param {string} password
+ * @param {string} confirmPassword
+ * @param {boolean} termsAccepted
+ * @returns {Object} errors - Object containing validation error messages keyed by field.
+ */
 const validateRegisterForm = (username, email, password, confirmPassword, termsAccepted) => {
   const errors = {};
 

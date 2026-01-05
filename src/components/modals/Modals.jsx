@@ -1,11 +1,26 @@
 import React from 'react';
 import './Modals.css';
 
+/**
+ * Modals component managing multiple informational modals and a cookie preferences modal.
+ * Renders simple modals (terms, privacy, cookies, disclaimer) and a customize cookie modal.
+ * @extends React.Component
+ */
 class Modals extends React.Component {
   constructor(props) {
     super(props);
 
     // Simple modal definitions
+    /**
+     * List of simple modal definitions rendered by renderSimpleModals.
+     * Each modal object includes:
+     * - id: string - element id used for modal anchor
+     * - title: string - modal title
+     * - paragraphs: string[] - paragraphs to render inside modal
+     * - extraButtons?: Array<{className: string, label: string}>
+     * - extraLink?: {href: string, className: string, label: string}
+     * @type {Array<Object>}
+     */
     this.simpleModals = [
       {
         id: 'terms-modal',
@@ -51,6 +66,19 @@ class Modals extends React.Component {
     ];
 
     // Cookie preference sections
+    /**
+     * Cookie preference section definitions displayed inside the customize cookie modal.
+     * Each section includes:
+     * - key: string
+     * - title: string
+     * - desc: string
+     * - locked: boolean
+     * - defaultOpen: boolean
+     * - hasToggle: boolean
+     * - defaultChecked?: boolean
+     * - list: string[]
+     * @type {Array<Object>}
+     */
     this.cookieSections = [
       {
         key: 'essential',
@@ -122,6 +150,10 @@ class Modals extends React.Component {
     ];
   }
 
+  /**
+   * Render simple informational modals (Terms, Privacy, Cookies, Disclaimer).
+   * @returns {Array<JSX.Element>} Array of modal JSX elements.
+   */
   renderSimpleModals() {
     return this.simpleModals.map((modal) => (
       <div key={modal.id} id={modal.id} className="modal">
@@ -154,6 +186,10 @@ class Modals extends React.Component {
     ));
   }
 
+  /**
+   * Render cookie preference sections used inside the customize cookie modal.
+   * @returns {Array<JSX.Element>} Array of details elements representing cookie groups.
+   */
   renderCookieSections() {
     return this.cookieSections.map((section) => (
       <details
@@ -195,6 +231,11 @@ class Modals extends React.Component {
     ));
   }
 
+  /**
+   * Render method for the Modals component.
+   * Outputs all simple modals plus the customize cookie modal UI.
+   * @returns {JSX.Element} Fragment containing modal elements.
+   */
   render() {
     return (
       <>

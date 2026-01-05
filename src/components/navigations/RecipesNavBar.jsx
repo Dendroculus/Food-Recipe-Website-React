@@ -2,7 +2,17 @@ import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import "./RecipesNavBar.css";
 
+/**
+ * RecipeNavbar component renders a responsive header navigation for recipe categories.
+ * It includes a hamburger menu that reveals recipe categories, a brand link, and auxiliary icons.
+ * @extends React.Component
+ */
 class RecipeNavbar extends React.Component {
+  /**
+   * Get the static list of menu items for the recipe menu.
+   * Each item includes keys: key, label, img, href, match.
+   * @returns {Array<Object>} Array of menu item objects.
+   */
   getMenuItems() {
     return [
       {
@@ -43,6 +53,10 @@ class RecipeNavbar extends React.Component {
     ];
   }
 
+  /**
+   * Render the menu items as JSX elements for the slide-in recipe menu.
+   * @returns {Array<JSX.Element>} Array of JSX div elements for each menu item.
+   */
   renderMenuItems() {
     return this.getMenuItems().map((item) => (
       <div id={item.key} className="border-bottom" key={item.key}>
@@ -52,6 +66,11 @@ class RecipeNavbar extends React.Component {
     ));
   }
 
+  /**
+   * Render method for the RecipeNavbar component.
+   * Outputs header markup including the hamburger menu, brand link, and auxiliary links.
+   * @returns {JSX.Element} Header and navigation JSX.
+   */
   render() {
     return (
       <header>
@@ -94,6 +113,11 @@ class RecipeNavbar extends React.Component {
   }
 }
 
+/**
+ * Higher-order component that injects the router location into the wrapped component's props.
+ * @param {React.ComponentType} Component - The component to wrap.
+ * @returns {React.ComponentType} Wrapped component that receives a `location` prop.
+ */
 function withLocation(Component) {
   return function Wrapped(props) {
     const location = useLocation();

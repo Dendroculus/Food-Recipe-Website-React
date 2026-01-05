@@ -1,9 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Card component representing a single shop product.
+ * Displays product image, title, meta, price, stock status and action buttons.
+ * Expects handlers for showing details and adding the product to cart.
+ * @extends React.Component
+ */
 class ShopProductCard extends React.Component {
+  /**
+   * Render the product card.
+   * @returns {JSX.Element} The rendered product card element.
+   */
   render() {
     const { product, onDetailsClick, onAddClick } = this.props;
+
+    /**
+     * Flag indicating whether the product is out of stock.
+     * @type {boolean}
+     */
     const isOutOfStock = typeof product.stock === 'number' && product.stock <= 0;
 
     return (
@@ -54,6 +69,13 @@ class ShopProductCard extends React.Component {
   }
 }
 
+/**
+ * Prop types for ShopProductCard component.
+ * - product: object containing product data (img, title, price, stock, meta, alt)
+ * - onDetailsClick: function called with product when Details is clicked
+ * - onAddClick: function called with product when Add is clicked
+ * @type {Object}
+ */
 ShopProductCard.propTypes = {
   product: PropTypes.object.isRequired,
   onDetailsClick: PropTypes.func.isRequired,

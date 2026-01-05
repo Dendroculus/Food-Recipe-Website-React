@@ -2,7 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./InspirationNav.css";
 
+/**
+ * InspirationNav component - a navigation bar with grouped dropdowns and right-side icon links.
+ * Provides default nav groups and right links, and renders dropdowns, brand, and icons.
+ * @extends React.Component
+ */
 export default class InspirationNav extends React.Component {
+  /**
+   * Default navigation groups with items for dropdowns.
+   * @type {Array<Object>}
+   */
   defaultNavGroups = [
     {
       id: "recipes",
@@ -52,12 +61,21 @@ export default class InspirationNav extends React.Component {
     }
   ];
 
+  /**
+   * Default right-side icon links displayed if none provided via props.
+   * @type {Array<Object>}
+   */
   defaultRightLinks = [
     { to: "/", img: "/assets/icons/house.png", alt: "home", title: "Home" },
     { href: "/form", img: "/assets/icons/user.png", alt: "user", title: "Account" },
     { href: "/payment/Payment", img: "/assets/icons/shopping_cart.png", alt: "cart", title: "Cart" }
   ];
 
+  /**
+   * Render a dropdown menu for a nav group.
+   * @param {Object} group - Group configuration object.
+   * @returns {JSX.Element} Dropdown JSX.
+   */
   renderDropdown(group) {
     return (
       <div key={group.id} className="stellar-dropdown">
@@ -80,6 +98,10 @@ export default class InspirationNav extends React.Component {
     );
   }
 
+  /**
+   * Render the brand element. Uses router Link when useRouterLinks and brandTo are provided.
+   * @returns {JSX.Element} Brand link JSX.
+   */
   renderBrand() {
     const { brandHref = "/", brandTo, useRouterLinks = true } = this.props;
     if (useRouterLinks && brandTo) {
@@ -100,6 +122,10 @@ export default class InspirationNav extends React.Component {
     );
   }
 
+  /**
+   * Render the right-side icon links, using router Link for items with `to` when useRouterLinks is true.
+   * @returns {Array<JSX.Element>} Array of link/icon elements.
+   */
   renderRightLinks() {
     const { rightLinks, useRouterLinks = true } = this.props;
     const links = rightLinks && rightLinks.length ? rightLinks : this.defaultRightLinks;
@@ -120,6 +146,11 @@ export default class InspirationNav extends React.Component {
     });
   }
 
+  /**
+   * Main render method for the navigation component.
+   * Chooses nav groups from props or defaults and assembles the nav structure.
+   * @returns {JSX.Element} Navigation JSX.
+   */
   render() {
     const { navGroups } = this.props;
     const groups = navGroups && navGroups.length ? navGroups : this.defaultNavGroups;

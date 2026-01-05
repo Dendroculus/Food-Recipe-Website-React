@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Modal component for showing product details in the shop.
+ * Props:
+ * - product: object
+ * - onClose: function
+ * @extends React.Component
+ */
 class ShopDetailsModal extends React.Component {
   render() {
     const { product, onClose } = this.props;
@@ -23,6 +30,10 @@ class ShopDetailsModal extends React.Component {
   }
 }
 
+/**
+ * Prop types for ShopDetailsModal.
+ * @type {Object}
+ */
 ShopDetailsModal.propTypes = {
   product: PropTypes.object,
   onClose: PropTypes.func.isRequired,

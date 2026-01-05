@@ -1,6 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Modal UI for adding a product to the shopping cart.
+ * Displays product details and quantity controls.
+ * Props:
+ * - product: object | null
+ * - quantity: number
+ * - onClose: function
+ * - onSave: function
+ * - onInc: function
+ * - onDec: function
+ * - onQtyChange: function
+ * @extends React.Component
+ */
 class ShopAddModal extends React.Component {
   render() {
     const { product, quantity, onClose, onSave, onInc, onDec, onQtyChange } = this.props;
@@ -55,6 +68,10 @@ class ShopAddModal extends React.Component {
   }
 }
 
+/**
+ * Prop types for ShopAddModal.
+ * @type {Object}
+ */
 ShopAddModal.propTypes = {
   product: PropTypes.object,
   quantity: PropTypes.number.isRequired,
