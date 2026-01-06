@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { validateLoginForm } from '../../components/validator/AuthValidator'; 
+import PasswordInput from './AuthPasswordInput';
 
 /**
  * SignInForm component renders the login form and handles local form state and validation.
@@ -111,20 +112,16 @@ class SignInForm extends React.Component {
             </div>
 
             {/* PASSWORD WRAPPER */}
-            <div className="input-wrapper">
-              <label htmlFor="password" className="password">Password</label>
-              <input
-                className={`form-control ${errors.password ? 'is-invalid' : ''}`}
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter your password"
-                autoComplete="off"
-                value={password}
-                onChange={this.handleChange}
-              />
-              {errors.password && <small className="error-msg">{errors.password}</small>}
-            </div>
+            <PasswordInput 
+              name="password"
+              label="Password"
+              value={password}
+              onChange={this.handleChange}
+              error={errors.password}
+              placeholder="Enter your password"
+              id="password"
+              className="password"
+              autoComplete="off" />
 
           </section>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { validateRegisterForm } from '../../components/validator/AuthValidator';
+import PasswordInput from './AuthPasswordInput';
 
 /**
  * SignUpForm component renders the registration form and handles validation and submission.
@@ -25,7 +26,7 @@ class SignUpForm extends React.Component {
       confirmPassword: '',
       termsAccepted: false,
       errors: {},
-      isLoading: false,
+      isLoading: false
     };
   }
 
@@ -126,36 +127,28 @@ class SignUpForm extends React.Component {
             </div>
 
             {/* PASSWORD */}
-            <div className="input-wrapper">
-              <label htmlFor="password_signup" className="password_signup">Password</label>
-              <input
-                className={`form-control ${errors.password ? 'is-invalid' : ''}`}
-                type="password"
-                name="password"
-                id="password_signup"
-                placeholder="Enter your password"
-                autoComplete="off"
-                value={password}
-                onChange={this.handleChange}
-              />
-              {errors.password && <small className="error-msg">{errors.password}</small>}
-            </div>
+            <PasswordInput 
+              name="password"
+              label="Password"
+              value={password}
+              onChange={this.handleChange}
+              error={errors.password}
+              placeholder="Enter your password"
+              id="password_signup"
+              className="password_signup"
+              autoComplete="off" />
 
             {/* CONFIRM PASSWORD */}
-            <div className="input-wrapper">
-              <label htmlFor="confirm_password" className="password_signup">Confirm Password</label>
-              <input
-                className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
-                type="password"
-                name="confirmPassword"
-                id="confirm_password"
-                placeholder="Confirm your password"
-                autoComplete="off"
-                value={confirmPassword}
-                onChange={this.handleChange}
-              />
-              {errors.confirmPassword && <small className="error-msg">{errors.confirmPassword}</small>}
-            </div>
+            <PasswordInput 
+              name="confirmPassword"
+              label="Confirm Password"
+              value={confirmPassword}
+              onChange={this.handleChange}
+              error={errors.confirmPassword}
+              placeholder="Confirm your password"
+              id="confirm_password"
+              className="password_signup"
+              autoComplete="off" />
 
           </section>
 
