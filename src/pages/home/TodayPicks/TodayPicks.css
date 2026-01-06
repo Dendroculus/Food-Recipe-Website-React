@@ -18,6 +18,9 @@
   margin-bottom: 0.5rem;
   text-align: left;
 }
+#quick-recipes-form {
+  scroll-margin-top: 6rem;
+}
 
 .quick-recipes {
   margin-top: 1.5rem;

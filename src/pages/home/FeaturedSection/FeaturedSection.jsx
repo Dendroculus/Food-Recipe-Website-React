@@ -6,6 +6,7 @@ import { allAppetizerRecipes } from '../../recipes/main-page/appetizer/Appetizer
 import { allDessertRecipes } from '../../recipes/main-page/dessert/DessertData';
 import { allSaladRecipes } from '../../recipes/main-page/salad/SaladData';
 import { allSpecialDietsRecipes } from '../../recipes/main-page/special-diets/SpecialDietsData';
+import { saveRecipe } from '../../../components/utils/Actions';
 
 /**
  * FeaturedSection component displays a dynamic weekly featured recipe, kitchen tips, and a comparison table.
@@ -104,7 +105,7 @@ class FeaturedSection extends React.Component {
                       <a href={featuredRecipe.href} className="btn btn-sm btn-success">
                         View Recipe
                       </a>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">
+                      <button type="button" onClick={() => saveRecipe(featuredRecipe)} className="btn btn-sm btn-outline-secondary">
                         Save
                       </button>
                     </div>

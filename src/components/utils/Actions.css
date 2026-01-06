@@ -1,0 +1,114 @@
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-direction: column;
+}
+
+.recipe-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #007A70;
+    color: #fff;
+    border: none;
+    border-radius: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.recipe-btn:hover {
+    background: #31ffea;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-btn-block {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.recipe-btn-outline {
+    background: transparent;
+    border: 2px solid #007A70;
+    color: #007A70;
+}
+
+.recipe-btn-outline:hover {
+    background: #007A70;
+    color: #fff;
+}
+
+@media print {
+    @page {
+        margin: 0;
+        size: auto;
+    }
+
+    .recipe-page-wrapper * {
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .print-active, .print-active * {
+        visibility: visible;
+        height: auto;
+        overflow: visible;
+    }
+
+    .print-active {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 2.5rem;
+        background: #fff;
+        z-index: 9999;
+        box-shadow: none;
+    }
+
+    .action-buttons, 
+    .youtube-video-container,
+    .navbar,
+    .info-box { 
+        display: none; 
+    }
+    
+    .recipe-header {
+        display: block;
+        box-shadow: none;
+        margin-top: 0;
+        color: #000;
+        background: none;
+    }
+
+    .recipe-title {
+        color: #007A70;
+        text-shadow: none;
+        animation: none;
+    }
+    
+    .recipe-page-wrapper a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+
+@media (max-width: 960px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 540px) {
+    .recipe-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
