@@ -1,6 +1,6 @@
 .hero-search-wrapper-outer {
     flex-shrink: 0;
-    width: 25rem;
+    width: 22.5rem;
     margin-top: 1.5rem;
     margin-left: 2rem;
     position: relative;
@@ -27,11 +27,11 @@
     text-align: left;
     color: #007A70;
     font-family: 'Playwrite', sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .herodesc {
-    margin: 0.5rem 0 1.5rem 0;
+    margin: 0.5rem 0;
     font-size: 1.125rem;
     line-height: 1.5;
     color: rgb(146, 146, 146);

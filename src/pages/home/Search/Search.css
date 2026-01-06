@@ -210,3 +210,7 @@
     font-size: 0.9rem;
   }
 }
+
+#home-search-input {
+  scroll-margin-top: 150px; 
+}

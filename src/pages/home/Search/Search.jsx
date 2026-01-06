@@ -8,17 +8,23 @@ import { allDessertRecipes } from '../../recipes/main-page/dessert/DessertData';
 import { allSaladRecipes } from '../../recipes/main-page/salad/SaladData';
 import { allSpecialDietsRecipes } from '../../recipes/main-page/special-diets/SpecialDietsData';
 
+/**
+ * Search component
+ *
+ * Provides an inline search box with debounced live search over a combined
+ * list of recipes, a dropdown showing results, trending suggestions and
+ * category shortcuts. Supports an optional "hero" presentation mode via the
+ * `isHero` prop.
+ */
 export default class Search extends React.Component {
+    /**
+     * Create the Search component instance.
+     * @param {Object} props - React props.
+     */
     constructor(props) {
         super(props);
-        this.state = {
-            searchTerm: '',
-            isFocused: false,
-            searchResults: []
-        };
-
-        this.searchTimeout = null;
-
+        
+        // 1. Combine all recipes first so we can use them for state initialization
         this.allRecipes = [
             ...allMainCourseRecipes,
             ...allAppetizerRecipes,
@@ -26,12 +32,56 @@ export default class Search extends React.Component {
             ...allSaladRecipes,
             ...allSpecialDietsRecipes
         ];
+
+        this.state = {
+            searchTerm: '',
+            isFocused: false,
+            searchResults: [],
+            // 2. Initialize trending recipes with random picks
+            trendingRecipes: this.getRandomRecipes(5)
+        };
+
+        /**
+         * Debounce timeout id used for throttling searches.
+         * @type {?number}
+         */
+        this.searchTimeout = null;
     }
 
+    /**
+     * getRandomRecipes
+     *
+     * Returns a small array of random recipes from the combined recipe list.
+     * Used to populate the trending section with varied items.
+     *
+     * @param {number} count - Number of random recipes to return.
+     * @returns {Array<Recipe>} Array of recipe objects (may be empty).
+     */
+    getRandomRecipes(count) {
+        if (!this.allRecipes || this.allRecipes.length === 0) return [];
+        // Create a copy to sort so we don't mutate the original list order
+        const shuffled = [...this.allRecipes].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    }
+
+    /**
+     * React lifecycle method.
+     * Clears any pending debounce timer when the component unmounts.
+     * @returns {void}
+     */
     componentWillUnmount() {
         if (this.searchTimeout) clearTimeout(this.searchTimeout);
     }
 
+    /**
+     * handleSearchChange
+     *
+     * Debounced input change handler. Updates the `searchTerm` state and
+     * schedules `performSearch` after a short delay.
+     *
+     * @param {Event} e - Input change event.
+     * @returns {void}
+     */
     handleSearchChange = (e) => {
         const target = e.target.value;
         this.setState({ searchTerm: target });
@@ -47,6 +97,34 @@ export default class Search extends React.Component {
         }, 300);
     };
 
+    /**
+     * handleSearchSubmit
+     *
+     * Form submit handler invoked on Enter. Navigates to the first search
+     * result if any exist.
+     *
+     * @param {Event} e - Submit event.
+     * @returns {void}
+     */
+    handleSearchSubmit = (e) => {
+        e.preventDefault();
+        const { searchResults } = this.state;
+        if (searchResults.length > 0) {
+            // "Links to my FOOD A" -> Go to the first match
+            window.location.href = searchResults[0].href;
+        }
+    };
+
+    /**
+     * performSearch
+     *
+     * Filters the combined recipe list by matching the target term against
+     * title, keywords, category, subcategory and tags. Updates `searchResults`
+     * with up to 8 matches.
+     *
+     * @param {string} target - Search term to match.
+     * @returns {void}
+     */
     performSearch = (target) => {
         const results = this.allRecipes.filter((recipe) => {
             const t = target.toLowerCase();
@@ -69,30 +147,66 @@ export default class Search extends React.Component {
         this.setState({ searchResults: results.slice(0, 8) });
     }
 
+    /**
+     * handleSearchFocus
+     *
+     * Marks the search as focused to show the dropdown.
+     * @returns {void}
+     */
     handleSearchFocus = () => { this.setState({ isFocused: true }); }
 
+    /**
+     * handleSearchBlur
+     *
+     * Hides the dropdown shortly after blur to allow internal clicks to register.
+     * @returns {void}
+     */
     handleSearchBlur = () => {
         setTimeout(() => {
             this.setState({ isFocused: false });
         }, 200);
     }
 
-    handleTrendingClick = (searchTerm) => {
-        this.setState({ searchTerm: searchTerm, isFocused: true }, () => {
-            this.performSearch(searchTerm);
+    /**
+     * handleTrendingClick
+     *
+     * When a trending recipe is clicked, fills the search input and performs
+     * the search immediately.
+     *
+     * @param {string} recipeTitle - Title of the trending recipe to search for.
+     * @returns {void}
+     */
+    handleTrendingClick = (recipeTitle) => {
+        this.setState({ searchTerm: recipeTitle, isFocused: true }, () => {
+            this.performSearch(recipeTitle);
         });
     };
 
+    /**
+     * handleCategoryClick
+     *
+     * Navigates to the category page for the selected category.
+     *
+     * @param {string} categoryPath - URL path segment for the category.
+     * @returns {void}
+     */
     handleCategoryClick = (categoryPath) => {
         window.location.href = `/recipes/main-page/${categoryPath}`;
     };
 
+    /**
+     * render
+     *
+     * Renders the search input and conditional dropdown. The dropdown shows
+     * either search results or trending recipes and category shortcuts.
+     *
+     * @returns {JSX.Element}
+     */
     render() {
-        const { searchTerm, isFocused, searchResults } = this.state;
+        const { searchTerm, isFocused, searchResults, trendingRecipes } = this.state;
         const { isHero } = this.props;
 
         const showDropdown = isFocused;
-        const trendingSearches = ['Sausage & Kale', 'Miso Soup', 'Tiramisu', 'Sheet-Pan Chicken', 'Pistachio'];
         
         const categories = [
             { name: 'Appetizers', path: 'appetizer', img: '/assets/appetizers/appetizers_pfp.jpg'},
@@ -108,12 +222,13 @@ export default class Search extends React.Component {
         return (
         <div className={wrapperClass}>
             <div className="search-container">
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form onSubmit={this.handleSearchSubmit}>
                 <div className="search-input-wrapper">
                 <FaSearch className="search-icon" />
                 <input
                     type="text"
                     className="search-input"
+                    id="home-search-input"
                     placeholder={isHero ? "Start searching..." : "Search Recipes"}
                     value={searchTerm}
                     onChange={this.handleSearchChange}
@@ -144,13 +259,14 @@ export default class Search extends React.Component {
                     <>
                     <div className="trending-section">
                         <h3 className="search-heading">Trending Now</h3>
-                        {trendingSearches.map((item, index) => (
+                        {/* 3. Render the RANDOM trending recipes */}
+                        {trendingRecipes.map((recipe, index) => (
                         <div 
                             key={index} 
                             className="trending-item"
-                            onMouseDown={() => this.handleTrendingClick(item)}>
+                            onMouseDown={() => this.handleTrendingClick(recipe.title)}>
                             <IoTrendingUp className="trending-icon" />
-                            <span>{item}</span>
+                            <span>{recipe.title}</span>
                         </div>
                         ))}
                     </div>

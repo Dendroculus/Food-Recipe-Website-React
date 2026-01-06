@@ -200,3 +200,8 @@
   }
   .nutrition-table td.num { text-align: left; }
 }
+
+#weekly-recipe-title {
+  font-family: 'Playwrite', sans-serif;
+  color: #007A70;
+}

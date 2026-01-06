@@ -1,27 +1,66 @@
 import React from 'react';
 import './FeaturedSection.css';
-import {featuredRecipe, spotlightRecipes, tips} from './FeaturedSectionData';
+import { spotlightRecipes, tips } from './FeaturedSectionData';
+import { allMainCourseRecipes } from '../../recipes/main-page/main-course/MainCourseData';
+import { allAppetizerRecipes } from '../../recipes/main-page/appetizer/AppetizerData';
+import { allDessertRecipes } from '../../recipes/main-page/dessert/DessertData';
+import { allSaladRecipes } from '../../recipes/main-page/salad/SaladData';
+import { allSpecialDietsRecipes } from '../../recipes/main-page/special-diets/SpecialDietsData';
 
 /**
- * FeaturedSection component displays the weekly featured recipe, kitchen tips, and a small comparison table.
- * Uses data imported from FeaturedSectionData.
- * @extends React.Component
+ * FeaturedSection component displays a dynamic weekly featured recipe, kitchen tips, and a comparison table.
+ * * Features:
+ * - Randomly selects a recipe from all available data to display as "Recipe of the Week".
+ * - Uses static data for tips and spotlight comparison table.
+ * * @extends React.Component
  */
 class FeaturedSection extends React.Component {
   /**
-   * Initialize the featured section with imported data.
+   * Initialize component and select a random recipe.
    * @param {object} props - React props.
    */
   constructor(props) {
     super(props);
 
-    this.featuredRecipe = featuredRecipe
+    const allRecipes = [
+        ...allMainCourseRecipes,
+        ...allAppetizerRecipes,
+        ...allDessertRecipes,
+        ...allSaladRecipes,
+        ...allSpecialDietsRecipes
+    ];
+
+    const randomRecipe = allRecipes.length > 0 
+        ? allRecipes[Math.floor(Math.random() * allRecipes.length)] 
+        : null;
+
+    this.featuredRecipe = randomRecipe ? {
+      image: randomRecipe.img,
+      alt: randomRecipe.title,
+      badgeLabel: 'Weekly Pick',
+      title: 'Recipe of the Week',
+      subtitle: randomRecipe.title,
+      meta: `${randomRecipe.time} • ${randomRecipe.category || 'Special'} • ★ 4.9`,
+      description: 'A quick star-worthy dish that balances savory and bright flavors — perfect for any meal.',
+      href: randomRecipe.href,
+    } : {
+      // FALLBACK RECIPE IF NO RECIPES ARE AVAILABLE
+      image: '/assets/main_course/Pork/Pork Chops Charcutiere Sauce.png',
+      alt: 'Recipe of the Week',
+      badgeLabel: 'Weekly Pick',
+      title: 'Recipe of the Week',
+      subtitle: 'Pork Chops Charcutiere',
+      meta: '30 min • Medium • ★ 4.8',
+      description: 'A quick star-worthy main that balances savory and bright flavors.',
+      href: '#'
+    };
+
     this.spotlightRecipes = spotlightRecipes;
     this.tips = tips;
   }
 
   /**
-   * Render the featured section with recipe card, tips, and comparison table.
+   * Render the featured section with the dynamic recipe card.
    * @returns {JSX.Element} The featured section markup.
    */
   render() {
@@ -123,7 +162,7 @@ class FeaturedSection extends React.Component {
 
                 <p className="small text-muted mt-3 mb-0">Want more? Use the search above or subscribe to get weekly recipes in your inbox.</p>
                 <div className="spotlight-cta">
-                  <a href="#site-search" className="btn-ghost">
+                  <a href="#home-search-input" className="btn-ghost">
                     Get the checklist
                   </a>
                 </div>
