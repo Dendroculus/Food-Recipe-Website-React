@@ -116,6 +116,7 @@
   border: 1px solid black;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .shop-modal-pfps img {
