@@ -5,7 +5,7 @@ import Footer from "../../../components/footer/Footer";
 import Modal from "../../../components/modals/Modals";
 import TopPicks from "./TopPicks";
 import FilterRecipe from './FilterRecipe';
-import Search from "./Search";
+import Search from "./../../../components/search/recipe-search/RecipeSearch";
 import { FaChevronLeft, FaChevronRight, FaHeart, FaRegHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import "./styles/MainPage.css";

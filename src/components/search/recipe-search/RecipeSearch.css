@@ -1,19 +1,21 @@
-.search-wrapper {
-  margin-top: 7.5rem;
+.recipe-search-wrapper {
+  padding-top: 9.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
   background: linear-gradient(135deg, #00A8A8, #4dbb96);
 }
 
-.search-container {
+.recipe-search-container {
   position: relative;
   width: 100%;
   max-width: 50rem;
 }
 
-.search-input-wrapper {
+.recipe-search-input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
@@ -25,19 +27,19 @@
   transition: all 0.3s ease;
 }
 
-.search-input-wrapper:focus-within {
+.recipe-search-input-wrapper:focus-within {
   box-shadow: 0 0.5rem 1rem #0b6f564d;
   transform: translateY(-0.125rem);
 }
 
-.search-icon {
+.recipe-search-icon {
   font-size: 1.5rem;
   color: #0c6e61;
   margin-right: 1rem;
   flex-shrink: 0;
 }
 
-.search-input {
+.recipe-search-input {
   flex: 1;
   border: none;
   outline: none;
@@ -46,11 +48,11 @@
   background: transparent;
 }
 
-.search-input::placeholder {
+.recipe-search-input::placeholder {
   color: #9ca3af;
 }
 
-.search-dropdown {
+.recipe-search-dropdown {
   position: absolute;
   top: calc(100% + 0.5rem);
   left: 0;
@@ -62,10 +64,10 @@
   z-index: 3;
   max-height: 37.5rem;
   overflow-y: auto;
-  animation: slideDown 0.3s ease;
+  animation: recipe-slideDown 0.3s ease;
 }
 
-@keyframes slideDown {
+@keyframes recipe-slideDown {
   from {
     opacity: 0;
     transform: translateY(-0.625rem);
@@ -76,11 +78,11 @@
   }
 }
 
-.trending-section {
+.recipe-trending-section {
   margin-bottom: 2rem;
 }
 
-.search-heading {
+.recipe-search-heading {
   font-size: 1.5rem;
   font-weight: 700;
   color:  #00A8A8;
@@ -90,7 +92,7 @@
   letter-spacing: 0.05rem;
 }
 
-.trending-item {
+.recipe-trending-item {
   display: flex;
   align-items: center;
   padding: 1rem 1.25rem;
@@ -102,14 +104,14 @@
   border-left: 0.25rem solid transparent;
 }
 
-.trending-item:hover {
+.recipe-trending-item:hover {
   background: linear-gradient(to right, #00a8a814, #4dbb960d);
   border-left-color: #00A8A8;
   transform: translateX(0.2rem);
   box-shadow: 0 0.25rem 0.75rem #00a8a826;
 }
 
-.trending-icon {
+.recipe-trending-icon {
   font-size: 1.5rem;
   color: #0e735d;
   margin-right: 1.25rem;
@@ -117,28 +119,28 @@
   transition: all 0.3s ease;
 }
 
-.trending-item:hover .trending-icon {
+.recipe-trending-item:hover .recipe-trending-icon {
   color: #00A8A8;
   transform: scale(1.2) rotate(-10deg);
 }
 
-.trending-item span {
+.recipe-trending-item span {
   font-size: 1.125rem;
   color: #1f2937;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.trending-item:hover span {
+.recipe-trending-item:hover span {
   color: #0c6e61;
 }
 
-.category-section {
+.recipe-category-section {
   border-top: 0.0625rem solid #e5e7eb;
   padding-top: 1.5rem;
 }
 
-.category-item {
+.recipe-category-item {
   display: flex;
   align-items: center;
   padding: 0.875rem 1rem;
@@ -148,11 +150,11 @@
   margin-bottom: 0.5rem;
 }
 
-.category-item:hover {
+.recipe-category-item:hover {
   background: #f3f4f6;
 }
 
-.category-img {
+.recipe-category-img {
   width: 3.75rem;
   height: 3.75rem;
   border-radius: 50%;
@@ -162,17 +164,17 @@
   border: 0.125rem solid #e5e7eb;
 }
 
-.category-item span {
+.recipe-category-item span {
   font-size: 1.125rem;
   color: #1f2937;
   font-weight: 500;
 }
 
-.search-results-section {
-  animation: fadeIn 0.3s ease;
+.recipe-search-results-section {
+  animation: recipe-fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
+@keyframes recipe-fadeIn {
   from {
     opacity: 0;
   }
@@ -181,7 +183,7 @@
   }
 }
 
-.search-result-item {
+.recipe-search-result-item {
   display: flex;
   align-items: center;
   padding: 0.875rem 1rem;
@@ -193,12 +195,12 @@
   color: inherit;
 }
 
-.search-result-item:hover {
+.recipe-search-result-item:hover {
   background: #f3f4f6;
   transform: translateX(0.3125rem);
 }
 
-.result-img {
+.recipe-result-img {
   width: 5rem;
   height: 5rem;
   border-radius: 0.5rem;
@@ -207,99 +209,102 @@
   flex-shrink: 0;
 }
 
-.result-info {
+.recipe-result-info {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.result-title {
+.recipe-result-title {
   font-size: 1.125rem;
   font-weight: 600;
   color: #1f2937;
   line-height: 1.3;
 }
 
-.result-meta {
+.recipe-result-meta {
   display: flex;
   gap: 1rem;
   font-size: 0.875rem;
 }
 
-.result-category {
+.recipe-result-category {
   color: #00A8A8;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-.result-time {
+.recipe-result-time {
   color: #6b7280;
 }
 
-.search-dropdown::-webkit-scrollbar {
+.recipe-search-dropdown::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-.search-dropdown::-webkit-scrollbar-track {
+.recipe-search-dropdown::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 0.625rem;
 }
 
-.search-dropdown::-webkit-scrollbar-thumb {
+.recipe-search-dropdown::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 0.625rem;
 }
 
-.search-dropdown::-webkit-scrollbar-thumb:hover {
+.recipe-search-dropdown::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
 @media (max-width: 768px) {
-  .search-wrapper {
-    padding: 1.5rem 1rem;
+  .recipe-search-wrapper {
+    padding-top: 8rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
   }
 
-  .search-input-wrapper {
+  .recipe-search-input-wrapper {
     padding: 0.875rem 1rem;
   }
 
-  .search-icon {
+  .recipe-search-icon {
     font-size: 1.25rem;
   }
 
-  .search-input {
+  .recipe-search-input {
     font-size: 1rem;
   }
 
-  .search-heading {
+  .recipe-search-heading {
     font-size: 2rem;
   }
 
-  .category-img {
+  .recipe-category-img {
     width: 3rem;
     height: 3rem;
   }
 
-  .result-img {
+  .recipe-result-img {
     width: 3.75rem;
     height: 3.75rem;
   }
 
-  .trending-item span,
-  .category-item span {
+  .recipe-trending-item span,
+  .recipe-category-item span {
     font-size: 1rem;
   }
 
-  .result-title {
+  .recipe-result-title {
     font-size: 1rem;
   }
 
-  .result-meta {
+  .recipe-result-meta {
     font-size: 0.75rem;
   }
 
-  .search-dropdown {
+  .recipe-search-dropdown {
     max-height: 32rem;
   }
 }

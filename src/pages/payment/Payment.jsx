@@ -289,7 +289,7 @@ export default class Payment extends React.Component {
                 <PaymentMethods accepted={this.acceptedPayments} includeMore={true} />
 
                 <div className="form-actions">
-                  <a href="/" className="btn-secondary">
+                  <a href="/" className="payment-cancel-btn btn-secondary">
                     Cancel
                   </a>
                   <button type="submit" className="btn-primary sbmt" disabled={!this.canSubmit()}>

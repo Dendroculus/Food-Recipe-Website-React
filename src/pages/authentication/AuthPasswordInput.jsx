@@ -49,7 +49,7 @@ class PasswordInput extends React.Component {
         return (
             <div className="input-wrapper">
                 <label htmlFor={id} className={className}>{label}</label>
-                <div className='password-input-group'>
+                <div className="password-input-group">
                     <input
                     className={`form-control ${error ? 'is-invalid' : ''}`}
                     type={showPassword ? 'text' : 'password'}
@@ -62,7 +62,7 @@ class PasswordInput extends React.Component {
                     />
                     <button
                     type='button'
-                    className='password-toggle-btn'
+                    className="password-toggle-btn"
                     onClick={this.togglePasswordVisibility}
                     >
                     {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}

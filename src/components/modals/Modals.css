@@ -224,7 +224,7 @@
 .cookie-footer .legal { color: #5d7f7a; }
 .cookie-footer .legal a { color: #1c6a63; text-decoration: underline; }
 
-.btn-cta {
+.cookies-save {
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -236,7 +236,7 @@
   text-wrap: nowrap;
   box-shadow: 0 10px 24px rgba(27,107,100,0.25);
 }
-.btn-cta:hover { background: #12544f; }
+.cookies-save:hover { background: #12544f; }
 
 .partners-link {
   display: inline-block;
@@ -295,5 +295,5 @@
   .badge.locked { font-size: 0.6rem; padding: 0.25rem 0.4rem; }
   .cookie-footer { padding: 0.6rem 0.5rem 0.75rem; gap: 0.6rem; border-radius: 0 0 16px 16px; }
   .cookie-footer .legal { font-size: 0.7rem; }
-  .btn-cta { padding: 0.65rem 0.85rem; font-size: 0.85em; }
+  .cookies-save { padding: 0.65rem 0.85rem; font-size: 0.85em; }
 }

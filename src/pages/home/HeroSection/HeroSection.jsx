@@ -1,6 +1,6 @@
 import React from 'react';
 import TodayPicks from '../TodayPicks/TodayPicks';
-import Search from '../Search/Search'; 
+import Search from "./../../../components/search/home-search/HomeSearch";
 import './HeroSection.css';
 
 /**
