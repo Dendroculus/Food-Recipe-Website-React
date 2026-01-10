@@ -106,39 +106,39 @@ class AboutUs extends React.Component {
   render() {
     const team = [
       {
-        img: "https://avatars.githubusercontent.com/u/167067576?v=4",
-        name: "Jessica Gunawan",
-        role: "Founder & Head Chef",
-        bio:
-          "With 15 years of professional kitchen experience spanning Michelin-starred restaurants and cozy neighborhood bistros, Jessica is the creative force behind our recipes. She has a special talent for taking complex culinary techniques and making them approachable for home cooks. Jessica's passion lies in seasonal ingredients and bold, unexpected flavor combinations that elevate everyday meals into memorable experiences. When she's not in the kitchen, you'll find her at local farmers' markets or teaching cooking classes to aspiring chefs.",
-      },
-      {
         img: "https://avatars.githubusercontent.com/u/224712928?v=4",
         name: "Hans Valerie",
-        role: "Pastry Expert & Photographer",
+        role: "Team Lead & Software Architect",
         bio:
-          "Hans is a master pastry chef trained in Paris and Tokyo, bringing a unique blend of French precision and Japanese artistry to our desserts. Beyond his incredible baking skills, Hans is the eye behind every beautiful food photograph you see on our site. He believes that we eat with our eyes first, and his stunning imagery makes every dish look as delicious as it tastes. Hans has a special gift for transforming simple ingredients into elegant desserts that both look and taste extraordinary.",
+          "As the team lead, Hans ensures the codebase remains clean, maintainable, and scalable. He manages the repository, enforces architectural standards, and aggressively refactors code to adhere to DRY principles. Driven by the belief that every piece of code must have documentation, he maintains rigorous technical docs to ensure the project's long-term success.",
+      },
+      {
+        img: "https://avatars.githubusercontent.com/u/167067576?v=4",
+        name: "Jessica Gunawan",
+        role: "Full Stack Developer",
+        bio:
+          "Jessica bridges the gap between the server and the browser. She implements core features and ensures the application logic connects seamlessly with the user interface. She loves solving complex logic puzzles and bringing designs to life.",
       },
       {
         img: "https://avatars.githubusercontent.com/u/230555205?v=4",
         name: "Kindy Lim",
-        role: "Recipe Tester & Community Manager",
+        role: "QA & User Experience",
         bio:
-          "Kindy is the heart and soul of our community. As our lead recipe tester, they ensure every single recipe works flawlessly in real home kitchens—not just professional test kitchens. Kindy tests each recipe at least three times using everyday equipment and ingredients you can find at your local grocery store. Beyond testing, Kindy manages our thriving online community, responding to questions, sharing cooking tips, and celebrating our members' culinary victories.",
+          "Kindy is responsible for breaking the app so you don't have to. They handle quality assurance testing and ensure the user journey is smooth and intuitive. If there is a bug or a confusing button, Kindy finds it first.",
       },
       {
         img: "https://avatars.githubusercontent.com/u/160008363?v=4",
         name: "Edbert Chandra",
-        role: "Content Strategist & Food Writer",
+        role: "Backend & Data Management",
         bio:
-          "Edbert is a storyteller at heart who believes every recipe has a narrative worth sharing. With a background in cultural anthropology and food journalism, he crafts compelling stories around food traditions, ingredient origins, and the cultural significance of dishes from around the world.",
+          "Edbert structures the data that powers the application. He manages the content databases and ensures that recipes and user data are stored efficiently and retrieved quickly.",
       },
       {
         img: "https://avatars.githubusercontent.com/u/235623182?v=4",
         name: "Steven Lienardi",
-        role: "Culinary Consultant & Innovation Lead",
+        role: "UI/UX Designer & Frontend",
         bio:
-          "Steven brings global flavors and cutting-edge techniques to our kitchen. With experience in molecular gastronomy, plant-based cuisine, and traditional cooking methods from six continents, Steven constantly pushes the boundaries of what's possible in a home kitchen.",
+          "Steven focuses on the look and feel of the application. He explores new library features and visual styles to make sure the application isn't just functional, but also visually engaging for the user.",
       },
     ];
 

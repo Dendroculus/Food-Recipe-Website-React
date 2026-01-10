@@ -53,10 +53,10 @@ export default class InspirationNav extends React.Component {
       label: "ABOUT US",
       active: false,
       items: [
-        { href: "/about-us/about-us.html#our-story", img: "/assets/about us/about_us_pfp.png", alt: "Our Story", text: "Our Story" },
-        { href: "/about-us/about-us.html#meet-the-team", img: "/assets/about us/meet_the_team_pfp.png", alt: "Meet the Team", text: "Meet the Team" },
-        { href: "/about-us/about-us.html#our-mission", img: "/assets/about us/our_mission_pfp.png", alt: "Our Mission", text: "Our Mission" },
-        { href: "/about-us/about-us.html#contact-us", img: "/assets/about us/contact_us_pfp.png", alt: "Contact Us", text: "Contact Us" }
+        { href: "/about-us/AboutUs#our-story", img: "/assets/about us/about_us_pfp.png", alt: "Our Story", text: "Our Story" },
+        { href: "/about-us/AboutUs#meet-the-team", img: "/assets/about us/meet_the_team_pfp.png", alt: "Meet the Team", text: "Meet the Team" },
+        { href: "/about-us/AboutUs#our-mission", img: "/assets/about us/our_mission_pfp.png", alt: "Our Mission", text: "Our Mission" },
+        { href: "/about-us/AboutUs#contact-us", img: "/assets/about us/contact_us_pfp.png", alt: "Contact Us", text: "Contact Us" }
       ]
     }
   ];

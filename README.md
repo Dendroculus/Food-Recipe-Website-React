@@ -42,17 +42,16 @@ Live demo: **[Food Recipe Website](https://food-recipe-website-react.vercel.app/
 
 ## 🖼️ Screenshots
 
-| Home Page | Recipes Main Page |
+| | |
 | :---: | :---: |
+| **Home Page** | **Recipes Main Page** |
 | ![Home Page](./public/assets/screenshots/Home.png) | ![Recipes Page](./public/assets/screenshots/Recipes_Main.png) | 
-
-| Shop Page | Recipes Page |
-| :---: | :---: |
-![Shop Page](./public/assets/screenshots/Shop.png) | ![Recipe Details](./public/assets/screenshots/Recipes.png) |
-
-| Authentication Page | Payment Page |
-| :---: | :---: |
-![Authentication Page](./public/assets/screenshots/Authentication.png) | ![Payment Page](./public/assets/screenshots/Payment.png) |
+| **Shopping Page** | **Recipes Page** |
+| ![Shopping Page](./public/assets/screenshots/Shop.png) | ![Recipe Details](./public/assets/screenshots/Recipes.png) |
+| **Authentication Page** | **Payment Page** |
+| ![Authentication Page](./public/assets/screenshots/Authentication.png) | ![Payment Page](./public/assets/screenshots/Payment.png) |
+| **Inspiration Page** | **About Us Page** |
+| ![Inspiration Page](./public/assets/screenshots/Inspiration.png) | ![About Us Page](./public/assets/screenshots/AboutUs.png) |
 
 ---
 
