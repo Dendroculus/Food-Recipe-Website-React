@@ -4,7 +4,7 @@ import RecipeNavBar from "../../../components/navigations/RecipesNavBar";
 import './styles/RecipePage.css';
 import Footer from "../../../components/footer/Footer";
 import Modal from "../../../components/modals/Modals";
-import Search from "../main-page/Search";
+import Search from "./../../../components/search/recipe-search/RecipeSearch";
 
 /**
  * RecipePageLayout renders a full recipe page composed of multiple categories/sections.
@@ -54,7 +54,7 @@ export default class RecipePageLayout extends React.Component {
         const { categories } = this.props;
 
         return (
-            <div className='recipe-page-wrapper'>
+            <div className="recipe-page-wrapper">
                 <RecipeNavBar />
                 <Search />
                 <main>

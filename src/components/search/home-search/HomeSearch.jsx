@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { IoTrendingUp } from 'react-icons/io5';
-import './Search.css';
-import { allMainCourseRecipes } from '../../recipes/main-page/main-course/MainCourseData';
-import { allAppetizerRecipes } from '../../recipes/main-page/appetizer/AppetizerData';
-import { allDessertRecipes } from '../../recipes/main-page/dessert/DessertData';
-import { allSaladRecipes } from '../../recipes/main-page/salad/SaladData';
-import { allSpecialDietsRecipes } from '../../recipes/main-page/special-diets/SpecialDietsData';
+import './HomeSearch.css';
+import { allMainCourseRecipes } from '../../../pages/recipes/main-page/main-course/MainCourseData';
+import { allAppetizerRecipes } from '../../../pages/recipes/main-page/appetizer/AppetizerData';
+import { allDessertRecipes } from '../../../pages/recipes/main-page/dessert/DessertData';
+import { allSaladRecipes } from '../../../pages/recipes/main-page/salad/SaladData';
+import { allSpecialDietsRecipes } from '../../../pages/recipes/main-page/special-diets/SpecialDietsData';
 
 /**
  * Search component

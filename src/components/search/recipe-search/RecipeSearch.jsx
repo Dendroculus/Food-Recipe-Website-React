@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { IoTrendingUp } from 'react-icons/io5';
-import './styles/Search.css';
-import { allMainCourseRecipes } from './main-course/MainCourseData';
-import { allAppetizerRecipes } from './appetizer/AppetizerData';
-import { allDessertRecipes } from './dessert/DessertData';
-import { allSaladRecipes } from './salad/SaladData';
-import { allSpecialDietsRecipes } from './special-diets/SpecialDietsData';
+import './RecipeSearch.css';
+import { allMainCourseRecipes } from '../../../pages/recipes/main-page/main-course/MainCourseData';
+import { allAppetizerRecipes } from '../../../pages/recipes/main-page/appetizer/AppetizerData';
+import { allDessertRecipes } from '../../../pages/recipes/main-page/dessert/DessertData';
+import { allSaladRecipes } from '../../../pages/recipes/main-page/salad/SaladData';
+import { allSpecialDietsRecipes } from '../../../pages/recipes/main-page/special-diets/SpecialDietsData';
 
 /**
  * Search component provides an inline search box with live results and trending/category suggestions.
@@ -166,14 +166,14 @@ export default class Search extends React.Component {
         ];
         const showSearchResults = searchTerm.trim().length > 0 && searchResults.length > 0;
         return (
-        <div className="search-wrapper">
-            <div className="search-container">
+        <div className="recipe-search-wrapper">
+            <div className="recipe-search-container">
             <form onSubmit={this.handleSearchSubmit}>
-                <div className="search-input-wrapper">
-                <FaSearch className="search-icon" />
+                <div className="recipe-search-input-wrapper">
+                <FaSearch className="recipe-search-icon" />
                 <input
                     type="text"
-                    className="search-input"
+                    className="recipe-search-input"
                     placeholder="Search Recipes"
                     value={searchTerm}
                     onChange={this.handleSearchChange}
@@ -183,24 +183,24 @@ export default class Search extends React.Component {
                 </div>
             </form>
             {showDropdown && (
-                <div className="search-dropdown">
+                <div className="recipe-search-dropdown">
                 {showSearchResults ?  (
-                    <div className="search-results-section">
-                    <h3 className="search-heading">Search Results</h3>
+                    <div className="recipe-search-results-section">
+                    <h3 className="recipe-search-heading">Search Results</h3>
                         {searchResults.map((recipe) => (
                             <a 
                             key={recipe.id} 
                             href={recipe.href} 
-                            className="search-result-item">
+                            className="recipe-search-result-item">
                             <img 
                                 src={recipe.img} 
                                 alt={recipe.title} 
-                                className="result-img"/>
-                            <div className="result-info">
-                                <span className="result-title">{recipe.title}</span>
-                                <div className="result-meta">
-                                <span className="result-category">{recipe.category}</span>
-                                <span className="result-time">{recipe.time}</span>
+                                className="recipe-result-img"/>
+                            <div className="recipe-result-info">
+                                <span className="recipe-result-title">{recipe.title}</span>
+                                <div className="recipe-result-meta">
+                                <span className="recipe-result-category">{recipe.category}</span>
+                                <span className="recipe-result-time">{recipe.time}</span>
                                 </div>
                             </div>
                             </a>
@@ -208,30 +208,30 @@ export default class Search extends React.Component {
                     </div>
                 ) : (
                     <>
-                    <div className="trending-section">
-                        <h3 className="search-heading">Trending Searches</h3>
+                    <div className="recipe-trending-section">
+                        <h3 className="recipe-search-heading">Trending Searches</h3>
                         {trendingSearches.map((item, index) => (
                         <div 
                             key={index} 
-                            className="trending-item"
+                            className="recipe-trending-item"
                             onClick={() => this.handleTrendingClick(item)}>
-                            <IoTrendingUp className="trending-icon" />
+                            <IoTrendingUp className="recipe-trending-icon" />
                             <span>{item}</span>
                         </div>
                         ))}
                     </div>
 
-                    <div className="category-section">
-                        <h3 className="search-heading">Search by Category</h3>
+                    <div className="recipe-category-section">
+                        <h3 className="recipe-search-heading">Search by Category</h3>
                         {categories.map((category, index) => (
                         <div 
                             key={index} 
-                            className="category-item"
+                            className="recipe-category-item"
                             onClick={() => this.handleCategoryClick(category.path)}>
                             <img 
                             src={category.img} 
                             alt={category.name}
-                            className="category-img"/>
+                            className="recipe-category-img"/>
                             <span>{category.name}</span>
                         </div>
                         ))}

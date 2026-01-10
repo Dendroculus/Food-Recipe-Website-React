@@ -171,7 +171,7 @@ class CookieConsent extends React.Component {
               <small className="legal">
                 You can update your choices at any time. See our <a href="#privacy-modal">Privacy Policy</a> and <a href="#cookies-modal">Cookies</a>.
               </small>
-              <a href="#!" className="btn-cta" onClick={() => this.handleCookieAction('custom')}>Save &amp; Exit</a>
+              <a href="#!" className="cookies-save btn-cta" onClick={() => this.handleCookieAction('custom')}>Save &amp; Exit</a>
             </footer>
           </div>
         </div>

@@ -147,23 +147,6 @@
     transition: transform 0.4s ease;
 }
 
-.btn-secondary {
-    background: linear-gradient(135deg, #00A8A8, #4dbb96);
-    transform: scale(1.5);
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 0.4rem 0.75rem;
-    transition: all 0.3s ease;
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    transform-origin: center;
-}
-
-.btn-secondary:hover {
-    box-shadow: 0 0.25rem 0.75rem #007a704d;
-}
-
 .recipe-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -502,12 +485,6 @@
     .card text {
         padding: 2rem;
     }
-
-    .btn-secondary {
-        font-size: 1.3rem;
-        padding: 0.6rem 1.2rem;
-        transform: none;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -522,12 +499,6 @@
     .recommended-card {
         height: 7rem;
     }
-            
-    .btn-secondary {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-
     .card-content p {
         margin-bottom: 2rem;
     }
