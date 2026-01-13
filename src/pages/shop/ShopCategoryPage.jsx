@@ -5,6 +5,7 @@ import Shop from './Shop';
 import ShopProductCard from '../../components/shop/ShopProductCard';
 import ShopDetailsModal from '../../components/shop/ShopDetailsModal';
 import ShopAddModal from '../../components/shop/ShopAddModal';
+import { specialDates } from './specialDates';
 
 /**
  * ShopCategoryPage
@@ -70,8 +71,7 @@ class ShopCategoryPage extends React.Component {
     const today = new Date();
     const currentMonthDay = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
     
-    // Dates: Jan 10th, Dec 25th, Aug 17th
-    const specialDates = ['01-10', '12-25', '08-17']; 
+    const specialDateStrings = specialDates.map(d => d.date);
     
     // Create a unique namespace for localStorage based on the Page Title
     // Example: "Cooking Ingredients" -> "daily_promos_CookingIngredients"
@@ -79,11 +79,11 @@ class ShopCategoryPage extends React.Component {
     const storageKey = `daily_promos_${safeTitle}`;
 
     // If today is not a special day, clear old data and return original list
-    if (!specialDates.includes(currentMonthDay)) {
-      localStorage.removeItem(storageKey); 
+    if (!specialDateStrings.includes(currentMonthDay)) {
+      localStorage.removeItem(storageKey);
       return productList;
     }
-
+    
     // 1. Try to retrieve existing promos for today/category
     let promoData = null;
     try {
